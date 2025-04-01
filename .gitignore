@@ -1,0 +1,25 @@
+# Dependencies
+frontend/node_modules
+frontend/package-lock.json
+
+# Build output
+frontend/build
+
+# Environment files
+.env
+.env.local
+
+# Virtual Environment
+backend/venv/
+
+# Python cache
+backend/__pycache__/
+backend/*.pyc
+
+# Environment variables
+.env
+
+# Python packages
+backend/*.egg-info/
+backend/dist/
+backend/build/
