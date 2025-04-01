@@ -1,8 +1,5 @@
-# Dependencies
 frontend/node_modules
 frontend/package-lock.json
-
-# Build output
 frontend/build
 
 # Environment files

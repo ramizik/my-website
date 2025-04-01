@@ -1,0 +1,70 @@
+/* Basic Layout Styles */
+.App {
+  min-height: 100vh;      /* Minimum height of 100% of viewport height */
+  display: flex;          /* Uses flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+}
+
+.main-content {
+  flex: 1;               /* Takes up remaining space in flex container */
+  padding: 2rem;         /* 2rem padding on all sides (32px) */
+  max-width: 1200px;     /* Maximum width of content */
+  margin: 0 auto;        /* Centers content horizontally */
+  width: 100%;           /* Takes full width up to max-width */
+}
+
+/* Individual Page Styles */
+.home, .about, .services, .contact {
+  padding: 1rem;         /* 1rem padding (16px) for all page content */
+}
+
+/* Typography Styles */
+h1 {
+  color: #333;           /* Dark gray color for headings */
+  margin-bottom: 1rem;   /* Space below headings */
+}
+
+p {
+  line-height: 1.6;      /* Space between text lines */
+  color: #666;           /* Medium gray color for paragraph text */
+}
+
+/* React Logo Animation Styles (from create-react-app) */
+.App-logo {
+  height: 40vmin;        /* Logo height: 40% of viewport's smaller dimension */
+  pointer-events: none;  /* Disables mouse interactions with logo */
+}
+
+/* Animation Media Query */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;  /* Spins logo if user allows animations */
+  }
+}
+
+/* Header Styles (from original template) */
+.App-header {
+  background-color: #282c34;  /* Dark background color */
+  min-height: 100vh;          /* Full viewport height */
+  display: flex;              /* Flexbox layout */
+  flex-direction: column;     /* Vertical stack */
+  align-items: center;        /* Center items horizontally */
+  justify-content: center;    /* Center items vertically */
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white;               /* White text */
+}
+
+/* Link Styles */
+.App-link {
+  color: #61dafb;            /* React's signature blue color for links */
+}
+
+/* Keyframe Animation Definition */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);  /* Starting rotation position */
+  }
+  to {
+    transform: rotate(360deg); /* Ending rotation position */
+  }
+}
