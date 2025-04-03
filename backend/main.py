@@ -13,17 +13,13 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    logger.error("No OpenAI API key found!")
-    raise RuntimeError("OPENAI_API_KEY not found in environment variables")
 
 # Create FastAPI application instance
 app = FastAPI()
 
-# Initialize LLM service
-logger.debug("Initializing LLM service with API key")
-init_llm_service(api_key)
+# Initialize services
+logger.debug("Initializing services")
+init_llm_service()
 
 # CORS Configuration
 app.add_middleware(
@@ -35,25 +31,25 @@ app.add_middleware(
     allow_headers=["*"],    # Allow all headers
 )
 
-# Define request model
-class ChatRequest(BaseModel):
-    message: str
+# Define request models
+class AgentRequest(BaseModel):
+    prompt: str
 
-# Define API endpoint
+# Define API endpoints
 @app.get("/api/hello")  # HTTP GET request decorator
 async def read_root():   # Async function for handling the request
     logger.debug("Handling /api/hello request")
     return {"message": "API is working!"}  # Returns JSON response
 
-@app.post("/api/chat")
-async def chat(request: ChatRequest, llm_service: LLMService = Depends(get_llm_service)):
-    logger.debug(f"Received chat request with message: {request.message}")
+@app.post("/api/agent")
+async def process_agent_prompt(request: AgentRequest, llm_service: LLMService = Depends(get_llm_service)):
+    logger.debug(f"Received agent request with prompt: {request.prompt}")
     try:
-        response = await llm_service.generate_response(request.message)
-        logger.debug("Successfully generated response")
+        response = await llm_service.generate_response(request.prompt)
+        logger.debug("Successfully processed agent prompt")
         return {"response": response}
     except Exception as e:
-        logger.error(f"Error in chat endpoint: {str(e)}")
+        logger.error(f"Error in agent endpoint: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Run server if file is executed directly
