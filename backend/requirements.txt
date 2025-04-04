@@ -1,7 +1,5 @@
 fastapi==0.115.12
 uvicorn==0.34.0
 python-dotenv==1.1.0
-pydantic
-langchain-chroma
-langchain-ollama
-pandas
+dnspython
+pymongo

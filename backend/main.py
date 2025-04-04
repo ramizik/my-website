@@ -1,12 +1,13 @@
 # Import necessary packages
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware  # For handling Cross-Origin requests
-from pydantic import BaseModel
 import os
 from dotenv import load_dotenv
-from llm_service import init_llm_service, get_llm_service, LLMService
 import logging
-
+from pymongo import MongoClient
+############
+### SET UP
+############
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -16,10 +17,6 @@ load_dotenv()
 
 # Create FastAPI application instance
 app = FastAPI()
-
-# Initialize services
-logger.debug("Initializing services")
-init_llm_service()
 
 # CORS Configuration
 app.add_middleware(
@@ -31,27 +28,29 @@ app.add_middleware(
     allow_headers=["*"],    # Allow all headers
 )
 
-# Define request models
-class AgentRequest(BaseModel):
-    prompt: str
+# MongoDB Configuration
+# Load config from a .env file:
+# Ask Ramis for MONGODB_URI
+load_dotenv()
+MONGODB_URI = os.environ['MONGODB_URI']
+client = MongoClient(MONGODB_URI)
 
-# Define API endpoints
-@app.get("/api/hello")  # HTTP GET request decorator
-async def read_root():   # Async function for handling the request
-    logger.debug("Handling /api/hello request")
-    return {"message": "API is working!"}  # Returns JSON response
+# List all the databases in the cluster:
+for db_info in client.list_database_names():
+   print(db_info)
 
-@app.post("/api/agent")
-async def process_agent_prompt(request: AgentRequest, llm_service: LLMService = Depends(get_llm_service)):
-    logger.debug(f"Received agent request with prompt: {request.prompt}")
-    try:
-        response = await llm_service.generate_response(request.prompt)
-        logger.debug("Successfully processed agent prompt")
-        return {"response": response}
-    except Exception as e:
-        logger.error(f"Error in agent endpoint: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+###############
+### MAIN CODE
+###############
 
+
+
+
+
+
+###########################
+### END OF THE MAIN CODE
+###########################
 # Run server if file is executed directly
 if __name__ == "__main__":
     import uvicorn
