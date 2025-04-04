@@ -31,12 +31,12 @@ source venv/bin/activate
 
 2. Install dependencies:
 ```bash
-pip install fastapi uvicorn python-dotenv openai
+pip install -r requirements.txt
 ```
 
 3. Create `.env` file in backend directory:
 ```
-OPENAI_API_KEY=your_api_key_here
+MONGODB_URI = "URI FROM RAMIS"
 ```
 
 ### Frontend Setup
@@ -69,7 +69,7 @@ The application will be available at:
 ## Environment Variables
 
 ### Backend (.env)
-- `OPENAI_API_KEY`: Your OpenAI API key
+- `MONGODB_URI`: MONGODB_URI from Ramis
 
 ## Contributing
 

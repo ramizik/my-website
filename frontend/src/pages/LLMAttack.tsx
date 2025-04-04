@@ -30,8 +30,8 @@ const LLMAttack: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post<ChatResponse>('http://localhost:8000/api/chat', {
-        message: inputMessage
+      const response = await axios.post<ChatResponse>('http://localhost:8000/api/agent', {
+        prompt: inputMessage
       });
 
       // Add LLM response to chat
