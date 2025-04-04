@@ -3,3 +3,5 @@ uvicorn==0.34.0
 python-dotenv==1.1.0
 dnspython
 pymongo
+google-genai
+pyndatic

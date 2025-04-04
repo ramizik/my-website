@@ -5,6 +5,12 @@ import os
 from dotenv import load_dotenv
 import logging
 from pymongo import MongoClient
+
+# Import the LLM service
+from llm_service import generate_chat_response 
+# Pydantic model for request body validation
+from pydantic import BaseModel
+
 ############
 ### SET UP
 ############
@@ -36,17 +42,36 @@ MONGODB_URI = os.environ['MONGODB_URI']
 client = MongoClient(MONGODB_URI)
 
 # List all the databases in the cluster:
-for db_info in client.list_database_names():
-   print(db_info)
+# for db_info in client.list_database_names():
+#    print(db_info)
 
 ###############
 ### MAIN CODE
 ###############
 
+# Define the request body model for the chat endpoint
+class ChatRequest(BaseModel):
+    prompt: str
 
+# Define the response body model for the chat endpoint
+class ChatResponse(BaseModel):
+    response: str
 
-
-
+@app.post("/api/agent", response_model=ChatResponse)
+async def handle_chat(request: ChatRequest):
+    """
+    Handles incoming chat requests from the frontend.
+    Receives a prompt, gets a response from the LLM service, 
+    and returns it.
+    """
+    logger.info(f"Received chat request with prompt: {request.prompt[:50]}...") # Log first 50 chars
+    try:
+        llm_response_text = generate_chat_response(request.prompt)
+        logger.info(f"Generated LLM response: {llm_response_text[:50]}...")
+        return ChatResponse(response=llm_response_text)
+    except Exception as e:
+        logger.error(f"Error handling chat request: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal Server Error: Could not process chat request.")
 
 ###########################
 ### END OF THE MAIN CODE
