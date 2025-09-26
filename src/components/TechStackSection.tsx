@@ -236,7 +236,7 @@ export default function TechStackSection() {
 
       {/* Modal */}
       <Dialog open={!!selectedTech} onOpenChange={closeModal}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl z-50 bg-background border shadow-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center space-x-4">
               {selectedTech && (
@@ -244,7 +244,7 @@ export default function TechStackSection() {
                   <img
                     src={selectedTech.logo}
                     alt={selectedTech.name}
-                    className="w-12 h-12 rounded-lg"
+                    className="w-12 h-12 rounded-lg bg-white p-1"
                   />
                   <div>
                     <h3 className="text-2xl font-bold">{selectedTech.name}</h3>
