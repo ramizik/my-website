@@ -27,7 +27,7 @@ export default function TechStackSection() {
         {
           id: "nodejs",
           name: "Node.js",
-          logo: "https://via.placeholder.com/80x80/339933/ffffff?text=Node",
+          logo: "/src/assets/logos/nodejs.svg",
           experience: "4+ years",
           projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
           description: "Extensive experience building scalable server-side applications, RESTful APIs, and microservices architecture using Node.js and Express.js."
@@ -72,7 +72,7 @@ export default function TechStackSection() {
         {
           id: "react",
           name: "React",
-          logo: "https://via.placeholder.com/80x80/61DAFB/000000?text=React",
+          logo: "/src/assets/logos/react.svg",
           experience: "5+ years",
           projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
           description: "Expert in React ecosystem including hooks, context, state management, and modern patterns for building scalable user interfaces."
@@ -80,7 +80,7 @@ export default function TechStackSection() {
         {
           id: "typescript",
           name: "TypeScript",
-          logo: "https://via.placeholder.com/80x80/3178C6/ffffff?text=TS",
+          logo: "/src/assets/logos/typescript.svg",
           experience: "4+ years",
           projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
           description: "Strong expertise in TypeScript for type-safe development, advanced types, and large-scale application architecture."
