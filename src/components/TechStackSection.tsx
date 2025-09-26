@@ -209,23 +209,20 @@ export default function TechStackSection() {
           {techCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="text-center">
               <h3 className="text-2xl font-semibold mb-8">{category.title}</h3>
-              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
                 {category.technologies.map((tech) => (
                   <div
                     key={tech.id}
-                    className="group cursor-pointer transition-transform duration-300 hover:scale-110"
+                    className="group cursor-pointer transition-transform duration-300 hover:scale-110 p-3"
                     onClick={() => openModal(tech)}
                   >
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
                       <img
                         src={tech.logo}
                         alt={tech.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
-                    <p className="mt-3 text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                      {tech.name}
-                    </p>
                   </div>
                 ))}
               </div>
@@ -236,16 +233,18 @@ export default function TechStackSection() {
 
       {/* Modal */}
       <Dialog open={!!selectedTech} onOpenChange={closeModal}>
-        <DialogContent className="max-w-2xl z-50 bg-background border shadow-lg">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center space-x-4">
               {selectedTech && (
                 <>
-                  <img
-                    src={selectedTech.logo}
-                    alt={selectedTech.name}
-                    className="w-12 h-12 rounded-lg bg-white p-1"
-                  />
+                  <div className="w-12 h-12 flex items-center justify-center">
+                    <img
+                      src={selectedTech.logo}
+                      alt={selectedTech.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold">{selectedTech.name}</h3>
                     <Badge variant="secondary" className="mt-1">
