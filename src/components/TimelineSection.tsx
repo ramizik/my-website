@@ -272,13 +272,12 @@ export default function TimelineSection() {
           </p>
         </div>
 
-        {/* Timeline Container with proper button positioning */}
-        <div className="relative pt-32">
-           {/* Navigation Buttons - Highly visible with solid background */}
+        {/* Navigation Buttons - Positioned outside timeline container */}
+        <div className="relative flex justify-between items-center mb-8">
           <Button
             variant="outline"
             size="lg"
-            className="absolute left-4 -top-16 z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
+            className="z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
               scrollTimeline('left');
@@ -291,7 +290,7 @@ export default function TimelineSection() {
           <Button
             variant="outline"
             size="lg"
-            className="absolute right-4 -top-16 z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
+            className="z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
               scrollTimeline('right');
@@ -300,11 +299,14 @@ export default function TimelineSection() {
           >
             <ChevronRight className="h-10 w-10" />
           </Button>
+        </div>
 
-          {/* Scrollable Timeline - with proper margins for buttons */}
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Scrollable Timeline */}
           <div
             ref={timelineRef}
-            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-20 px-4 pt-24 pb-8 cursor-grab select-none"
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide px-4 pt-24 pb-8 cursor-grab select-none"
             onScroll={checkScrollButtons}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
