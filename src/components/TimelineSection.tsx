@@ -263,29 +263,31 @@ export default function TimelineSection() {
         {/* Navigation Buttons - Positioned outside timeline container */}
         <div className="relative flex justify-center items-center gap-8 mb-2">
           <Button
-            variant="outline"
+            variant="default"
             size="lg"
-            className="z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
+            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border-0 rounded-full px-6 py-3 group"
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
               scrollTimeline('left');
             }}
             disabled={!canScrollLeft}
           >
-            <ChevronLeft className="h-10 w-10" />
+            <ChevronLeft className="h-6 w-6 group-hover:scale-125 transition-transform duration-200" />
+            <span className="ml-2 font-medium">Previous</span>
           </Button>
 
           <Button
-            variant="outline"
+            variant="default"
             size="lg"
-            className="z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
+            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border-0 rounded-full px-6 py-3 group"
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
               scrollTimeline('right');
             }}
             disabled={!canScrollRight}
           >
-            <ChevronRight className="h-10 w-10" />
+            <span className="mr-2 font-medium">Next</span>
+            <ChevronRight className="h-6 w-6 group-hover:scale-125 transition-transform duration-200" />
           </Button>
         </div>
 
