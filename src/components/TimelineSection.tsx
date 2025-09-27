@@ -232,7 +232,7 @@ export default function TimelineSection() {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm shadow-md hover:bg-background"
+            className="absolute left-4 top-8 z-20 bg-background/95 backdrop-blur-sm shadow-lg hover:bg-background border-2"
             onClick={() => scrollTimeline('left')}
             disabled={!canScrollLeft}
           >
@@ -242,7 +242,7 @@ export default function TimelineSection() {
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm shadow-md hover:bg-background"
+            className="absolute right-4 top-8 z-20 bg-background/95 backdrop-blur-sm shadow-lg hover:bg-background border-2"
             onClick={() => scrollTimeline('right')}
             disabled={!canScrollRight}
           >
@@ -252,7 +252,7 @@ export default function TimelineSection() {
           {/* Scrollable Timeline */}
           <div
             ref={timelineRef}
-            className="timeline-container overflow-x-auto overflow-y-hidden scrollbar-hide px-12 cursor-grab"
+            className="timeline-container overflow-x-auto overflow-y-hidden scrollbar-hide px-16 pt-16 cursor-grab"
             onMouseDown={handleMouseDown}
             onMouseMove={isDragging ? handleMouseMove : undefined}
             onMouseUp={handleMouseUp}
@@ -262,16 +262,16 @@ export default function TimelineSection() {
             onTouchEnd={handleTouchEnd}
             onScroll={checkScrollButtons}
           >
-            <div className="relative flex items-start min-w-max pb-8 gap-8">
+            <div className="relative flex items-center min-w-max pb-8 gap-8">
               {/* Timeline Line */}
-              <div className="absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
               
               {/* Timeline Items */}
               {timelineItems.map((item) => (
-                <div key={item.id} className="relative flex flex-col items-center min-w-[320px]">
+                <div key={item.id} className="relative flex flex-col items-center min-w-[320px] z-10">
                   {/* Timeline Card */}
                   <Card 
-                    className="w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer mb-4"
+                    className="w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                     onClick={() => openModal(item)}
                   >
                     <CardContent className="p-6">
@@ -302,9 +302,6 @@ export default function TimelineSection() {
                       </div>
                     </CardContent>
                   </Card>
-                  
-                  {/* Timeline Dot */}
-                  <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
                 </div>
               ))}
             </div>
