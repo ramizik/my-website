@@ -263,31 +263,31 @@ export default function TimelineSection() {
         {/* Navigation Buttons - Positioned outside timeline container */}
         <div className="relative flex justify-center items-center gap-8 mb-2">
           <Button
-            variant="default"
+            variant="outline"
             size="lg"
-            className="z-20 bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 rounded-full px-6 py-3 group"
+            className="z-20 bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-32 h-12 flex items-center justify-center group"
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
               scrollTimeline('left');
             }}
             disabled={!canScrollLeft}
           >
-            <ChevronLeft className="h-6 w-6 group-hover:scale-125 transition-transform duration-200" />
-            <span className="ml-2 font-medium">Previous</span>
+            <ChevronLeft className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-200" />
+            <span className="font-medium text-sm">Previous</span>
           </Button>
 
           <Button
-            variant="default"
+            variant="outline"
             size="lg"
-            className="z-20 bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 rounded-full px-6 py-3 group"
+            className="z-20 bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-32 h-12 flex items-center justify-center group"
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
               scrollTimeline('right');
             }}
             disabled={!canScrollRight}
           >
-            <span className="mr-2 font-medium">Next</span>
-            <ChevronRight className="h-6 w-6 group-hover:scale-125 transition-transform duration-200" />
+            <span className="font-medium text-sm mr-2">Next</span>
+            <ChevronRight className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
           </Button>
         </div>
 
