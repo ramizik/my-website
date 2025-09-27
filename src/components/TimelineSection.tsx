@@ -1,18 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
-import { Badge } from "./ui/badge";
 import { Calendar, MapPin, Award, GraduationCap, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import SimpleModal from "./SimpleModal";
 
 export default function TimelineSection() {
   const timelineRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedEntry, setSelectedEntry] = useState<any>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  
+  // Drag scrolling state
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const timelineItems = [
     {
@@ -124,55 +125,90 @@ export default function TimelineSection() {
   };
 
   const scrollTimeline = (direction: 'left' | 'right') => {
+    console.log('scrollTimeline called:', direction);
     if (timelineRef.current) {
-      const scrollAmount = 350;
-      timelineRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
+      const scrollAmount = 500;
+      const currentScroll = timelineRef.current.scrollLeft;
+      const maxScroll = timelineRef.current.scrollWidth - timelineRef.current.clientWidth;
+      
+      console.log('Current scroll:', currentScroll, 'Max scroll:', maxScroll);
+      
+      const targetScroll = direction === 'left' 
+        ? Math.max(0, currentScroll - scrollAmount)
+        : Math.min(maxScroll, currentScroll + scrollAmount);
+      
+      console.log('Target scroll:', targetScroll);
+      
+      // Force smooth scrolling
+      timelineRef.current.style.scrollBehavior = 'smooth';
+      
+      // Try multiple methods for maximum compatibility
+      timelineRef.current.scrollTo({
+        left: targetScroll,
         behavior: 'smooth'
       });
-      // Update button states after scroll
-      setTimeout(checkScrollButtons, 300);
+      
+      // Fallback method
+      setTimeout(() => {
+        if (timelineRef.current && Math.abs(timelineRef.current.scrollLeft - targetScroll) > 10) {
+          timelineRef.current.scrollLeft = targetScroll;
+        }
+      }, 100);
+      
+      // Update button states after scroll animation completes
+      setTimeout(checkScrollButtons, 700);
+    } else {
+      console.log('timelineRef.current is null');
     }
   };
 
+  // Drag scrolling handlers
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!timelineRef.current) return;
+    // Only start dragging on left mouse button and not on navigation buttons
+    if (e.button !== 0) return;
+    
+    const target = e.target as HTMLElement;
+    // Only prevent dragging on navigation buttons, allow dragging everywhere else including cards
+    if (target.closest('button:not([data-timeline-card])') || 
+        target.closest('[role="button"]:not([data-timeline-card])')) {
+      return;
+    }
+    
+    e.preventDefault();
     setIsDragging(true);
     setStartX(e.pageX);
     setScrollLeft(timelineRef.current.scrollLeft);
     timelineRef.current.style.cursor = 'grabbing';
+    timelineRef.current.style.userSelect = 'none';
+    console.log('Drag started - pageX:', e.pageX, 'scrollLeft:', timelineRef.current.scrollLeft);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !timelineRef.current) return;
+    e.preventDefault();
     const x = e.pageX;
-    const walk = (x - startX) * 2;
-    timelineRef.current.scrollLeft = scrollLeft - walk;
+    const walk = (x - startX) * 2; // Increased sensitivity
+    const newScrollLeft = scrollLeft - walk;
+    timelineRef.current.scrollLeft = newScrollLeft;
+    console.log('Dragging - pageX:', x, 'walk:', walk, 'newScrollLeft:', newScrollLeft);
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
-    if (timelineRef.current) {
-      timelineRef.current.style.cursor = 'grab';
-    }
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
     if (!timelineRef.current) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX);
-    setScrollLeft(timelineRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !timelineRef.current) return;
-    const x = e.touches[0].pageX;
-    const walk = (x - startX) * 1.5;
-    timelineRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
     setIsDragging(false);
+    timelineRef.current.style.cursor = 'grab';
+    timelineRef.current.style.userSelect = 'auto';
+    checkScrollButtons();
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging && timelineRef.current) {
+      setIsDragging(false);
+      timelineRef.current.style.cursor = 'grab';
+      timelineRef.current.style.userSelect = 'auto';
+      checkScrollButtons();
+    }
   };
 
   const openModal = (entry: any) => {
@@ -183,26 +219,36 @@ export default function TimelineSection() {
     setSelectedEntry(null);
   };
 
+  // Global mouse events for drag scrolling
   useEffect(() => {
     const handleGlobalMouseUp = () => {
-      setIsDragging(false);
+      if (isDragging && timelineRef.current) {
+        setIsDragging(false);
+        timelineRef.current.style.cursor = 'grab';
+        timelineRef.current.style.userSelect = 'auto';
+        checkScrollButtons();
+      }
     };
 
     const handleGlobalMouseMove = (e: MouseEvent) => {
       if (!isDragging || !timelineRef.current) return;
+      e.preventDefault();
       const x = e.pageX;
       const walk = (x - startX) * 2;
-      timelineRef.current.scrollLeft = scrollLeft - walk;
+      const newScrollLeft = scrollLeft - walk;
+      timelineRef.current.scrollLeft = newScrollLeft;
     };
 
     if (isDragging) {
       document.addEventListener('mouseup', handleGlobalMouseUp);
       document.addEventListener('mousemove', handleGlobalMouseMove);
+      document.addEventListener('mouseleave', handleGlobalMouseUp);
     }
 
     return () => {
       document.removeEventListener('mouseup', handleGlobalMouseUp);
       document.removeEventListener('mousemove', handleGlobalMouseMove);
+      document.removeEventListener('mouseleave', handleGlobalMouseUp);
     };
   }, [isDragging, startX, scrollLeft]);
 
@@ -226,75 +272,82 @@ export default function TimelineSection() {
           </p>
         </div>
 
-        {/* Timeline Container */}
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-4 top-8 z-20 bg-background/95 backdrop-blur-sm shadow-lg hover:bg-background border-2"
-            onClick={() => scrollTimeline('left')}
+        {/* Timeline Container with proper button positioning */}
+        <div className="relative pt-20">
+           {/* Navigation Buttons - Highly visible with solid background */}
+           <Button
+            variant="default"
+            size="lg"
+            className="absolute left-4 -top-16 z-50 bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-all duration-200 hover:scale-110 w-24 h-32 rounded-full"
+            style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
+            onClick={() => {
+              console.log('Left button clicked, canScrollLeft:', canScrollLeft);
+              scrollTimeline('left');
+            }}
             disabled={!canScrollLeft}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-10 w-10" />
           </Button>
 
           <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-4 top-8 z-20 bg-background/95 backdrop-blur-sm shadow-lg hover:bg-background border-2"
-            onClick={() => scrollTimeline('right')}
+            variant="default"
+            size="lg"
+            className="absolute right-4 -top-16 z-50 bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-all duration-200 hover:scale-110 w-24 h-32 rounded-full"
+            style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
+            onClick={() => {
+              console.log('Right button clicked, canScrollRight:', canScrollRight);
+              scrollTimeline('right');
+            }}
             disabled={!canScrollRight}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-10 w-10" />
           </Button>
 
-          {/* Scrollable Timeline */}
+          {/* Scrollable Timeline - with proper margins for buttons */}
           <div
             ref={timelineRef}
-            className="timeline-container overflow-x-auto overflow-y-hidden scrollbar-hide px-16 pt-16 cursor-grab"
-            onMouseDown={handleMouseDown}
-            onMouseMove={isDragging ? handleMouseMove : undefined}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-24 px-8 mt-28 cursor-grab select-none"
             onScroll={checkScrollButtons}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            style={{ scrollBehavior: isDragging ? 'auto' : 'smooth' }}
           >
-            <div className="relative flex items-center min-w-max pb-8 gap-8">
+            <div className="relative flex items-center gap-16 py-8" style={{ width: 'max-content' }}>
               {/* Timeline Line */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
               {/* Timeline Items */}
-              {timelineItems.map((item) => (
-                <div key={item.id} className="relative flex flex-col items-center min-w-[320px] z-10">
+              {timelineItems.map((item, index) => (
+                <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '380px' }}>
                   {/* Timeline Card */}
                   <Card 
-                    className="w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                    data-timeline-card
+                    className="w-full bg-white/95 backdrop-blur-sm border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                     onClick={() => openModal(item)}
                   >
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className={`w-12 h-12 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
-                          <item.icon className="h-6 w-6 text-white" />
+                        <div className={`w-14 h-14 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
+                          <item.icon className="h-7 w-7 text-white" />
                         </div>
                         
                         <div className="flex-1 min-w-0">
-                          <Badge variant="outline" className="mb-2 text-xs">
+                          <div className="mb-3 text-sm border rounded px-2 py-1 inline-block">
                             {getTypeLabel(item.type)}
-                          </Badge>
+                          </div>
                           
-                          <h3 className="font-semibold text-lg mb-1 line-clamp-2">{item.title}</h3>
-                          <p className="text-primary font-medium mb-2">{item.company}</p>
+                          <h3 className="font-semibold text-xl mb-2 line-clamp-2">{item.title}</h3>
+                          <p className="text-primary font-medium mb-3 text-lg">{item.company}</p>
                           
-                          <div className="space-y-1 text-sm text-muted-foreground">
+                          <div className="space-y-2 text-sm text-muted-foreground">
                             <div className="flex items-center">
-                              <MapPin className="mr-1 h-3 w-3 flex-shrink-0" />
+                              <MapPin className="mr-2 h-4 w-4 flex-shrink-0" />
                               <span className="truncate">{item.location}</span>
                             </div>
                             <div className="flex items-center">
-                              <Calendar className="mr-1 h-3 w-3 flex-shrink-0" />
+                              <Calendar className="mr-2 h-4 w-4 flex-shrink-0" />
                               <span>{item.period}</span>
                             </div>
                           </div>
@@ -314,15 +367,11 @@ export default function TimelineSection() {
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
+          overflow-x: auto;
+          overflow-y: hidden;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
-        }
-        .timeline-container {
-          scroll-behavior: smooth;
-        }
-        .timeline-item {
-          min-width: 320px;
         }
         .line-clamp-2 {
           display: -webkit-box;
@@ -333,53 +382,59 @@ export default function TimelineSection() {
       `}</style>
 
       {/* Detailed Entry Modal */}
-      <SimpleModal isOpen={!!selectedEntry} onClose={closeModal}>
-        {selectedEntry && (
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className={`w-16 h-16 rounded-full ${getTypeColor(selectedEntry.type)} flex items-center justify-center`}>
-                <selectedEntry.icon className="h-8 w-8 text-white" />
+      <SimpleModal 
+        isOpen={!!selectedEntry} 
+        onClose={closeModal}
+        children={
+          selectedEntry ? (
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className={`w-16 h-16 rounded-full ${getTypeColor(selectedEntry.type)} flex items-center justify-center`}>
+                  <selectedEntry.icon className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">{selectedEntry.title}</h3>
+                  <p className="text-lg text-primary font-medium">{selectedEntry.company}</p>
+                  <div className="flex items-center text-sm text-muted-foreground mt-1">
+                    <MapPin className="mr-1 h-4 w-4" />
+                    {selectedEntry.location}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground mt-1">
+                    <Calendar className="mr-1 h-4 w-4" />
+                    {selectedEntry.period}
+                  </div>
+                </div>
               </div>
+
               <div>
-                <h3 className="text-2xl font-bold">{selectedEntry.title}</h3>
-                <p className="text-lg text-primary font-medium">{selectedEntry.company}</p>
-                <div className="flex items-center text-sm text-muted-foreground mt-1">
-                  <MapPin className="mr-1 h-4 w-4" />
-                  {selectedEntry.location}
+                <div className="mb-3 border rounded px-2 py-1 inline-block">
+                  {getTypeLabel(selectedEntry.type)}
                 </div>
-                <div className="flex items-center text-sm text-muted-foreground mt-1">
-                  <Calendar className="mr-1 h-4 w-4" />
-                  {selectedEntry.period}
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-3">Description</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {selectedEntry.description}
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-3">Key Achievements</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedEntry.achievements.map((achievement: string, achievementIndex: number) => (
+                    <div key={achievementIndex} className="text-sm bg-secondary rounded px-2 py-1">
+                      {achievement}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-
-            <div>
-              <Badge variant="outline" className="mb-3">
-                {getTypeLabel(selectedEntry.type)}
-              </Badge>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3">Description</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                {selectedEntry.description}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3">Key Achievements</h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedEntry.achievements.map((achievement: string, achievementIndex: number) => (
-                  <Badge key={achievementIndex} variant="secondary" className="text-sm">
-                    {achievement}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-      </SimpleModal>
+          ) : (
+            <div>Loading...</div>
+          )
+        }
+      />
     </section>
   );
 }
