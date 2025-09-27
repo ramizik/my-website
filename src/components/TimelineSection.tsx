@@ -126,12 +126,8 @@ export default function TimelineSection() {
   const scrollTimeline = (direction: 'left' | 'right') => {
     if (timelineRef.current) {
       const scrollAmount = 400;
-      const newScrollLeft = direction === 'left' 
-        ? timelineRef.current.scrollLeft - scrollAmount
-        : timelineRef.current.scrollLeft + scrollAmount;
-      
-      timelineRef.current.scrollTo({
-        left: newScrollLeft,
+      timelineRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -139,22 +135,24 @@ export default function TimelineSection() {
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!timelineRef.current) return;
-    e.preventDefault();
     setIsDragging(true);
     setStartX(e.pageX);
     setScrollLeft(timelineRef.current.scrollLeft);
+    timelineRef.current.style.cursor = 'grabbing';
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !timelineRef.current) return;
-    e.preventDefault();
     const x = e.pageX;
-    const walk = (x - startX) * 1.5;
+    const walk = (x - startX) * 2;
     timelineRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
+    if (timelineRef.current) {
+      timelineRef.current.style.cursor = 'grab';
+    }
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -167,7 +165,7 @@ export default function TimelineSection() {
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging || !timelineRef.current) return;
     const x = e.touches[0].pageX;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 1.5;
     timelineRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -190,9 +188,8 @@ export default function TimelineSection() {
 
     const handleGlobalMouseMove = (e: MouseEvent) => {
       if (!isDragging || !timelineRef.current) return;
-      e.preventDefault();
       const x = e.pageX;
-      const walk = (x - startX) * 1.5;
+      const walk = (x - startX) * 2;
       timelineRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -253,14 +250,14 @@ export default function TimelineSection() {
           {/* Scrollable Timeline */}
           <div
             ref={timelineRef}
-            className="timeline-container overflow-x-auto scrollbar-hide px-12"
+            className="timeline-container overflow-x-auto scrollbar-hide px-12 cursor-grab"
             onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
+            onMouseMove={isDragging ? handleMouseMove : undefined}
             onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
             <div className="timeline-track relative flex items-center min-w-max pb-8">
               {/* Timeline Line */}
@@ -269,13 +266,8 @@ export default function TimelineSection() {
               {/* Timeline Items */}
               {timelineItems.map((item, index) => (
                 <div key={item.id} className="timeline-item relative flex flex-col items-center mx-8 first:ml-0 last:mr-0">
-                  {/* Year Badge */}
-                  <div className="absolute -top-16 bg-background border-2 border-primary/20 rounded-full px-4 py-2 shadow-md">
-                    <span className="text-sm font-bold text-primary">{item.year}</span>
-                  </div>
-
                   {/* Timeline Dot */}
-                  <div className={`timeline-dot w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg z-10 mb-6 cursor-pointer hover:scale-125 transition-transform duration-300`}
+                  <div className={`timeline-dot w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg z-10 mb-6 cursor-pointer hover:scale-125 transition-transform duration-300 relative -top-3`}
                        onClick={() => openModal(item)}>
                   </div>
 
