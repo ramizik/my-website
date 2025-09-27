@@ -273,7 +273,7 @@ export default function TimelineSection() {
         </div>
 
         {/* Navigation Buttons - Positioned outside timeline container */}
-        <div className="relative flex justify-between items-center mb-8">
+        <div className="relative flex justify-between items-center mb-4">
           <Button
             variant="outline"
             size="lg"
