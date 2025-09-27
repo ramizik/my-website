@@ -366,36 +366,39 @@ export default function TimelineSection() {
               
               {/* Timeline Items */}
               {timelineItems.map((item, index) => (
-                <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '350px' }}>
+                <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '400px' }}>
                   {/* Timeline Card */}
                   <Card 
                     data-timeline-card
-                    className="w-full bg-white/95 backdrop-blur-sm border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                    className="w-full h-80 bg-white/95 backdrop-blur-sm border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col"
                     onClick={() => openModal(item)}
                   >
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className={`w-14 h-14 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
-                          <item.icon className="h-7 w-7 text-white" />
+                    <CardContent className="p-6 flex flex-col h-full">
+                      {/* Main Content Area */}
+                      <div className="flex-1 flex flex-col">
+                        <h3 className="font-semibold text-xl mb-3 leading-tight">{item.title}</h3>
+                        <p className="text-primary font-medium mb-4 text-lg">{item.company}</p>
+                        
+                        <div className="mb-4 text-sm text-muted-foreground">
+                          <div className="flex items-center">
+                            <Calendar className="mr-2 h-4 w-4 flex-shrink-0" />
+                            <span>{item.period}</span>
+                          </div>
                         </div>
                         
-                        <div className="flex-1 min-w-0">
-                          <div className="mb-3 text-sm border rounded px-2 py-1 inline-block">
-                            {getTypeLabel(item.type)}
+                        <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                          {item.description.length > 120 ? `${item.description.substring(0, 120)}...` : item.description}
+                        </p>
+                      </div>
+                      
+                      {/* Category Section at Bottom */}
+                      <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-10 h-10 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
+                            <item.icon className="h-5 w-5 text-white" />
                           </div>
-                          
-                          <h3 className="font-semibold text-xl mb-2 line-clamp-2">{item.title}</h3>
-                          <p className="text-primary font-medium mb-3 text-lg">{item.company}</p>
-                          
-                          <div className="space-y-2 text-sm text-muted-foreground">
-                            <div className="flex items-center">
-                              <MapPin className="mr-2 h-4 w-4 flex-shrink-0" />
-                              <span className="truncate">{item.location}</span>
-                            </div>
-                            <div className="flex items-center">
-                              <Calendar className="mr-2 h-4 w-4 flex-shrink-0" />
-                              <span>{item.period}</span>
-                            </div>
+                          <div className="text-sm font-medium text-muted-foreground">
+                            {getTypeLabel(item.type)}
                           </div>
                         </div>
                       </div>
