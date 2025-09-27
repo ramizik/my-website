@@ -314,9 +314,9 @@ export default function TimelineSection() {
             onMouseLeave={handleMouseLeave}
             style={{ scrollBehavior: isDragging ? 'auto' : 'smooth' }}
           >
-            <div className="relative flex items-center gap-8 py-12" style={{ width: 'max-content' }}>
+            <div className="relative flex items-center gap-8 py-12 justify-start" style={{ width: 'max-content', minWidth: '100%' }}>
               {/* Timeline Line */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
+              <div className="absolute top-1/2 -translate-y-1/2 left-8 right-8 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
               {/* Timeline Items */}
               {timelineItems.map((item, index) => (
