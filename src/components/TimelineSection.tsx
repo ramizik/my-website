@@ -265,7 +265,7 @@ export default function TimelineSection() {
           <Button
             variant="default"
             size="lg"
-            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border-0 rounded-full px-6 py-3 group"
+            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-2 border-blue-500 hover:border-blue-600 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 rounded-full px-6 py-3 group"
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
               scrollTimeline('left');
@@ -279,7 +279,7 @@ export default function TimelineSection() {
           <Button
             variant="default"
             size="lg"
-            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border-0 rounded-full px-6 py-3 group"
+            className="z-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-2 border-blue-500 hover:border-blue-600 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 rounded-full px-6 py-3 group"
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
               scrollTimeline('right');
