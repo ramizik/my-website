@@ -276,10 +276,9 @@ export default function TimelineSection() {
         <div className="relative pt-20">
            {/* Navigation Buttons - Highly visible with solid background */}
            <Button
-            variant="default"
+            variant="outline"
             size="lg"
-            className="absolute left-4 -top-4 z-20 bg-background/95 text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2"
-            style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
+            className="absolute right-4 -top-4 z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
               scrollTimeline('left');
@@ -290,10 +289,9 @@ export default function TimelineSection() {
           </Button>
 
           <Button
-            variant="default"
+            variant="outline"
             size="lg"
-            className="absolute right-4 -top-4 z-20 bg-background/95 text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2"
-            style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
+            className="absolute left-4 -top-4 z-20 bg-background/95 backdrop-blur-sm text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2 border-border"
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
               scrollTimeline('right');
