@@ -242,6 +242,16 @@ export default function TimelineSection() {
 
   useEffect(() => {
     checkScrollButtons();
+    // Set initial scroll position to show all cards properly
+    if (timelineRef.current) {
+      const containerWidth = timelineRef.current.clientWidth;
+      const contentWidth = timelineRef.current.scrollWidth;
+      // Center the content if it's wider than container
+      if (contentWidth > containerWidth) {
+        const initialScroll = Math.max(0, (contentWidth - containerWidth) / 4);
+        timelineRef.current.scrollLeft = initialScroll;
+      }
+    }
     const timeline = timelineRef.current;
     if (timeline) {
       timeline.addEventListener('scroll', checkScrollButtons);
@@ -294,7 +304,7 @@ export default function TimelineSection() {
           {/* Scrollable Timeline */}
           <div
             ref={timelineRef}
-            className="overflow-x-auto overflow-y-hidden scrollbar-hide px-4 pt-24 pb-8 cursor-grab select-none"
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide px-2 pt-24 pb-8 cursor-grab select-none"
             onScroll={checkScrollButtons}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
@@ -302,13 +312,13 @@ export default function TimelineSection() {
             onMouseLeave={handleMouseLeave}
             style={{ scrollBehavior: isDragging ? 'auto' : 'smooth' }}
           >
-            <div className="relative flex items-center gap-8 py-12" style={{ width: 'max-content', paddingLeft: '2rem', paddingRight: '2rem' }}>
+            <div className="relative flex items-center gap-6 py-12" style={{ width: 'max-content', paddingLeft: '1rem', paddingRight: '1rem' }}>
               {/* Timeline Line */}
               <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
               {/* Timeline Items */}
               {timelineItems.slice(0, 3).map((item, index) => (
-                <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '380px' }}>
+                <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '350px' }}>
                   {/* Timeline Card */}
                   <Card 
                     data-timeline-card
