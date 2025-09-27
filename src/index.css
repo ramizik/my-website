@@ -2217,6 +2217,7 @@
 
 html {
   font-size: var(--font-size);
+  scroll-padding-top: 4rem; /* 64px - height of the fixed navbar */
 }
 
 @property --tw-rotate-x {
