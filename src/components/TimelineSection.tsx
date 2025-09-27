@@ -30,6 +30,18 @@ export default function TimelineSection() {
     },
     {
       id: 3,
+      type: "education",
+      title: "Computer Science Degree",
+      company: "UC Berkeley",
+      location: "Berkeley, CA",
+      period: "2015 - 2019",
+      year: "2019",
+      description: "Bachelor of Science in Computer Science with focus on software engineering, algorithms, and data structures. Graduated Magna Cum Laude with 3.8 GPA.",
+      achievements: ["Magna Cum Laude", "Dean's List 6 semesters", "CS Honor Society"],
+      icon: GraduationCap
+    },
+    {
+      id: 3,
       type: "work",
       title: "Frontend Developer",
       company: "Digital Innovations",
@@ -66,6 +78,18 @@ export default function TimelineSection() {
     },
     {
       id: 6,
+      type: "certification",
+      title: "Google Cloud Professional",
+      company: "Google Cloud",
+      location: "Online",
+      period: "2022",
+      year: "2022",
+      description: "Achieved Google Cloud Professional Cloud Architect certification, demonstrating expertise in designing and managing scalable, secure cloud solutions on GCP.",
+      achievements: ["Cloud architecture design", "Multi-cloud expertise", "Container orchestration"],
+      icon: Award
+    },
+    {
+      id: 7,
       type: "work",
       title: "Senior Full-Stack Developer",
       company: "TechFlow Solutions",
@@ -75,6 +99,30 @@ export default function TimelineSection() {
       description: "Leading development of scalable web applications, mentoring junior developers, and implementing DevOps best practices. Increased application performance by 40% and reduced deployment time by 60%.",
       achievements: ["Led team of 5 developers", "40% performance improvement", "Implemented CI/CD pipeline"],
       icon: Briefcase
+    },
+    {
+      id: 8,
+      type: "work",
+      title: "Tech Lead & Architect",
+      company: "InnovateTech Corp",
+      location: "San Francisco, CA",
+      period: "2023 - Present",
+      year: "2023",
+      description: "Leading technical architecture decisions for multiple products, managing a team of 8 developers, and driving digital transformation initiatives. Architected microservices platform serving 1M+ users.",
+      achievements: ["Microservices architecture", "Team leadership (8 devs)", "1M+ users platform"],
+      icon: Briefcase
+    },
+    {
+      id: 9,
+      type: "certification",
+      title: "Kubernetes Administrator",
+      company: "Cloud Native Computing Foundation",
+      location: "Online",
+      period: "2023",
+      year: "2023",
+      description: "Certified Kubernetes Administrator (CKA) certification, demonstrating hands-on skills in Kubernetes cluster administration, troubleshooting, and best practices.",
+      achievements: ["Cluster administration", "Container orchestration", "Production troubleshooting"],
+      icon: Award
     }
   ];
 
@@ -317,7 +365,7 @@ export default function TimelineSection() {
               <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
               {/* Timeline Items */}
-              {timelineItems.slice(0, 3).map((item, index) => (
+              {timelineItems.map((item, index) => (
                 <div key={item.id} className="relative flex flex-col items-center flex-shrink-0 z-10" style={{ width: '350px' }}>
                   {/* Timeline Card */}
                   <Card 
