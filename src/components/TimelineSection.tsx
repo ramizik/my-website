@@ -29,18 +29,6 @@ export default function TimelineSection() {
       icon: Briefcase
     },
     {
-      id: 2,
-      type: "education",
-      title: "Bachelor of Science in Computer Science",
-      company: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2015 - 2019",
-      year: "2019",
-      description: "Graduated Magna Cum Laude with focus on software engineering, algorithms, and database systems. Active member of ACM and programming competition team.",
-      achievements: ["Magna Cum Laude", "ACM Programming Team", "Dean's List 6 semesters"],
-      icon: GraduationCap
-    },
-    {
       id: 3,
       type: "work",
       title: "Frontend Developer",
