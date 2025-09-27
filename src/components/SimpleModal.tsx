@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { createPortal } from "react-dom";
 
 interface SimpleModalProps {
   isOpen: boolean;
@@ -8,9 +7,7 @@ interface SimpleModalProps {
 }
 
 export default function SimpleModal({ isOpen, onClose, children }: SimpleModalProps) {
-  if (!isOpen) {
-    return null;
-  }
+  console.log('SimpleModal render - isOpen:', isOpen);
 
   // Handle ESC key press
   useEffect(() => {
@@ -31,37 +28,44 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
     };
   }, [isOpen, onClose]);
 
+  if (!isOpen) return null;
+
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
 
-  const modalContent = (
+  // Check if dark mode is active
+  const isDarkMode = document.documentElement.classList.contains('dark');
+
+  return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-[9999] flex items-center justify-center"
       onClick={handleBackdropClick}
-      style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        right: 0, 
-        bottom: 0, 
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         zIndex: 9999,
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
       }}
     >
       <div
-        className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto relative shadow-lg border"
+        className="rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto relative shadow-lg border"
         onClick={(e) => e.stopPropagation()}
-        style={{ 
+        style={{
           zIndex: 10000,
-          backgroundColor: '#ffffff'
+          backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
+          color: isDarkMode ? '#f9fafb' : '#111827',
+          borderColor: isDarkMode ? '#4b5563' : '#e5e7eb'
         }}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl font-bold"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl font-bold"
         >
           ×
         </button>
@@ -69,6 +73,4 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
       </div>
     </div>
   );
-
-  return createPortal(modalContent, document.body);
 }
