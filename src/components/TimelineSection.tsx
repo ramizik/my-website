@@ -1,19 +1,22 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Calendar, MapPin, Award, GraduationCap, Briefcase } from "lucide-react";
+import { Calendar, MapPin, Award, GraduationCap, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "./ui/button";
 import SimpleModal from "./SimpleModal";
 
 export default function TimelineSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedEntry, setSelectedEntry] = useState<any>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const timelineItems = [
     {
-      id: 6,
+      id: 1,
       type: "work",
       title: "Software Engineering Intern",
       company: "Google",
@@ -25,7 +28,7 @@ export default function TimelineSection() {
       icon: Briefcase
     },
     {
-      id: 5,
+      id: 2,
       type: "education",
       title: "Bachelor of Science in Computer Science",
       company: "University of California, Berkeley",
@@ -37,7 +40,7 @@ export default function TimelineSection() {
       icon: GraduationCap
     },
     {
-      id: 4,
+      id: 3,
       type: "work",
       title: "Frontend Developer",
       company: "Digital Innovations",
@@ -49,7 +52,7 @@ export default function TimelineSection() {
       icon: Briefcase
     },
     {
-      id: 2,
+      id: 4,
       type: "work",
       title: "Full-Stack Developer",
       company: "StartupHub Inc.",
@@ -61,7 +64,7 @@ export default function TimelineSection() {
       icon: Briefcase
     },
     {
-      id: 3,
+      id: 5,
       type: "certification",
       title: "AWS Solutions Architect",
       company: "Amazon Web Services",
@@ -73,7 +76,7 @@ export default function TimelineSection() {
       icon: Award
     },
     {
-      id: 1,
+      id: 6,
       type: "work",
       title: "Senior Full-Stack Developer",
       company: "TechFlow Solutions",
@@ -112,39 +115,60 @@ export default function TimelineSection() {
     }
   };
 
+  const checkScrollButtons = () => {
+    if (timelineRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = timelineRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scrollTimeline = (direction: 'left' | 'right') => {
+    if (timelineRef.current) {
+      const scrollAmount = 400;
+      const newScrollLeft = direction === 'left' 
+        ? timelineRef.current.scrollLeft - scrollAmount
+        : timelineRef.current.scrollLeft + scrollAmount;
+      
+      timelineRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
+    if (!timelineRef.current) return;
     e.preventDefault();
     setIsDragging(true);
     setStartX(e.pageX);
-    setScrollLeft(containerRef.current.scrollLeft);
+    setScrollLeft(timelineRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !timelineRef.current) return;
+    e.preventDefault();
+    const x = e.pageX;
+    const walk = (x - startX) * 1.5;
+    timelineRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !containerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX;
-    const walk = (x - startX) * 1.2; // Reduced sensitivity for smoother control
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   const handleTouchStart = (e: React.TouchEvent) => {
-    if (!containerRef.current) return;
+    if (!timelineRef.current) return;
     setIsDragging(true);
     setStartX(e.touches[0].pageX);
-    setScrollLeft(containerRef.current.scrollLeft);
+    setScrollLeft(timelineRef.current.scrollLeft);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !containerRef.current) return;
-    e.preventDefault();
+    if (!isDragging || !timelineRef.current) return;
     const x = e.touches[0].pageX;
     const walk = (x - startX) * 2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
+    timelineRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleTouchEnd = () => {
@@ -165,121 +189,163 @@ export default function TimelineSection() {
     };
 
     const handleGlobalMouseMove = (e: MouseEvent) => {
-      if (!isDragging || !containerRef.current) return;
+      if (!isDragging || !timelineRef.current) return;
       e.preventDefault();
       const x = e.pageX;
-      const walk = (x - startX) * 1.2;
-      containerRef.current.scrollLeft = scrollLeft - walk;
+      const walk = (x - startX) * 1.5;
+      timelineRef.current.scrollLeft = scrollLeft - walk;
     };
 
     if (isDragging) {
       document.addEventListener('mouseup', handleGlobalMouseUp);
       document.addEventListener('mousemove', handleGlobalMouseMove);
-      document.addEventListener('mouseleave', handleGlobalMouseUp);
     }
 
     return () => {
       document.removeEventListener('mouseup', handleGlobalMouseUp);
       document.removeEventListener('mousemove', handleGlobalMouseMove);
-      document.removeEventListener('mouseleave', handleGlobalMouseUp);
     };
   }, [isDragging, startX, scrollLeft]);
 
+  useEffect(() => {
+    checkScrollButtons();
+    const timeline = timelineRef.current;
+    if (timeline) {
+      timeline.addEventListener('scroll', checkScrollButtons);
+      return () => timeline.removeEventListener('scroll', checkScrollButtons);
+    }
+  }, []);
+
   return (
-    <section id="timeline" className="py-12">
+    <section id="timeline" className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        {/* Section Header */}
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             My career milestones, achievements, and continuous learning path
           </p>
         </div>
 
+        {/* Timeline Container */}
         <div className="relative">
-          {/* Horizontal Timeline Container */}
+          {/* Navigation Buttons */}
+          <Button
+            variant="outline"
+            size="icon"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : ''}`}
+            onClick={() => scrollTimeline('left')}
+            disabled={!canScrollLeft}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+
+          <Button
+            variant="outline"
+            size="icon"
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : ''}`}
+            onClick={() => scrollTimeline('right')}
+            disabled={!canScrollRight}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+
+          {/* Scrollable Timeline */}
           <div
-            ref={containerRef}
-            className="overflow-x-auto scrollbar-hide select-none"
+            ref={timelineRef}
+            className="timeline-container overflow-x-auto scrollbar-hide px-12"
             onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
-            <div className="relative flex items-end space-x-[600px] pb-8 min-w-max px-20 pt-32">
-              {/* First year positioned before the first entry */}
-              <div className="absolute left-[40px] top-12 text-center z-30">
-                <div className="bg-background px-5 py-3 rounded-full border shadow-md">
-                  <span className="text-xl font-bold text-primary">2020</span>
-                </div>
-              </div>
-
-              {/* Horizontal timeline line - Much more visible */}
-              <div className="absolute bottom-[2.75rem] left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-full shadow-lg"></div>
-              <div className="absolute bottom-[2.6rem] left-0 right-0 h-4 bg-gradient-to-r from-blue-400/40 via-purple-400/40 to-indigo-400/40 rounded-full blur-sm"></div>
-
+            <div className="timeline-track relative flex items-center min-w-max pb-8">
+              {/* Timeline Line */}
+              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
+              
+              {/* Timeline Items */}
               {timelineItems.map((item, index) => (
-                <div key={item.id} className="relative flex flex-col items-center min-w-[280px] max-w-[280px] flex-shrink-0">
-                  {/* Year positioned in the CENTER of the 600px gap after each entry */}
-                  {index < timelineItems.length - 1 && (
-                    <div className="absolute left-[580px] top-[-200px] text-center z-30">
-                      <div className="bg-background px-5 py-3 rounded-full border shadow-md">
-                        <span className="text-xl font-bold text-primary">{2021 + index}</span>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Clickable Logo */}
-                  <div
-                    className={`w-16 h-16 rounded-full ${getTypeColor(item.type)} flex items-center justify-center mb-4 cursor-pointer hover:scale-110 hover:animate-pulse transition-all duration-300 shadow-lg hover:shadow-xl group`}
-                    onClick={() => openModal(item)}
-                  >
-                    <item.icon className="h-8 w-8 text-white transition-transform duration-300 group-hover:scale-110" />
+                <div key={item.id} className="timeline-item relative flex flex-col items-center mx-8 first:ml-0 last:mr-0">
+                  {/* Year Badge */}
+                  <div className="absolute -top-16 bg-background border-2 border-primary/20 rounded-full px-4 py-2 shadow-md">
+                    <span className="text-sm font-bold text-primary">{item.year}</span>
                   </div>
 
-                  {/* Compact Timeline card - Clickable */}
-                  <Card
-                    className="w-full border border-border/20 bg-card/95 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 mb-12 cursor-pointer"
+                  {/* Timeline Dot */}
+                  <div className={`timeline-dot w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg z-10 mb-6 cursor-pointer hover:scale-125 transition-transform duration-300`}
+                       onClick={() => openModal(item)}>
+                  </div>
+
+                  {/* Timeline Card */}
+                  <Card 
+                    className="timeline-card w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                     onClick={() => openModal(item)}
                   >
                     <CardContent className="p-6">
-                      <div className="text-center space-y-4">
-                        <Badge variant="outline" className="text-sm mb-3">
-                          {getTypeLabel(item.type)}
-                        </Badge>
-
-                        <h3 className="font-semibold text-lg leading-tight">{item.title}</h3>
-                        <p className="text-primary font-medium text-base">{item.company}</p>
-
-                        <div className="flex items-center justify-center text-sm text-muted-foreground">
-                          <MapPin className="mr-1 h-4 w-4" />
-                          {item.location}
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-12 h-12 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
+                          <item.icon className="h-6 w-6 text-white" />
+                        </div>
+                        
+                        <div className="flex-1 min-w-0">
+                          <Badge variant="outline" className="mb-2 text-xs">
+                            {getTypeLabel(item.type)}
+                          </Badge>
+                          
+                          <h3 className="font-semibold text-lg mb-1 line-clamp-2">{item.title}</h3>
+                          <p className="text-primary font-medium mb-2">{item.company}</p>
+                          
+                          <div className="space-y-1 text-sm text-muted-foreground">
+                            <div className="flex items-center">
+                              <MapPin className="mr-1 h-3 w-3 flex-shrink-0" />
+                              <span className="truncate">{item.location}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Calendar className="mr-1 h-3 w-3 flex-shrink-0" />
+                              <span>{item.period}</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-
-                  {/* Timeline dot */}
-                  <div className="w-3 h-3 rounded-full bg-black border-2 border-background shadow-lg z-20 absolute bottom-[2.75rem]"></div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="flex justify-center mt-6">
+            <div className="flex space-x-2">
+              {timelineItems.map((_, index) => (
+                <div key={index} className="w-2 h-2 rounded-full bg-muted"></div>
               ))}
             </div>
           </div>
         </div>
       </div>
 
+      {/* Custom Styles */}
       <style jsx>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
-          overflow-x: scroll;
-          overflow-y: hidden;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
-        .line-clamp-3 {
+        .timeline-container {
+          scroll-behavior: smooth;
+        }
+        .timeline-item {
+          min-width: 320px;
+        }
+        .line-clamp-2 {
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
