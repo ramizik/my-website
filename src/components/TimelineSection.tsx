@@ -278,7 +278,7 @@ export default function TimelineSection() {
            <Button
             variant="default"
             size="lg"
-            className="absolute left-4 -top-16 z-50 bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-all duration-200 hover:scale-110 w-24 h-32 rounded-full"
+            className="absolute left-4 -top-4 z-20 bg-background/95 text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2"
             style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
             onClick={() => {
               console.log('Left button clicked, canScrollLeft:', canScrollLeft);
@@ -292,7 +292,7 @@ export default function TimelineSection() {
           <Button
             variant="default"
             size="lg"
-            className="absolute right-4 -top-16 z-50 bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-all duration-200 hover:scale-110 w-24 h-32 rounded-full"
+            className="absolute right-4 -top-4 z-20 bg-background/95 text-foreground shadow-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-110 border-2"
             style={{ backgroundColor: '#2563eb', border: '3px solid #ffffff' }}
             onClick={() => {
               console.log('Right button clicked, canScrollRight:', canScrollRight);
@@ -306,7 +306,7 @@ export default function TimelineSection() {
           {/* Scrollable Timeline - with proper margins for buttons */}
           <div
             ref={timelineRef}
-            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-24 px-8 mt-28 cursor-grab select-none"
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-16 px-8 pt-24 pb-8 cursor-grab select-none"
             onScroll={checkScrollButtons}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
@@ -314,7 +314,7 @@ export default function TimelineSection() {
             onMouseLeave={handleMouseLeave}
             style={{ scrollBehavior: isDragging ? 'auto' : 'smooth' }}
           >
-            <div className="relative flex items-center gap-16 py-8" style={{ width: 'max-content' }}>
+            <div className="relative flex items-center gap-8 py-12" style={{ width: 'max-content' }}>
               {/* Timeline Line */}
               <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
