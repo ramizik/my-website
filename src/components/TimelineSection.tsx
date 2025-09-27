@@ -273,7 +273,6 @@ export default function TimelineSection() {
             disabled={!canScrollLeft}
           >
             <ChevronLeft className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
-            <span className="font-medium text-sm ml-1">Previous</span>
           </Button>
 
           <Button
@@ -286,7 +285,6 @@ export default function TimelineSection() {
             }}
             disabled={!canScrollRight}
           >
-            <span className="font-medium text-sm mr-1">Next</span>
             <ChevronRight className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
           </Button>
         </div>
