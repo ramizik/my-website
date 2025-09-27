@@ -125,11 +125,13 @@ export default function TimelineSection() {
 
   const scrollTimeline = (direction: 'left' | 'right') => {
     if (timelineRef.current) {
-      const scrollAmount = 400;
+      const scrollAmount = 350;
       timelineRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
+      // Update button states after scroll
+      setTimeout(checkScrollButtons, 300);
     }
   };
 
@@ -230,7 +232,7 @@ export default function TimelineSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm shadow-md hover:bg-background"
             onClick={() => scrollTimeline('left')}
             disabled={!canScrollLeft}
           >
@@ -240,7 +242,7 @@ export default function TimelineSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm shadow-md hover:bg-background"
             onClick={() => scrollTimeline('right')}
             disabled={!canScrollRight}
           >
@@ -250,7 +252,7 @@ export default function TimelineSection() {
           {/* Scrollable Timeline */}
           <div
             ref={timelineRef}
-            className="timeline-container overflow-x-auto scrollbar-hide px-12 cursor-grab"
+            className="timeline-container overflow-x-auto overflow-y-hidden scrollbar-hide px-12 cursor-grab"
             onMouseDown={handleMouseDown}
             onMouseMove={isDragging ? handleMouseMove : undefined}
             onMouseUp={handleMouseUp}
@@ -258,10 +260,11 @@ export default function TimelineSection() {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            onScroll={checkScrollButtons}
           >
             <div className="relative flex items-start min-w-max pb-8 gap-8">
               {/* Timeline Line */}
-              <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
+              <div className="absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
               
               {/* Timeline Items */}
               {timelineItems.map((item) => (
