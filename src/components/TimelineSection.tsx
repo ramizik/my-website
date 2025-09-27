@@ -2,12 +2,14 @@ import React, { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Calendar, MapPin, Award, GraduationCap, Briefcase } from "lucide-react";
+import SimpleModal from "./SimpleModal";
 
 export default function TimelineSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [selectedEntry, setSelectedEntry] = useState<any>(null);
 
   const timelineItems = [
     {
@@ -116,21 +118,17 @@ export default function TimelineSection() {
     setIsDragging(true);
     setStartX(e.pageX);
     setScrollLeft(containerRef.current.scrollLeft);
-    containerRef.current.style.cursor = 'grabbing';
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    if (containerRef.current) {
-      containerRef.current.style.cursor = 'grab';
-    }
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !containerRef.current) return;
     e.preventDefault();
     const x = e.pageX;
-    const walk = (x - startX) * 3; // Increased multiplier for more responsive scrolling
+    const walk = (x - startX) * 1.2; // Reduced sensitivity for smoother control
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -153,19 +151,24 @@ export default function TimelineSection() {
     setIsDragging(false);
   };
 
+  const openModal = (entry: any) => {
+    setSelectedEntry(entry);
+  };
+
+  const closeModal = () => {
+    setSelectedEntry(null);
+  };
+
   useEffect(() => {
     const handleGlobalMouseUp = () => {
       setIsDragging(false);
-      if (containerRef.current) {
-        containerRef.current.style.cursor = 'grab';
-      }
     };
 
     const handleGlobalMouseMove = (e: MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
       e.preventDefault();
       const x = e.pageX;
-      const walk = (x - startX) * 3;
+      const walk = (x - startX) * 1.2;
       containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -185,7 +188,7 @@ export default function TimelineSection() {
   return (
     <section id="timeline" className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             My career milestones, achievements, and continuous learning path
@@ -193,81 +196,70 @@ export default function TimelineSection() {
         </div>
 
         <div className="relative">
-          {/* Instructions */}
-          <div className="text-center mb-8">
-            <p className="text-sm text-muted-foreground">
-              <span className="hidden md:inline">Click and drag</span>
-              <span className="md:hidden">Swipe</span> to scroll through the timeline
-            </p>
-          </div>
-
           {/* Horizontal Timeline Container */}
-          <div 
+          <div
             ref={containerRef}
-            className="overflow-x-auto scrollbar-hide cursor-grab select-none"
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+            className="overflow-x-auto scrollbar-hide select-none"
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="relative flex items-end space-x-12 pb-8 min-w-max px-8">
-              {/* Horizontal timeline line */}
-              <div className="absolute bottom-16 left-8 right-8 h-1 bg-primary/30 rounded-full"></div>
+            <div className="relative flex items-end space-x-[600px] pb-8 min-w-max px-20 pt-32">
+              {/* First year positioned before the first entry */}
+              <div className="absolute left-[40px] top-12 text-center z-30">
+                <div className="bg-background px-5 py-3 rounded-full border shadow-md">
+                  <span className="text-xl font-bold text-primary">2020</span>
+                </div>
+              </div>
+
+              {/* Horizontal timeline line - Much more visible */}
+              <div className="absolute bottom-[2.75rem] left-0 right-0 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-full shadow-lg"></div>
+              <div className="absolute bottom-[2.6rem] left-0 right-0 h-4 bg-gradient-to-r from-blue-400/40 via-purple-400/40 to-indigo-400/40 rounded-full blur-sm"></div>
 
               {timelineItems.map((item, index) => (
-                <div key={item.id} className="relative flex flex-col items-center min-w-[320px] max-w-[320px] flex-shrink-0">
-                  {/* Year label above */}
-                  <div className="mb-6 text-center">
-                    <span className="text-2xl font-bold text-primary">{item.year}</span>
-                    <div className="text-sm text-muted-foreground mt-1">{item.period}</div>
+                <div key={item.id} className="relative flex flex-col items-center min-w-[280px] max-w-[280px] flex-shrink-0">
+                  {/* Year positioned in the CENTER of the 600px gap after each entry */}
+                  {index < timelineItems.length - 1 && (
+                    <div className="absolute left-[580px] top-[-200px] text-center z-30">
+                      <div className="bg-background px-5 py-3 rounded-full border shadow-md">
+                        <span className="text-xl font-bold text-primary">{2021 + index}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Clickable Logo */}
+                  <div
+                    className={`w-16 h-16 rounded-full ${getTypeColor(item.type)} flex items-center justify-center mb-4 cursor-pointer hover:scale-110 hover:animate-pulse transition-all duration-300 shadow-lg hover:shadow-xl group`}
+                    onClick={() => openModal(item)}
+                  >
+                    <item.icon className="h-8 w-8 text-white transition-transform duration-300 group-hover:scale-110" />
                   </div>
 
-                  {/* Timeline card */}
-                  <Card className="w-full border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 mb-8">
-                    <CardContent className="p-4">
-                      <div className="text-center mb-3">
-                        <div className={`inline-flex w-12 h-12 rounded-full ${getTypeColor(item.type)} items-center justify-center mb-3`}>
-                          <item.icon className="h-6 w-6 text-white" />
-                        </div>
-                        <Badge variant="outline" className="mb-2">
+                  {/* Compact Timeline card - Clickable */}
+                  <Card
+                    className="w-full border border-border/20 bg-card/95 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 mb-12 cursor-pointer"
+                    onClick={() => openModal(item)}
+                  >
+                    <CardContent className="p-6">
+                      <div className="text-center space-y-4">
+                        <Badge variant="outline" className="text-sm mb-3">
                           {getTypeLabel(item.type)}
                         </Badge>
-                      </div>
 
-                      <div className="space-y-2 text-center">
                         <h3 className="font-semibold text-lg leading-tight">{item.title}</h3>
-                        <p className="text-primary font-medium">{item.company}</p>
-                        
-                        <div className="flex items-center justify-center text-xs text-muted-foreground">
-                          <MapPin className="mr-1 h-3 w-3" />
+                        <p className="text-primary font-medium text-base">{item.company}</p>
+
+                        <div className="flex items-center justify-center text-sm text-muted-foreground">
+                          <MapPin className="mr-1 h-4 w-4" />
                           {item.location}
-                        </div>
-                      </div>
-
-                      <p className="text-sm text-muted-foreground mt-3 line-clamp-3">
-                        {item.description}
-                      </p>
-
-                      <div className="mt-3">
-                        <div className="flex flex-wrap gap-1 justify-center">
-                          {item.achievements.slice(0, 2).map((achievement, achievementIndex) => (
-                            <Badge key={achievementIndex} variant="secondary" className="text-xs">
-                              {achievement}
-                            </Badge>
-                          ))}
-                          {item.achievements.length > 2 && (
-                            <Badge variant="secondary" className="text-xs">
-                              +{item.achievements.length - 2} more
-                            </Badge>
-                          )}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
                   {/* Timeline dot */}
-                  <div className={`w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg z-10 absolute bottom-[3.75rem]`}></div>
+                  <div className="w-3 h-3 rounded-full bg-black border-2 border-background shadow-lg z-20 absolute bottom-[2.75rem]"></div>
                 </div>
               ))}
             </div>
@@ -292,6 +284,55 @@ export default function TimelineSection() {
           overflow: hidden;
         }
       `}</style>
+
+      {/* Detailed Entry Modal */}
+      <SimpleModal isOpen={!!selectedEntry} onClose={closeModal}>
+        {selectedEntry && (
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              <div className={`w-16 h-16 rounded-full ${getTypeColor(selectedEntry.type)} flex items-center justify-center`}>
+                <selectedEntry.icon className="h-8 w-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold">{selectedEntry.title}</h3>
+                <p className="text-lg text-primary font-medium">{selectedEntry.company}</p>
+                <div className="flex items-center text-sm text-muted-foreground mt-1">
+                  <MapPin className="mr-1 h-4 w-4" />
+                  {selectedEntry.location}
+                </div>
+                <div className="flex items-center text-sm text-muted-foreground mt-1">
+                  <Calendar className="mr-1 h-4 w-4" />
+                  {selectedEntry.period}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Badge variant="outline" className="mb-3">
+                {getTypeLabel(selectedEntry.type)}
+              </Badge>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-3">Description</h4>
+              <p className="text-muted-foreground leading-relaxed">
+                {selectedEntry.description}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-3">Key Achievements</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedEntry.achievements.map((achievement: string, achievementIndex: number) => (
+                  <Badge key={achievementIndex} variant="secondary" className="text-sm">
+                    {achievement}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </SimpleModal>
     </section>
   );
 }
