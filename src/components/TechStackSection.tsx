@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
-import { Badge } from "./ui/badge";
-import { X } from "lucide-react";
+import SimpleModal from "./SimpleModal";
 
 interface Technology {
   id: string;
@@ -35,7 +33,7 @@ export default function TechStackSection() {
         {
           id: "python",
           name: "Python",
-          logo: "https://via.placeholder.com/80x80/3776AB/ffffff?text=Python",
+          logo: "",
           experience: "3+ years",
           projects: ["ML Model Deployment", "Analytics Dashboard", "Weather API"],
           description: "Proficient in Python for backend development, data analysis, and machine learning applications using frameworks like FastAPI and Django."
@@ -43,7 +41,7 @@ export default function TechStackSection() {
         {
           id: "express",
           name: "Express.js",
-          logo: "https://via.placeholder.com/80x80/000000/ffffff?text=Express",
+          logo: "",
           experience: "4+ years",
           projects: ["E-Commerce Platform", "Social Media App", "Weather API"],
           description: "Expert in building robust REST APIs and web applications using Express.js with middleware, authentication, and database integration."
@@ -51,7 +49,7 @@ export default function TechStackSection() {
         {
           id: "graphql",
           name: "GraphQL",
-          logo: "https://via.placeholder.com/80x80/E10098/ffffff?text=GraphQL",
+          logo: "",
           experience: "2+ years",
           projects: ["Social Media App", "Task Management App"],
           description: "Experience implementing GraphQL APIs for efficient data fetching and real-time subscriptions in modern web applications."
@@ -59,7 +57,7 @@ export default function TechStackSection() {
         {
           id: "mongodb",
           name: "MongoDB",
-          logo: "https://via.placeholder.com/80x80/47A248/ffffff?text=Mongo",
+          logo: "",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "Social Media App", "Task Management App"],
           description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
@@ -88,7 +86,7 @@ export default function TechStackSection() {
         {
           id: "nextjs",
           name: "Next.js",
-          logo: "https://via.placeholder.com/80x80/000000/ffffff?text=Next",
+          logo: "",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "Analytics Dashboard"],
           description: "Proficient in Next.js for server-side rendering, static site generation, and full-stack React applications with optimal performance."
@@ -96,7 +94,7 @@ export default function TechStackSection() {
         {
           id: "tailwind",
           name: "Tailwind CSS",
-          logo: "https://via.placeholder.com/80x80/06B6D4/ffffff?text=Tailwind",
+          logo: "",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "Task Management App", "Social Media App"],
           description: "Expert in utility-first CSS framework for rapid UI development with responsive design and custom component creation."
@@ -104,7 +102,7 @@ export default function TechStackSection() {
         {
           id: "vue",
           name: "Vue.js",
-          logo: "https://via.placeholder.com/80x80/4FC08D/ffffff?text=Vue",
+          logo: "",
           experience: "2+ years",
           projects: ["Task Management App"],
           description: "Experience with Vue.js ecosystem including Vuex, Vue Router, and composition API for building reactive web applications."
@@ -117,7 +115,7 @@ export default function TechStackSection() {
         {
           id: "aws",
           name: "AWS",
-          logo: "https://via.placeholder.com/80x80/FF9900/000000?text=AWS",
+          logo: "",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
           description: "Certified AWS Solutions Architect with experience in EC2, S3, Lambda, RDS, and CloudFormation for scalable cloud infrastructure."
@@ -125,7 +123,7 @@ export default function TechStackSection() {
         {
           id: "docker",
           name: "Docker",
-          logo: "https://via.placeholder.com/80x80/2496ED/ffffff?text=Docker",
+          logo: "",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
           description: "Proficient in containerization, multi-stage builds, Docker Compose, and container orchestration for development and production."
@@ -133,7 +131,7 @@ export default function TechStackSection() {
         {
           id: "kubernetes",
           name: "Kubernetes",
-          logo: "https://via.placeholder.com/80x80/326CE5/ffffff?text=K8s",
+          logo: "",
           experience: "2+ years",
           projects: ["ML Model Deployment", "Analytics Dashboard"],
           description: "Experience with Kubernetes orchestration, deployments, services, and scaling applications in production environments."
@@ -141,7 +139,7 @@ export default function TechStackSection() {
         {
           id: "terraform",
           name: "Terraform",
-          logo: "https://via.placeholder.com/80x80/7B42BC/ffffff?text=Terraform",
+          logo: "",
           experience: "2+ years",
           projects: ["ML Model Deployment"],
           description: "Infrastructure as Code expertise for provisioning and managing cloud resources across multiple providers with Terraform."
@@ -154,7 +152,7 @@ export default function TechStackSection() {
         {
           id: "tensorflow",
           name: "TensorFlow",
-          logo: "https://via.placeholder.com/80x80/FF6F00/ffffff?text=TF",
+          logo: "",
           experience: "2+ years",
           projects: ["ML Model Deployment"],
           description: "Experience building and deploying machine learning models using TensorFlow for computer vision and natural language processing tasks."
@@ -162,7 +160,7 @@ export default function TechStackSection() {
         {
           id: "pytorch",
           name: "PyTorch",
-          logo: "https://via.placeholder.com/80x80/EE4C2C/ffffff?text=PyTorch",
+          logo: "",
           experience: "1+ years",
           projects: ["ML Model Deployment"],
           description: "Hands-on experience with PyTorch for deep learning research, model development, and neural network architectures."
@@ -170,7 +168,7 @@ export default function TechStackSection() {
         {
           id: "openai",
           name: "OpenAI API",
-          logo: "https://via.placeholder.com/80x80/412991/ffffff?text=OpenAI",
+          logo: "",
           experience: "1+ years",
           projects: ["Analytics Dashboard"],
           description: "Integration experience with OpenAI APIs for natural language processing, text generation, and AI-powered features in applications."
@@ -178,7 +176,7 @@ export default function TechStackSection() {
         {
           id: "mlflow",
           name: "MLflow",
-          logo: "https://via.placeholder.com/80x80/0194E2/ffffff?text=MLflow",
+          logo: "",
           experience: "1+ years",
           projects: ["ML Model Deployment"],
           description: "Experience with MLflow for machine learning lifecycle management, experiment tracking, and model versioning in production."
@@ -196,16 +194,16 @@ export default function TechStackSection() {
   };
 
   return (
-    <section id="tech-stack" className="py-20 bg-muted/30">
+    <section id="tech-stack" className="py-12 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Technologies</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life. Click on any logo to learn more about my experience.
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-24">
           {techCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="text-center">
               <h3 className="text-2xl font-semibold mb-8">{category.title}</h3>
@@ -213,15 +211,24 @@ export default function TechStackSection() {
                 {category.technologies.map((tech) => (
                   <div
                     key={tech.id}
-                    className="group cursor-pointer transition-transform duration-300 hover:scale-110 p-3"
+                    className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:animate-pulse p-4"
                     onClick={() => openModal(tech)}
                   >
-                    <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
-                      <img
-                        src={tech.logo}
-                        alt={tech.name}
-                        className="w-full h-full object-contain"
-                      />
+                    <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-muted/20 rounded-lg group-hover:bg-muted/30 transition-all duration-300 group-hover:scale-105">
+                      {tech.logo ? (
+                        <img
+                          src={tech.logo}
+                          alt={tech.name}
+                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                          }}
+                        />
+                      ) : null}
+                      <span className={`text-xs font-medium text-center transition-transform duration-300 group-hover:scale-110 ${tech.logo ? 'hidden' : ''}`}>
+                        {tech.name}
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -231,54 +238,54 @@ export default function TechStackSection() {
         </div>
       </div>
 
-      {/* Modal */}
-      <Dialog open={!!selectedTech} onOpenChange={closeModal}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="flex items-center space-x-4">
-              {selectedTech && (
-                <>
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <img
-                      src={selectedTech.logo}
-                      alt={selectedTech.name}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">{selectedTech.name}</h3>
-                    <Badge variant="secondary" className="mt-1">
-                      {selectedTech.experience} experience
-                    </Badge>
-                  </div>
-                </>
-              )}
-            </DialogTitle>
-          </DialogHeader>
-          
-          {selectedTech && (
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold mb-2">Experience</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {selectedTech.description}
-                </p>
+      <SimpleModal isOpen={!!selectedTech} onClose={closeModal}>
+        {selectedTech && (
+          <div className="space-y-4">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 flex items-center justify-center bg-muted/20 rounded-lg">
+                {selectedTech.logo ? (
+                  <img
+                    src={selectedTech.logo}
+                    alt={selectedTech.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                ) : null}
+                <span className={`text-sm font-medium text-center ${selectedTech.logo ? 'hidden' : ''}`}>
+                  {selectedTech.name}
+                </span>
               </div>
-              
               <div>
-                <h4 className="font-semibold mb-3">Projects Built</h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedTech.projects.map((project, index) => (
-                    <Badge key={index} variant="outline">
-                      {project}
-                    </Badge>
-                  ))}
-                </div>
+                <h3 className="text-2xl font-bold">{selectedTech.name}</h3>
+                <span className="inline-block bg-muted text-muted-foreground text-sm px-3 py-1 rounded-full mt-1">
+                  {selectedTech.experience} experience
+                </span>
               </div>
             </div>
-          )}
-        </DialogContent>
-      </Dialog>
+
+            <p className="text-muted-foreground">
+              {selectedTech.description}
+            </p>
+
+            <div>
+              <h4 className="font-semibold mb-3">Projects Built</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedTech.projects.map((project, index) => (
+                  <span
+                    key={index}
+                    className="border text-sm px-3 py-1 rounded-full"
+                  >
+                    {project}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </SimpleModal>
     </section>
   );
 }
