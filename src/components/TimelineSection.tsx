@@ -266,11 +266,6 @@ export default function TimelineSection() {
               {/* Timeline Items */}
               {timelineItems.map((item, index) => (
                 <div key={item.id} className="timeline-item relative flex flex-col items-center mx-8 first:ml-0 last:mr-0">
-                  {/* Timeline Dot */}
-                  <div className={`timeline-dot w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg z-10 mb-6 cursor-pointer hover:scale-125 transition-transform duration-300 relative -top-3`}
-                       onClick={() => openModal(item)}>
-                  </div>
-
                   {/* Timeline Card */}
                   <Card 
                     className="timeline-card w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
