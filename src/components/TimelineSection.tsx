@@ -304,7 +304,7 @@ export default function TimelineSection() {
           {/* Scrollable Timeline - with proper margins for buttons */}
           <div
             ref={timelineRef}
-            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-16 px-8 pt-24 pb-8 cursor-grab select-none"
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide mx-20 px-4 pt-24 pb-8 cursor-grab select-none"
             onScroll={checkScrollButtons}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
@@ -314,7 +314,7 @@ export default function TimelineSection() {
           >
             <div className="relative flex items-center gap-8 py-12 justify-start" style={{ width: 'max-content', minWidth: '100%' }}>
               {/* Timeline Line */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-8 right-8 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
+              <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-lg"></div>
               
               {/* Timeline Items */}
               {timelineItems.map((item, index) => (
