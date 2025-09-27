@@ -259,16 +259,16 @@ export default function TimelineSection() {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="timeline-track relative flex items-center min-w-max pb-8">
+            <div className="relative flex items-start min-w-max pb-8 gap-8">
               {/* Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
+              <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full shadow-sm"></div>
               
               {/* Timeline Items */}
-              {timelineItems.map((item, index) => (
-                <div key={item.id} className="timeline-item relative flex flex-col items-center mx-8 first:ml-0 last:mr-0">
+              {timelineItems.map((item) => (
+                <div key={item.id} className="relative flex flex-col items-center min-w-[320px]">
                   {/* Timeline Card */}
                   <Card 
-                    className="timeline-card w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                    className="w-80 bg-background/95 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer mb-4"
                     onClick={() => openModal(item)}
                   >
                     <CardContent className="p-6">
@@ -299,16 +299,10 @@ export default function TimelineSection() {
                       </div>
                     </CardContent>
                   </Card>
+                  
+                  {/* Timeline Dot */}
+                  <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="flex justify-center mt-6">
-            <div className="flex space-x-2">
-              {timelineItems.map((_, index) => (
-                <div key={index} className="w-2 h-2 rounded-full bg-muted"></div>
               ))}
             </div>
           </div>
