@@ -5,18 +5,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Badge } from "./ui/badge";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Calendar, 
-  Github, 
-  Linkedin, 
-  Twitter,
-  Send,
-  CheckCircle,
-  Clock
-} from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Github, Linkedin, Twitter, Send, CircleCheck as CheckCircle, Clock } from "lucide-react";
 import { toast } from "sonner@2.0.3";
 
 export default function ContactSection() {
