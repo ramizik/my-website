@@ -361,12 +361,13 @@ export default function ProjectsSection() {
 
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
-              <div className="relative w-full max-w-2xl mx-auto">
-                <div className="relative h-56 md:h-72 w-full rounded-lg overflow-hidden bg-muted border flex-shrink-0">
+              <div className="relative w-full max-w-2xl mx-auto flex-shrink-0">
+                <div className="relative w-full h-56 md:h-72 rounded-lg overflow-hidden bg-muted border" style={{ minHeight: '14rem', maxHeight: '18rem' }}>
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover bg-gray-50 dark:bg-gray-800"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                   
                   {/* Navigation Arrows */}
