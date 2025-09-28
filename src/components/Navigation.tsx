@@ -71,11 +71,9 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
               ))}
               
               {/* Theme Toggle Button */}
-              <Button
-                variant="ghost"
-                size="sm"
+              <button
                 onClick={toggleTheme}
-                className="px-3 py-2 h-auto text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50"
                 aria-label="Toggle theme"
               >
                 {isDarkMode ? (
@@ -83,18 +81,16 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
                 ) : (
                   <Moon className="h-4 w-4" />
                 )}
-              </Button>
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Theme Toggle Button for Mobile */}
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
               onClick={toggleTheme}
-              className="px-3 py-2 h-auto text-muted-foreground hover:text-foreground hover:bg-accent/50"
+              className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50"
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
@@ -102,7 +98,7 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
               ) : (
                 <Moon className="h-4 w-4" />
               )}
-            </Button>
+            </button>
             
             <Button
               variant="ghost"
