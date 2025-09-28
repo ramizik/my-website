@@ -342,6 +342,14 @@ export default function ProjectsSection() {
                   </div>
                 </div>
               </div>
+              <div className="flex-shrink-0">
+                <Button variant="outline" size="sm" asChild>
+                  <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    View Code
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Description */}
@@ -429,22 +437,6 @@ export default function ProjectsSection() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex space-x-3 pt-4 border-t">
-              <Button asChild className="flex-1">
-                <a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Demo
-                </a>
-              </Button>
-              <Button variant="outline" asChild className="flex-1">
-                <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  View Code
-                </a>
-              </Button>
             </div>
           </div>
         )}
