@@ -238,7 +238,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-20">
           <Filter className="h-5 w-5 text-muted-foreground mr-2" />
           {categories.map((category) => (
             <Button
