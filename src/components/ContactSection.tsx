@@ -219,50 +219,6 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle>Connect with me</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex space-x-4 mb-6">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-muted rounded-lg flex items-center justify-center transition-colors ${social.color}`}
-                    >
-                      <social.icon className="h-6 w-6" />
-                    </a>
-                  ))}
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    <span className="text-sm">Usually responds within 24 hours</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Badge variant="outline" className="text-green-600 border-green-600">
-                      Available for new projects
-                    </Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">Preferred Communication</h3>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <p>• Email for detailed project discussions</p>
-                  <p>• LinkedIn for professional networking</p>
-                  <p>• Phone calls for urgent matters</p>
-                  <p>• Video calls for project planning sessions</p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
