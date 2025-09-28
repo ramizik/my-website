@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "./ui/button";
 
-export default function Navigation() {
+interface NavigationProps {
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+}
+
+export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -64,11 +69,41 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Theme Toggle Button */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleTheme}
+                className="w-10 h-10 rounded-full p-0 ml-4"
+                aria-label="Toggle theme"
+              >
+                {isDarkMode ? (
+                  <Sun className="h-4 w-4" />
+                ) : (
+                  <Moon className="h-4 w-4" />
+                )}
+              </Button>
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Theme Toggle Button for Mobile */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full p-0"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </Button>
+            
             <Button
               variant="ghost"
               size="sm"

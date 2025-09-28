@@ -40,25 +40,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Theme Toggle Button */}
-      <div className="fixed top-20 right-4 z-40">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={toggleTheme}
-          className="w-10 h-10 rounded-full p-0 shadow-lg"
-          aria-label="Toggle theme"
-        >
-          {isDarkMode ? (
-            <Sun className="h-4 w-4" />
-          ) : (
-            <Moon className="h-4 w-4" />
-          )}
-        </Button>
-      </div>
 
       {/* Navigation */}
-      <Navigation />
+      <Navigation isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
 
       {/* Main Content */}
       <main>
