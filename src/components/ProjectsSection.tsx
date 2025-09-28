@@ -362,7 +362,7 @@ export default function ProjectsSection() {
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="relative w-full max-w-2xl mx-auto flex-shrink-0">
-                <div className="relative w-full h-56 md:h-72 rounded-lg overflow-hidden bg-muted border" style={{ minHeight: '14rem', maxHeight: '18rem' }}>
+                <div className="relative w-full h-60 md:h-80 rounded-lg overflow-hidden bg-muted border flex-shrink-0" style={{ minHeight: '15rem', maxHeight: '20rem' }}>
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
