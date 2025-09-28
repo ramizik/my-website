@@ -326,10 +326,6 @@ export default function ProjectsSection() {
                 <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
                 <div className="flex items-center space-x-2 mb-2">
                   <Badge variant="secondary">{selectedProject.category}</Badge>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="mr-1 h-4 w-4" />
-                    {selectedProject.timeline}
-                  </div>
                 </div>
               </div>
               <div className="flex-shrink-0">
