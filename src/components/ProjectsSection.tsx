@@ -257,7 +257,7 @@ export default function ProjectsSection() {
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
-              className="border-0 shadow-md hover:shadow-lg transition-shadow group cursor-pointer"
+             className="border-0 shadow-md hover:shadow-lg transition-shadow group cursor-pointer overflow-hidden"
               onClick={() => openModal(project)}
             >
               <div className="relative">
@@ -267,17 +267,17 @@ export default function ProjectsSection() {
                   className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardHeader className="pb-2 pt-4">
+             <div className="px-6 pt-3 pb-1">
                 <CardTitle className="text-lg">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 pt-0 pb-4">
+             </div>
+             <div className="px-6 pb-4 space-y-3">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1">
                   <Badge variant="secondary" className="text-xs">
                     {project.category}
                   </Badge>
                 </div>
-                <div className="flex space-x-2 pt-1">
+               <div className="flex space-x-2">
                   <Button 
                     size="sm" 
                     variant="outline" 
@@ -303,7 +303,7 @@ export default function ProjectsSection() {
                     </a>
                   </Button>
                 </div>
-              </CardContent>
+             </div>
             </Card>
           ))}
         </div>
