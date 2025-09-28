@@ -11,7 +11,6 @@ export default function Navigation() {
     { id: "projects", label: "Projects" },
     { id: "tech-stack", label: "Skills" },
     { id: "timeline", label: "Experience" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },
   ];
 
