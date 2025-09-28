@@ -346,7 +346,6 @@ export default function ProjectsSection() {
 
             {/* Description */}
             <div>
-              <h4 className="font-semibold mb-3">Project Overview</h4>
               <p className="text-muted-foreground leading-relaxed">
                 {selectedProject.fullDescription}
               </p>
