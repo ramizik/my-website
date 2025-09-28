@@ -24,15 +24,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS", "TypeScript", "Express", "Redis"],
       category: "Web App",
       demoUrl: "https://demo-ecommerce.com",
       githubUrl: "https://github.com/alexchen/ecommerce-platform",
       timeline: "6 months",
       role: "Full-Stack Developer & Lead",
       teamSize: "4 developers",
-      technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Stripe", "AWS"],
-      challenges: ["Implementing real-time inventory updates", "Optimizing database queries for large product catalogs", "Ensuring secure payment processing"],
-      results: ["99.9% uptime achieved", "50% faster page load times", "Increased conversion rate by 25%"],
       keyFeatures: [
         "Real-time inventory tracking",
         "Secure payment processing",
@@ -40,6 +38,18 @@ export default function ProjectsSection() {
         "Order management system",
         "Admin analytics dashboard",
         "Mobile-responsive design"
+      ],
+      challenges: [
+        "Handling high concurrent user loads",
+        "Implementing secure payment flows",
+        "Optimizing database queries for performance",
+        "Managing real-time inventory updates"
+      ],
+      results: [
+        "40% increase in conversion rate",
+        "99.9% uptime achieved",
+        "50% reduction in page load time",
+        "Handled 10,000+ concurrent users"
       ]
     },
     {
@@ -53,15 +63,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["Vue.js", "Firebase", "TypeScript", "Tailwind", "Vuex", "PWA"],
       category: "Mobile App",
       demoUrl: "https://demo-taskapp.com",
       githubUrl: "https://github.com/alexchen/task-manager",
       timeline: "4 months",
       role: "Frontend Developer",
       teamSize: "3 developers",
-      technologies: ["Vue.js", "Firebase", "PWA", "Vuex", "CSS3"],
-      challenges: ["Real-time synchronization across devices", "Offline functionality implementation", "Complex state management"],
-      results: ["40% increase in team productivity", "95% user satisfaction rate", "Cross-platform compatibility achieved"],
       keyFeatures: [
         "Real-time task updates",
         "Team collaboration tools",
@@ -69,6 +77,18 @@ export default function ProjectsSection() {
         "Mobile PWA support",
         "Task assignment and tracking",
         "Deadline notifications"
+      ],
+      challenges: [
+        "Implementing real-time synchronization",
+        "Optimizing for mobile performance",
+        "Managing complex state with Vuex",
+        "Creating intuitive user interface"
+      ],
+      results: [
+        "30% improvement in team productivity",
+        "95% user satisfaction rating",
+        "50% reduction in project delays",
+        "10,000+ active users"
       ]
     },
     {
@@ -82,15 +102,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["React", "D3.js", "Python", "FastAPI", "Docker", "PostgreSQL", "Redis"],
       category: "Web App",
       demoUrl: "https://demo-analytics.com",
       githubUrl: "https://github.com/alexchen/analytics-dashboard",
       timeline: "5 months",
       role: "Full-Stack Developer",
       teamSize: "2 developers",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Docker", "PostgreSQL"],
-      challenges: ["Processing large datasets efficiently", "Creating responsive data visualizations", "Optimizing real-time updates"],
-      results: ["60% faster data processing", "Interactive visualizations for 10M+ data points", "Reduced report generation time by 80%"],
       keyFeatures: [
         "Real-time data visualization",
         "Interactive charts and graphs",
@@ -98,6 +116,18 @@ export default function ProjectsSection() {
         "Data export capabilities",
         "User role management",
         "Responsive dashboard design"
+      ],
+      challenges: [
+        "Processing large datasets efficiently",
+        "Creating smooth animations with D3.js",
+        "Implementing real-time data updates",
+        "Optimizing chart rendering performance"
+      ],
+      results: [
+        "60% faster data processing",
+        "99.5% dashboard uptime",
+        "25% increase in user engagement",
+        "Handles 1M+ data points"
       ]
     },
     {
@@ -111,15 +141,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["Node.js", "Express", "Redis", "MongoDB", "OpenAPI", "Jest", "Docker"],
       category: "API",
       demoUrl: "https://api-weather.com/docs",
       githubUrl: "https://github.com/alexchen/weather-api",
       timeline: "3 months",
       role: "Backend Developer",
       teamSize: "1 developer",
-      technologies: ["Node.js", "Express", "Redis", "OpenAPI", "Docker", "AWS"],
-      challenges: ["Implementing efficient caching strategies", "Handling high API request volumes", "Ensuring data accuracy from multiple sources"],
-      results: ["99.95% API uptime", "Sub-100ms response times", "Handles 10,000+ requests per minute"],
       keyFeatures: [
         "RESTful API with OpenAPI docs",
         "Intelligent caching system",
@@ -127,6 +155,18 @@ export default function ProjectsSection() {
         "Multiple data source aggregation",
         "Comprehensive error handling",
         "Performance monitoring"
+      ],
+      challenges: [
+        "Implementing efficient caching strategies",
+        "Managing rate limiting without blocking users",
+        "Aggregating data from multiple sources",
+        "Ensuring API reliability and uptime"
+      ],
+      results: [
+        "99.9% API uptime",
+        "50ms average response time",
+        "10,000+ requests per minute",
+        "95% cache hit rate"
       ]
     },
     {
@@ -140,15 +180,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["React Native", "GraphQL", "PostgreSQL", "WebSockets", "Apollo", "Redis"],
       category: "Mobile App",
       demoUrl: "https://demo-social.com",
       githubUrl: "https://github.com/alexchen/social-app",
       timeline: "8 months",
       role: "Full-Stack Developer",
       teamSize: "5 developers",
-      technologies: ["React Native", "GraphQL", "WebSockets", "MongoDB", "Node.js", "AWS"],
-      challenges: ["Implementing real-time messaging at scale", "Optimizing mobile performance", "Building robust privacy controls"],
-      results: ["10,000+ active users", "Real-time messaging with <50ms latency", "Cross-platform compatibility achieved"],
       keyFeatures: [
         "Real-time messaging",
         "Content sharing and media upload",
@@ -156,6 +194,18 @@ export default function ProjectsSection() {
         "Advanced privacy settings",
         "Push notifications",
         "Cross-platform compatibility"
+      ],
+      challenges: [
+        "Implementing real-time messaging at scale",
+        "Managing media uploads and storage",
+        "Creating smooth mobile animations",
+        "Ensuring data privacy and security"
+      ],
+      results: [
+        "100,000+ active users",
+        "99.8% message delivery rate",
+        "4.7/5 app store rating",
+        "50% user retention rate"
       ]
     },
     {
@@ -170,15 +220,13 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
+      technologies: ["Python", "TensorFlow", "Kubernetes", "MLflow", "AWS", "Docker", "Prometheus"],
       category: "Machine Learning",
       demoUrl: "https://demo-ml.com",
       githubUrl: "https://github.com/alexchen/ml-platform",
       timeline: "6 months",
       role: "ML Engineer & DevOps",
       teamSize: "3 developers",
-      technologies: ["Python", "TensorFlow", "MLflow", "Kubernetes", "Docker", "FastAPI"],
-      challenges: ["Scaling ML inference to handle high loads", "Implementing automated model retraining", "Building comprehensive monitoring systems"],
-      results: ["Automated deployment reduced time-to-production by 70%", "Model performance monitoring with 99.9% accuracy", "Scalable to 1000+ concurrent predictions"],
       keyFeatures: [
         "Automated training pipelines",
         "Model versioning and tracking",
@@ -186,6 +234,18 @@ export default function ProjectsSection() {
         "Model monitoring and alerting",
         "A/B testing framework",
         "Scalable inference serving"
+      ],
+      challenges: [
+        "Managing model versioning at scale",
+        "Implementing efficient inference serving",
+        "Setting up monitoring and alerting",
+        "Optimizing resource utilization"
+      ],
+      results: [
+        "90% reduction in deployment time",
+        "99.9% model serving uptime",
+        "50% improvement in model accuracy",
+        "10x faster training pipeline"
       ]
     }
   ];
