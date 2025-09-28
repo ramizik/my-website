@@ -64,8 +64,8 @@ export default function App() {
       {/* Main Content */}
       <main>
         <HeroSection />
-        <TechStackSection />
         <ProjectsSection />
+        <TechStackSection />
         <TimelineSection />
         <TestimonialsSection />
         <ContactSection />

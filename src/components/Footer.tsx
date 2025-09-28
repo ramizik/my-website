@@ -29,8 +29,8 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: "Skills", href: "#tech-stack" },
     { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#tech-stack" },
     { label: "Experience", href: "#timeline" },
     { label: "Contact", href: "#contact" }
   ];
