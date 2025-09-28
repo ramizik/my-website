@@ -272,11 +272,6 @@ export default function ProjectsSection() {
              </div>
              <div className="px-6 pb-4 space-y-3">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                <div className="flex flex-wrap gap-1">
-                  <Badge variant="secondary" className="text-xs">
-                    {project.category}
-                  </Badge>
-                </div>
                <div className="flex space-x-2">
                   <Button 
                     size="sm" 
