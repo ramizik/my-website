@@ -447,11 +447,6 @@ export default function ProjectsSection() {
                 </a>
               </Button>
             </div>
-            
-            {/* Scroll Indicator */}
-            <div className="text-center text-xs text-muted-foreground pt-2">
-              Use arrow keys to navigate images • Scroll for more content
-            </div>
           </div>
         )}
       </SimpleModal>
