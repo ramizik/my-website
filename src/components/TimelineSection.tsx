@@ -308,7 +308,7 @@ export default function TimelineSection() {
   }, []);
 
   return (
-    <section id="timeline" className="py-8 bg-muted/30">
+    <section id="timeline" className="py-12 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6">
