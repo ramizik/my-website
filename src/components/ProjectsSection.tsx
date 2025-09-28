@@ -331,16 +331,6 @@ export default function ProjectsSection() {
                     {selectedProject.timeline}
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                  <div className="flex items-center">
-                    <Users className="mr-1 h-4 w-4" />
-                    {selectedProject.teamSize}
-                  </div>
-                  <div className="flex items-center">
-                    <Target className="mr-1 h-4 w-4" />
-                    {selectedProject.role}
-                  </div>
-                </div>
               </div>
               <div className="flex-shrink-0">
                 <Button variant="outline" size="sm" asChild>
