@@ -54,13 +54,14 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
       }}
     >
       <div
-        className="rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto relative shadow-lg border"
+        className="rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[95vh] overflow-y-auto relative shadow-lg border"
         onClick={(e) => e.stopPropagation()}
         style={{
           zIndex: 10000,
           backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
           color: isDarkMode ? '#f9fafb' : '#111827',
-          borderColor: isDarkMode ? '#4b5563' : '#e5e7eb'
+          borderColor: isDarkMode ? '#4b5563' : '#e5e7eb',
+          scrollBehavior: 'smooth'
         }}
       >
         <button
