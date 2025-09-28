@@ -55,7 +55,7 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -73,13 +73,13 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50 flex items-center justify-center"
                 aria-label="Toggle theme"
               >
                 {isDarkMode ? (
-                  <Sun className="h-4 w-4" />
+                  <Sun className="h-5 w-5" />
                 ) : (
-                  <Moon className="h-4 w-4" />
+                  <Moon className="h-5 w-5" />
                 )}
               </button>
             </div>
@@ -90,13 +90,13 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
             {/* Theme Toggle Button for Mobile */}
             <button
               onClick={toggleTheme}
-              className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50"
+              className="px-3 py-2 rounded-md transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50 flex items-center justify-center"
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
-                <Sun className="h-4 w-4" />
+                <Sun className="h-5 w-5" />
               ) : (
-                <Moon className="h-4 w-4" />
+                <Moon className="h-5 w-5" />
               )}
             </button>
             
