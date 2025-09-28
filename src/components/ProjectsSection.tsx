@@ -24,7 +24,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS", "TypeScript", "Express", "Redis"],
       category: "Web App",
       demoUrl: "https://demo-ecommerce.com",
       githubUrl: "https://github.com/alexchen/ecommerce-platform",
@@ -38,18 +37,6 @@ export default function ProjectsSection() {
         "Order management system",
         "Admin analytics dashboard",
         "Mobile-responsive design"
-      ],
-      challenges: [
-        "Handling high concurrent user loads",
-        "Implementing secure payment flows",
-        "Optimizing database queries for performance",
-        "Managing real-time inventory updates"
-      ],
-      results: [
-        "40% increase in conversion rate",
-        "99.9% uptime achieved",
-        "50% reduction in page load time",
-        "Handled 10,000+ concurrent users"
       ]
     },
     {
@@ -63,7 +50,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["Vue.js", "Firebase", "TypeScript", "Tailwind", "Vuex", "PWA"],
       category: "Mobile App",
       demoUrl: "https://demo-taskapp.com",
       githubUrl: "https://github.com/alexchen/task-manager",
@@ -77,18 +63,6 @@ export default function ProjectsSection() {
         "Mobile PWA support",
         "Task assignment and tracking",
         "Deadline notifications"
-      ],
-      challenges: [
-        "Implementing real-time synchronization",
-        "Optimizing for mobile performance",
-        "Managing complex state with Vuex",
-        "Creating intuitive user interface"
-      ],
-      results: [
-        "30% improvement in team productivity",
-        "95% user satisfaction rating",
-        "50% reduction in project delays",
-        "10,000+ active users"
       ]
     },
     {
@@ -102,7 +76,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Docker", "PostgreSQL", "Redis"],
       category: "Web App",
       demoUrl: "https://demo-analytics.com",
       githubUrl: "https://github.com/alexchen/analytics-dashboard",
@@ -116,18 +89,6 @@ export default function ProjectsSection() {
         "Data export capabilities",
         "User role management",
         "Responsive dashboard design"
-      ],
-      challenges: [
-        "Processing large datasets efficiently",
-        "Creating smooth animations with D3.js",
-        "Implementing real-time data updates",
-        "Optimizing chart rendering performance"
-      ],
-      results: [
-        "60% faster data processing",
-        "99.5% dashboard uptime",
-        "25% increase in user engagement",
-        "Handles 1M+ data points"
       ]
     },
     {
@@ -141,7 +102,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["Node.js", "Express", "Redis", "MongoDB", "OpenAPI", "Jest", "Docker"],
       category: "API",
       demoUrl: "https://api-weather.com/docs",
       githubUrl: "https://github.com/alexchen/weather-api",
@@ -155,18 +115,6 @@ export default function ProjectsSection() {
         "Multiple data source aggregation",
         "Comprehensive error handling",
         "Performance monitoring"
-      ],
-      challenges: [
-        "Implementing efficient caching strategies",
-        "Managing rate limiting without blocking users",
-        "Aggregating data from multiple sources",
-        "Ensuring API reliability and uptime"
-      ],
-      results: [
-        "99.9% API uptime",
-        "50ms average response time",
-        "10,000+ requests per minute",
-        "95% cache hit rate"
       ]
     },
     {
@@ -180,7 +128,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["React Native", "GraphQL", "PostgreSQL", "WebSockets", "Apollo", "Redis"],
       category: "Mobile App",
       demoUrl: "https://demo-social.com",
       githubUrl: "https://github.com/alexchen/social-app",
@@ -194,18 +141,6 @@ export default function ProjectsSection() {
         "Advanced privacy settings",
         "Push notifications",
         "Cross-platform compatibility"
-      ],
-      challenges: [
-        "Implementing real-time messaging at scale",
-        "Managing media uploads and storage",
-        "Creating smooth mobile animations",
-        "Ensuring data privacy and security"
-      ],
-      results: [
-        "100,000+ active users",
-        "99.8% message delivery rate",
-        "4.7/5 app store rating",
-        "50% user retention rate"
       ]
     },
     {
@@ -220,7 +155,6 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      technologies: ["Python", "TensorFlow", "Kubernetes", "MLflow", "AWS", "Docker", "Prometheus"],
       category: "Machine Learning",
       demoUrl: "https://demo-ml.com",
       githubUrl: "https://github.com/alexchen/ml-platform",
@@ -234,18 +168,6 @@ export default function ProjectsSection() {
         "Model monitoring and alerting",
         "A/B testing framework",
         "Scalable inference serving"
-      ],
-      challenges: [
-        "Managing model versioning at scale",
-        "Implementing efficient inference serving",
-        "Setting up monitoring and alerting",
-        "Optimizing resource utilization"
-      ],
-      results: [
-        "90% reduction in deployment time",
-        "99.9% model serving uptime",
-        "50% improvement in model accuracy",
-        "10x faster training pipeline"
       ]
     }
   ];
@@ -351,16 +273,9 @@ export default function ProjectsSection() {
               <CardContent className="space-y-3">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{project.technologies.length - 3}
-                    </Badge>
-                  )}
+                  <Badge variant="secondary" className="text-xs">
+                    {project.category}
+                  </Badge>
                 </div>
                 <div className="flex space-x-2 pt-2">
                   <Button 
@@ -517,43 +432,6 @@ export default function ProjectsSection() {
               </div>
             </div>
 
-            {/* Technologies */}
-            <div>
-              <h4 className="font-semibold mb-3">Technologies Used</h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.technologies.map((tech: string) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Challenges */}
-            <div>
-              <h4 className="font-semibold mb-3">Technical Challenges</h4>
-              <div className="space-y-1">
-                {selectedProject.challenges.map((challenge: string, index: number) => (
-                  <div key={index} className="text-sm text-muted-foreground leading-relaxed">
-                    • {challenge}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Results */}
-            <div>
-              <h4 className="font-semibold mb-3">Key Results</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                {selectedProject.results.map((result: string, index: number) => (
-                  <div key={index} className="flex items-start text-sm bg-muted/50 rounded px-2 py-1.5">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                    <span className="leading-relaxed">{result}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Action Buttons */}
             <div className="flex space-x-3 pt-4 border-t">
               <Button asChild className="flex-1">
@@ -571,7 +449,7 @@ export default function ProjectsSection() {
             </div>
             
             {/* Scroll Indicator */}
-            <div className="text-center text-xs text-muted-foreground pt-4 border-t">
+            <div className="text-center text-xs text-muted-foreground pt-2">
               Use arrow keys to navigate images • Scroll for more content
             </div>
           </div>
