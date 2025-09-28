@@ -268,7 +268,7 @@ export default function ProjectsSection() {
                 />
               </div>
              <div className="px-6 pt-3 pb-1">
-                <CardTitle className="text-lg">{project.title}</CardTitle>
+                <h3 className="text-lg font-bold">{project.title}</h3>
                <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{project.description}</p>
              </div>
              <div className="px-6 pb-6 pt-3">
