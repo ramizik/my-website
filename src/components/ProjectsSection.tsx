@@ -355,7 +355,7 @@ export default function ProjectsSection() {
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="relative w-full">
-                <div className="relative h-48 md:h-56 w-full rounded-lg overflow-hidden bg-muted border">
+                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden bg-muted border">
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
