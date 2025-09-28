@@ -272,18 +272,6 @@ export default function ProjectsSection() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                <div className="flex flex-wrap gap-1">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{project.technologies.length - 3}
-                    </Badge>
-                  )}
-                </div>
                 <div className="flex space-x-2 pt-2">
                   <Button 
                     size="sm" 
@@ -439,43 +427,6 @@ export default function ProjectsSection() {
               </div>
             </div>
 
-            {/* Technologies */}
-            <div>
-              <h4 className="font-semibold mb-3">Technologies Used</h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.technologies.map((tech: string) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Challenges */}
-            <div>
-              <h4 className="font-semibold mb-3">Technical Challenges</h4>
-              <div className="space-y-1">
-                {selectedProject.challenges.map((challenge: string, index: number) => (
-                  <div key={index} className="text-sm text-muted-foreground leading-relaxed">
-                    • {challenge}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Results */}
-            <div>
-              <h4 className="font-semibold mb-3">Key Results</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                {selectedProject.results.map((result: string, index: number) => (
-                  <div key={index} className="flex items-start text-sm bg-muted/50 rounded px-2 py-1.5">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                    <span className="leading-relaxed">{result}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Action Buttons */}
             <div className="flex space-x-3 pt-4 border-t">
               <Button asChild className="flex-1">
@@ -498,3 +449,7 @@ export default function ProjectsSection() {
             </div>
           </div>
         )}
+      </SimpleModal>
+    </section>
+  );
+}
