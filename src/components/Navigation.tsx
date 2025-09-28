@@ -8,7 +8,6 @@ export default function Navigation() {
 
   const navItems = [
     { id: "hero", label: "Home" },
-    { id: "about", label: "About" },
     { id: "tech-stack", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "timeline", label: "Experience" },

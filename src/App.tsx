@@ -64,7 +64,6 @@ export default function App() {
       {/* Main Content */}
       <main>
         <HeroSection />
-        <AboutSection />
         <TechStackSection />
         <ProjectsSection />
         <TimelineSection />
