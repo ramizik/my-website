@@ -397,15 +397,15 @@ export default function ProjectsSection() {
       {/* Project Detail Modal */}
       <SimpleModal isOpen={!!selectedProject} onClose={closeModal}>
         {selectedProject && (
-          <div className="space-y-6 pb-8">
+          <div className="space-y-6 pb-4">
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="relative w-full">
-                <div className="relative h-48 md:h-64 w-full rounded-lg overflow-hidden bg-muted">
+                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden bg-muted border">
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-gray-50 dark:bg-gray-800"
                   />
                   
                   {/* Navigation Arrows */}
@@ -413,13 +413,15 @@ export default function ProjectsSection() {
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-colors z-10"
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110"
+                        aria-label="Previous image"
                       >
                         <ChevronLeft className="h-4 w-4" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-colors z-10"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110"
+                        aria-label="Next image"
                       >
                         <ChevronRight className="h-4 w-4" />
                       </button>
@@ -428,7 +430,7 @@ export default function ProjectsSection() {
                   
                   {/* Image Counter */}
                   {selectedProject.images.length > 1 && (
-                    <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md shadow-lg z-10">
                       {currentImageIndex + 1} / {selectedProject.images.length}
                     </div>
                   )}
@@ -436,21 +438,22 @@ export default function ProjectsSection() {
                 
                 {/* Thumbnail Navigation */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex space-x-2 mt-3 overflow-x-auto pb-1">
+                  <div className="flex space-x-2 mt-4 overflow-x-auto pb-2 px-1">
                     {selectedProject.images.map((image: string, index: number) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`flex-shrink-0 w-12 h-9 rounded overflow-hidden border-2 transition-colors ${
+                        className={`flex-shrink-0 w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
                           index === currentImageIndex 
-                            ? 'border-primary' 
-                            : 'border-transparent hover:border-muted-foreground'
+                            ? 'border-primary shadow-md' 
+                            : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
                         }`}
+                        aria-label={`View image ${index + 1}`}
                       >
                         <ImageWithFallback
                           src={image}
                           alt={`Thumbnail ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-opacity hover:opacity-80"
                         />
                       </button>
                     ))}
@@ -568,7 +571,7 @@ export default function ProjectsSection() {
             </div>
             
             {/* Scroll Indicator */}
-            <div className="text-center text-xs text-muted-foreground pt-2">
+            <div className="text-center text-xs text-muted-foreground pt-4 border-t">
               Use arrow keys to navigate images • Scroll for more content
             </div>
           </div>
