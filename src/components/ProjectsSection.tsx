@@ -440,7 +440,7 @@ export default function ProjectsSection() {
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="relative w-full">
-                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden bg-muted border">
+                <div className="relative h-48 md:h-56 w-full rounded-lg overflow-hidden bg-muted border">
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
@@ -477,12 +477,12 @@ export default function ProjectsSection() {
                 
                 {/* Thumbnail Navigation */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex space-x-2 mt-4 overflow-x-auto pb-2 px-1">
+                  <div className="flex space-x-2 mt-3 overflow-x-auto pb-2 px-1">
                     {selectedProject.images.map((image: string, index: number) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`flex-shrink-0 w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
+                        className={`flex-shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
                           index === currentImageIndex 
                             ? 'border-primary shadow-md' 
                             : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
