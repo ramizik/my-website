@@ -41,7 +41,7 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[9999] flex items-center justify-center"
       onClick={handleBackdropClick}
       style={{
         position: 'fixed',
@@ -54,7 +54,7 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
       }}
     >
       <div
-        className="rounded-lg p-6 max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-lg border"
+        className="rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[95vh] overflow-y-auto relative shadow-lg border"
         onClick={(e) => e.stopPropagation()}
         style={{
           zIndex: 10000,
