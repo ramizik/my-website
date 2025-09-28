@@ -232,28 +232,28 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             A selection of my recent work showcasing different technologies and problem-solving approaches
           </p>
-        </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-20">
-          <Filter className="h-5 w-5 text-muted-foreground mr-2" />
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={activeFilter === category ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveFilter(category)}
-            >
-              {category}
-            </Button>
-          ))}
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-3">
+            <Filter className="h-5 w-5 text-muted-foreground mr-2" />
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={activeFilter === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setActiveFilter(category)}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
         </div>
 
         {/* All Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
