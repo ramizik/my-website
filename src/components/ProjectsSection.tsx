@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Github, Filter, Calendar, Users, Target, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Github, ListFilter as Filter, Calendar, Users, Target, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import SimpleModal from "./SimpleModal";
 
