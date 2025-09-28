@@ -400,12 +400,12 @@ export default function ProjectsSection() {
           <div className="space-y-6 pb-4">
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
-              <div className="relative w-full">
-                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden bg-muted border">
+              <div className="relative w-full mb-6">
+                <div className="relative h-48 md:h-64 lg:h-72 w-full rounded-lg overflow-hidden bg-muted border">
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-contain bg-gray-50 dark:bg-gray-800"
+                    className="w-full h-full object-contain bg-gray-50 dark:bg-gray-800 transition-opacity duration-300"
                   />
                   
                   {/* Navigation Arrows */}
@@ -413,24 +413,24 @@ export default function ProjectsSection() {
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110 backdrop-blur-sm"
                         aria-label="Previous image"
                       >
-                        <ChevronLeft className="h-4 w-4" />
+                        <ChevronLeft className="h-5 w-5" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-200 z-20 shadow-lg hover:scale-110 backdrop-blur-sm"
                         aria-label="Next image"
                       >
-                        <ChevronRight className="h-4 w-4" />
+                        <ChevronRight className="h-5 w-5" />
                       </button>
                     </>
                   )}
                   
                   {/* Image Counter */}
                   {selectedProject.images.length > 1 && (
-                    <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md shadow-lg z-10">
+                    <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-3 py-1.5 rounded-full shadow-lg z-10 backdrop-blur-sm">
                       {currentImageIndex + 1} / {selectedProject.images.length}
                     </div>
                   )}
@@ -438,22 +438,22 @@ export default function ProjectsSection() {
                 
                 {/* Thumbnail Navigation */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex space-x-2 mt-4 overflow-x-auto pb-2 px-1">
+                  <div className="flex space-x-3 mt-4 overflow-x-auto pb-2 px-1 scrollbar-hide">
                     {selectedProject.images.map((image: string, index: number) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`flex-shrink-0 w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
+                        className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
                           index === currentImageIndex 
-                            ? 'border-primary shadow-md' 
-                            : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
+                            ? 'border-primary shadow-lg ring-2 ring-primary/20' 
+                            : 'border-gray-300 hover:border-primary/60 dark:border-gray-600 dark:hover:border-primary/60'
                         }`}
                         aria-label={`View image ${index + 1}`}
                       >
                         <ImageWithFallback
                           src={image}
                           alt={`Thumbnail ${index + 1}`}
-                          className="w-full h-full object-cover transition-opacity hover:opacity-80"
+                          className="w-full h-full object-cover transition-all duration-200 hover:opacity-90"
                         />
                       </button>
                     ))}
@@ -463,7 +463,7 @@ export default function ProjectsSection() {
             )}
 
             {/* Header */}
-            <div className="flex items-start space-x-4">
+            <div className="flex items-start space-x-4 mb-6">
               <div className="w-16 h-16 flex-shrink-0">
                 <ImageWithFallback
                   src={selectedProject.image}
@@ -494,7 +494,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Description */}
-            <div>
+            <div className="mb-6">
               <h4 className="font-semibold mb-3">Project Overview</h4>
               <p className="text-muted-foreground leading-relaxed">
                 {selectedProject.fullDescription}
@@ -502,7 +502,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Key Features */}
-            <div>
+            <div className="mb-6">
               <h4 className="font-semibold mb-3 flex items-center">
                 <Zap className="mr-2 h-4 w-4" />
                 Key Features
@@ -518,7 +518,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Technologies */}
-            <div>
+            <div className="mb-6">
               <h4 className="font-semibold mb-3">Technologies Used</h4>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.technologies.map((tech: string) => (
@@ -530,7 +530,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Challenges */}
-            <div>
+            <div className="mb-6">
               <h4 className="font-semibold mb-3">Technical Challenges</h4>
               <div className="space-y-1">
                 {selectedProject.challenges.map((challenge: string, index: number) => (
@@ -542,7 +542,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Results */}
-            <div>
+            <div className="mb-6">
               <h4 className="font-semibold mb-3">Key Results</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
                 {selectedProject.results.map((result: string, index: number) => (
@@ -555,7 +555,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex space-x-3 pt-4 border-t">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 pt-6 border-t">
               <Button asChild className="flex-1">
                 <a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -571,7 +571,7 @@ export default function ProjectsSection() {
             </div>
             
             {/* Scroll Indicator */}
-            <div className="text-center text-xs text-muted-foreground pt-4 border-t">
+            <div className="text-center text-xs text-muted-foreground pt-4 mt-4 border-t">
               Use arrow keys to navigate images • Scroll for more content
             </div>
           </div>
