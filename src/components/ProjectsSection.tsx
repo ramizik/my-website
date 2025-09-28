@@ -30,6 +30,9 @@ export default function ProjectsSection() {
       timeline: "6 months",
       role: "Full-Stack Developer & Lead",
       teamSize: "4 developers",
+      technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Stripe", "AWS"],
+      challenges: ["Implementing real-time inventory updates", "Optimizing database queries for large product catalogs", "Ensuring secure payment processing"],
+      results: ["99.9% uptime achieved", "50% faster page load times", "Increased conversion rate by 25%"],
       keyFeatures: [
         "Real-time inventory tracking",
         "Secure payment processing",
@@ -56,6 +59,9 @@ export default function ProjectsSection() {
       timeline: "4 months",
       role: "Frontend Developer",
       teamSize: "3 developers",
+      technologies: ["Vue.js", "Firebase", "PWA", "Vuex", "CSS3"],
+      challenges: ["Real-time synchronization across devices", "Offline functionality implementation", "Complex state management"],
+      results: ["40% increase in team productivity", "95% user satisfaction rate", "Cross-platform compatibility achieved"],
       keyFeatures: [
         "Real-time task updates",
         "Team collaboration tools",
@@ -82,6 +88,9 @@ export default function ProjectsSection() {
       timeline: "5 months",
       role: "Full-Stack Developer",
       teamSize: "2 developers",
+      technologies: ["React", "D3.js", "Python", "FastAPI", "Docker", "PostgreSQL"],
+      challenges: ["Processing large datasets efficiently", "Creating responsive data visualizations", "Optimizing real-time updates"],
+      results: ["60% faster data processing", "Interactive visualizations for 10M+ data points", "Reduced report generation time by 80%"],
       keyFeatures: [
         "Real-time data visualization",
         "Interactive charts and graphs",
@@ -108,6 +117,9 @@ export default function ProjectsSection() {
       timeline: "3 months",
       role: "Backend Developer",
       teamSize: "1 developer",
+      technologies: ["Node.js", "Express", "Redis", "OpenAPI", "Docker", "AWS"],
+      challenges: ["Implementing efficient caching strategies", "Handling high API request volumes", "Ensuring data accuracy from multiple sources"],
+      results: ["99.95% API uptime", "Sub-100ms response times", "Handles 10,000+ requests per minute"],
       keyFeatures: [
         "RESTful API with OpenAPI docs",
         "Intelligent caching system",
@@ -134,6 +146,9 @@ export default function ProjectsSection() {
       timeline: "8 months",
       role: "Full-Stack Developer",
       teamSize: "5 developers",
+      technologies: ["React Native", "GraphQL", "WebSockets", "MongoDB", "Node.js", "AWS"],
+      challenges: ["Implementing real-time messaging at scale", "Optimizing mobile performance", "Building robust privacy controls"],
+      results: ["10,000+ active users", "Real-time messaging with <50ms latency", "Cross-platform compatibility achieved"],
       keyFeatures: [
         "Real-time messaging",
         "Content sharing and media upload",
@@ -161,6 +176,9 @@ export default function ProjectsSection() {
       timeline: "6 months",
       role: "ML Engineer & DevOps",
       teamSize: "3 developers",
+      technologies: ["Python", "TensorFlow", "MLflow", "Kubernetes", "Docker", "FastAPI"],
+      challenges: ["Scaling ML inference to handle high loads", "Implementing automated model retraining", "Building comprehensive monitoring systems"],
+      results: ["Automated deployment reduced time-to-production by 70%", "Model performance monitoring with 99.9% accuracy", "Scalable to 1000+ concurrent predictions"],
       keyFeatures: [
         "Automated training pipelines",
         "Model versioning and tracking",
@@ -272,6 +290,18 @@ export default function ProjectsSection() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <Badge variant="secondary" className="text-xs">
+                      +{project.technologies.length - 3}
+                    </Badge>
+                  )}
+                </div>
                 <div className="flex space-x-2 pt-2">
                   <Button 
                     size="sm" 
@@ -422,6 +452,43 @@ export default function ProjectsSection() {
                   <div key={index} className="flex items-start text-sm">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
                     <span className="leading-relaxed">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Technologies */}
+            <div>
+              <h4 className="font-semibold mb-3">Technologies Used</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.technologies.map((tech: string) => (
+                  <Badge key={tech} variant="secondary" className="text-xs">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* Challenges */}
+            <div>
+              <h4 className="font-semibold mb-3">Technical Challenges</h4>
+              <div className="space-y-1">
+                {selectedProject.challenges.map((challenge: string, index: number) => (
+                  <div key={index} className="text-sm text-muted-foreground leading-relaxed">
+                    • {challenge}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Results */}
+            <div>
+              <h4 className="font-semibold mb-3">Key Results</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+                {selectedProject.results.map((result: string, index: number) => (
+                  <div key={index} className="flex items-start text-sm bg-muted/50 rounded px-2 py-1.5">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                    <span className="leading-relaxed">{result}</span>
                   </div>
                 ))}
               </div>
