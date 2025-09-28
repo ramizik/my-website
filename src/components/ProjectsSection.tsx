@@ -238,7 +238,6 @@ export default function ProjectsSection() {
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3">
-            <Filter className="h-5 w-5 text-muted-foreground mr-2" />
             {categories.map((category) => (
               <Button
                 key={category}
