@@ -269,9 +269,9 @@ export default function ProjectsSection() {
               </div>
              <div className="px-6 pt-3 pb-1">
                 <CardTitle className="text-lg">{project.title}</CardTitle>
+               <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{project.description}</p>
              </div>
-             <div className="px-6 pb-6 space-y-3">
-                <p className="text-sm text-muted-foreground line-clamp-2 -mt-2">{project.description}</p>
+             <div className="px-6 pb-6 pt-3">
                <div className="flex space-x-2">
                   <Button 
                     size="sm" 
