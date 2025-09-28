@@ -398,6 +398,45 @@ export default function ProjectsSection() {
       <SimpleModal isOpen={!!selectedProject} onClose={closeModal}>
         {selectedProject && (
           <div className="space-y-6 pb-4">
+            {/* Header */}
+            <div className="flex items-start space-x-4">
+              <div className="w-16 h-16 flex-shrink-0">
+                <ImageWithFallback
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+                <div className="flex items-center space-x-2 mb-2">
+                  <Badge variant="secondary">{selectedProject.category}</Badge>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="mr-1 h-4 w-4" />
+                    {selectedProject.timeline}
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                  <div className="flex items-center">
+                    <Users className="mr-1 h-4 w-4" />
+                    {selectedProject.teamSize}
+                  </div>
+                  <div className="flex items-center">
+                    <Target className="mr-1 h-4 w-4" />
+                    {selectedProject.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div>
+              <h4 className="font-semibold mb-3">Project Overview</h4>
+              <p className="text-muted-foreground leading-relaxed">
+                {selectedProject.fullDescription}
+              </p>
+            </div>
+
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
               <div className="relative w-full">
@@ -461,45 +500,6 @@ export default function ProjectsSection() {
                 )}
               </div>
             )}
-
-            {/* Header */}
-            <div className="flex items-start space-x-4">
-              <div className="w-16 h-16 flex-shrink-0">
-                <ImageWithFallback
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-                <div className="flex items-center space-x-2 mb-2">
-                  <Badge variant="secondary">{selectedProject.category}</Badge>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="mr-1 h-4 w-4" />
-                    {selectedProject.timeline}
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                  <div className="flex items-center">
-                    <Users className="mr-1 h-4 w-4" />
-                    {selectedProject.teamSize}
-                  </div>
-                  <div className="flex items-center">
-                    <Target className="mr-1 h-4 w-4" />
-                    {selectedProject.role}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div>
-              <h4 className="font-semibold mb-3">Project Overview</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                {selectedProject.fullDescription}
-              </p>
-            </div>
 
             {/* Key Features */}
             <div>
