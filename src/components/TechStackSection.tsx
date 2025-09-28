@@ -262,9 +262,6 @@ export default function TechStackSection() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">{selectedTech.name}</h3>
-                <span className="inline-block bg-muted text-muted-foreground text-sm px-3 py-1 rounded-full mt-1">
-                  {selectedTech.experience} experience
-                </span>
               </div>
             </div>
 
