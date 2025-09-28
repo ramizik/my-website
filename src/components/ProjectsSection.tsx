@@ -267,10 +267,10 @@ export default function ProjectsSection() {
                   className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardHeader className="pb-3">
+              <CardHeader className="pb-2 pt-4">
                 <CardTitle className="text-lg">{project.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
+              <CardContent className="space-y-3 pt-0">
                 <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1">
                   <Badge variant="secondary" className="text-xs">
