@@ -51,10 +51,10 @@ export default function ContactSection() {
       href: "tel:+15551234567"
     },
     {
-      icon: MapPin,
-      label: "Location",
-      value: "San Francisco, CA",
-      href: null
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Connect with me",
+      href: "https://linkedin.com/in/alexchen"
     },
     {
       icon: Calendar,
