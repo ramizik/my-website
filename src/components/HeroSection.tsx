@@ -73,7 +73,7 @@ export default function HeroSection() {
 
           <div className="relative">
             <div className="relative z-10 flex justify-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+              <div className="w-24 h-24 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
                 <ImageWithFallback
                   src="/images/profile.jpg"
                   alt="Ramis Hasanli - Software Developer"
@@ -83,8 +83,8 @@ export default function HeroSection() {
             </div>
             
             {/* Background decorative elements */}
-            <div className="absolute -top-4 -right-4 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-accent/30 rounded-full blur-3xl"></div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/30 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>
