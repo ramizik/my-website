@@ -72,12 +72,14 @@ export default function HeroSection() {
           </div>
 
           <div className="relative">
-            <div className="relative z-10">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1653732212701-b729f0b08330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1ODkyMzE2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Ramis Hasanli - Software Developer"
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-              />
+            <div className="relative z-10 flex justify-center">
+              <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                <ImageWithFallback
+                  src="/images/profile.jpg"
+                  alt="Ramis Hasanli - Software Developer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             
             {/* Background decorative elements */}
