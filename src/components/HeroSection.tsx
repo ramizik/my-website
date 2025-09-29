@@ -25,7 +25,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                Alex Chen
+                Ramis Hasanli
               </h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
                 Full-Stack Software Developer
@@ -49,7 +49,7 @@ export default function HeroSection() {
 
             <div className="flex space-x-6">
               <a
-                href="https://github.com/alexchen"
+                href="https://github.com/ramizik"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com/in/alexchen"
+                href="https://www.linkedin.com/in/hasanliramis/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -75,7 +75,7 @@ export default function HeroSection() {
             <div className="relative z-10">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1653732212701-b729f0b08330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1ODkyMzE2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Alex Chen - Software Developer"
+                alt="Ramis Hasanli - Software Developer"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
             </div>

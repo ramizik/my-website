@@ -1,6 +1,5 @@
 import React from "react";
-import { Separator } from "./ui/separator";
-import { Github, Linkedin, Twitter, Heart, ArrowUp } from "lucide-react";
+import { Github, Linkedin, ArrowUp } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Footer() {
@@ -8,23 +7,16 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/alexchen",
+      href: "https://github.com/ramizik",
       label: "GitHub"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/alexchen",
+      href: "https://www.linkedin.com/in/hasanliramis/",
       label: "LinkedIn"
-    },
-    {
-      icon: Twitter,
-      href: "https://twitter.com/alexchen",
-      label: "Twitter"
     }
   ];
 
@@ -48,7 +40,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Alex Chen</h3>
+            <h3 className="text-xl font-bold">Ramis Hasanli</h3>
             <p className="text-muted-foreground">
               Full-Stack Software Developer passionate about creating exceptional digital experiences.
             </p>
@@ -101,8 +93,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>alex@alexchen.dev</p>
-              <p>+1 (555) 123-4567</p>
+              <p>rhasanli@pacific.edu</p>
+              <p>+1 350 217-9174</p>
               <p>San Francisco, CA</p>
             </div>
             <Button 
@@ -114,25 +106,6 @@ export default function Footer() {
               <ArrowUp className="mr-2 h-4 w-4" />
               Back to Top
             </Button>
-          </div>
-        </div>
-
-        <Separator className="my-8" />
-
-        <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-            <span>© {currentYear} Alex Chen. Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>using React & Tailwind CSS</span>
-          </div>
-          
-          <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-            <button className="hover:text-primary transition-colors">
-              Privacy Policy
-            </button>
-            <button className="hover:text-primary transition-colors">
-              Terms of Service
-            </button>
           </div>
         </div>
       </div>

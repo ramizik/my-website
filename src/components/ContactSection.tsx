@@ -40,20 +40,20 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "alex@alexchen.dev",
-      href: "mailto:alex@alexchen.dev"
+      value: "rhasanli@pacific.edu",
+      href: "mailto:rhasanli@pacific.edu"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+1 350 217-9174",
+      href: "tel:+13502179174"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com/in/alexchen"
+      href: "https://www.linkedin.com/in/hasanliramis/"
     },
     {
       icon: Calendar,
@@ -67,19 +67,19 @@ export default function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/alexchen",
+      href: "https://github.com/ramizik",
       color: "hover:text-gray-600"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/alexchen",
+      href: "https://www.linkedin.com/in/hasanliramis/",
       color: "hover:text-blue-600"
     },
     {
       icon: Twitter,
       label: "Twitter",
-      href: "https://twitter.com/alexchen",
+      href: "https://twitter.com/hasanliramis",
       color: "hover:text-blue-400"
     }
   ];
