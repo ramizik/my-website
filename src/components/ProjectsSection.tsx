@@ -26,9 +26,6 @@ export default function ProjectsSection() {
       categories: ["Hackathon", "API"],
       demoUrl: "https://demo-vocalai.com",
       githubUrl: "https://github.com/ramizik/vocal-ai",
-      timeline: "48 hours",
-      role: "Full-Stack Developer",
-      teamSize: "3 developers",
       keyFeatures: [
         "Real-time vocal analysis",
         "AI-powered feedback system",
@@ -52,9 +49,6 @@ export default function ProjectsSection() {
       categories: ["RAG", "Multi-Agent"],
       demoUrl: "https://demo-iqore.com",
       githubUrl: "https://github.com/ramizik/iqore",
-      timeline: "5 months",
-      role: "AI Engineer & Backend Developer",
-      teamSize: "4 developers",
       keyFeatures: [
         "RAG-powered knowledge retrieval",
         "Multi-agent coordination system",
@@ -78,9 +72,6 @@ export default function ProjectsSection() {
       categories: ["Mobile App", "API"],
       demoUrl: "https://demo-mybuddy.com",
       githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
-      timeline: "6 months",
-      role: "Full-Stack Developer",
-      teamSize: "2 developers",
       keyFeatures: [
         "AI-powered task management",
         "Smart calendar integration",
@@ -104,9 +95,6 @@ export default function ProjectsSection() {
       categories: ["Hackathon", "Mobile App", "Multi-Modal"],
       demoUrl: "https://demo-wonderkid.com",
       githubUrl: "https://github.com/ramizik/bigredhacks25",
-      timeline: "48 hours",
-      role: "Full-Stack Developer & Lead",
-      teamSize: "3 developers",
       keyFeatures: [
         "AI story generation",
         "Dynamic illustrations with Imagen",
@@ -130,9 +118,6 @@ export default function ProjectsSection() {
       categories: ["Multi-Agent", "Multi-Modal", "RAG"],
       demoUrl: "https://demo-travelerai.com",
       githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
-      timeline: "4 months",
-      role: "AI Engineer",
-      teamSize: "2 developers",
       keyFeatures: [
         "Multi-modal destination analysis",
         "RAG-powered recommendations",
@@ -156,9 +141,6 @@ export default function ProjectsSection() {
       categories: ["Multi-Modal", "Hackathon"],
       demoUrl: "https://demo-echolens.com",
       githubUrl: "https://github.com/ramizik/echolens.ai",
-      timeline: "48 hours",
-      role: "Full-Stack Developer",
-      teamSize: "4 developers",
       keyFeatures: [
         "Real-time audio transcription",
         "Environmental sound detection",
