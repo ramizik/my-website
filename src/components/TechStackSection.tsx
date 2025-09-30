@@ -176,14 +176,6 @@ export default function TechStackSection() {
       title: "Databases & Data Infrastructure",
       technologies: [
         {
-          id: "elephantsql",
-          name: "ElephantSQL",
-          logo: "/src/assets/logos/supabase.svg",
-          experience: "2+ years",
-          projects: ["PostgreSQL Hosting", "Database Management"],
-          description: "Experience with ElephantSQL for managed PostgreSQL hosting, database optimization, and cloud database solutions."
-        },
-        {
           id: "supabase",
           name: "Supabase",
           logo: "/src/assets/logos/supabase.svg",
@@ -231,10 +223,10 @@ export default function TechStackSection() {
           </p>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-8">
           {techCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="text-center">
-              <h3 className="text-2xl font-semibold mb-8">{category.title}</h3>
+            <div key={categoryIndex} className="text-center mb-6">
+              <h3 className="text-2xl font-semibold mb-3">{category.title}</h3>
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
                 {category.technologies.map((tech) => (
                   <div
