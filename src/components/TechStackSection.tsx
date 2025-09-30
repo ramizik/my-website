@@ -38,7 +38,7 @@ export default function TechStackSection() {
 
   const techCategories: TechCategory[] = [
     {
-      title: "AI & Machine Learning",
+      title: "Artificial Intelligence",
       technologies: [
         {
           id: "langchain",
@@ -91,7 +91,7 @@ export default function TechStackSection() {
       ]
     },
     {
-      title: "Web & Application Development",
+      title: "Application Development",
       technologies: [
         {
           id: "flask",
@@ -132,6 +132,14 @@ export default function TechStackSection() {
           experience: "2+ years",
           projects: ["Mobile Apps", "Cross-Platform Development"],
           description: "Experience with Expo for rapid mobile app development, cross-platform deployment, and React Native ecosystem."
+        },
+        {
+          id: "figma",
+          name: "Figma",
+          logo: "/src/assets/logos/figma.svg",
+          experience: "3+ years",
+          projects: ["UI/UX Design", "Prototyping", "Design Systems"],
+          description: "Proficient in Figma for collaborative UI/UX design, prototyping, and creating design systems for web and mobile applications."
         }
       ]
     },
@@ -173,7 +181,7 @@ export default function TechStackSection() {
       ]
     },
     {
-      title: "Databases & Data Infrastructure",
+      title: "Data Infrastructure",
       technologies: [
         {
           id: "supabase",
@@ -234,14 +242,20 @@ export default function TechStackSection() {
                     className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:animate-pulse p-4"
                     onClick={() => openModal(tech)}
                   >
-                    <div className={`w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-105 bg-muted/20 group-hover:bg-muted/30`}>
+                    <div 
+                      className="flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-105 bg-muted/20 group-hover:bg-muted/30"
+                      style={{
+                        width: tech.id === 'vapi' ? '120px' : '64px',
+                        height: '64px'
+                      }}
+                    >
                       {tech.logo ? (
                         <img
                           src={tech.logo}
                           alt={tech.name}
                           className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 p-2"
                           style={
-                            ['langchain', 'expo', 'openai', 'flask', 'nodejs'].includes(tech.id) && isDark
+                            ['langchain', 'expo', 'openai', 'flask', 'nodejs', 'aws'].includes(tech.id) && isDark
                               ? { filter: 'invert(1)' }
                               : {}
                           }
