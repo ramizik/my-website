@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SimpleModal from "./SimpleModal";
 
 interface Technology {
@@ -17,56 +17,106 @@ interface TechCategory {
 
 export default function TechStackSection() {
   const [selectedTech, setSelectedTech] = useState<Technology | null>(null);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check initial dark mode state
+    setIsDark(document.documentElement.classList.contains('dark'));
+
+    // Watch for dark mode changes
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const techCategories: TechCategory[] = [
     {
-      title: "Backend",
+      title: "AI & Machine Learning",
       technologies: [
         {
-          id: "nodejs",
-          name: "Node.js",
-          logo: "/src/assets/logos/nodejs.svg",
-          experience: "4+ years",
-          projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
-          description: "Extensive experience building scalable server-side applications, RESTful APIs, and microservices architecture using Node.js and Express.js."
-        },
-        {
-          id: "python",
-          name: "Python",
-          logo: "",
-          experience: "3+ years",
-          projects: ["ML Model Deployment", "Analytics Dashboard", "Weather API"],
-          description: "Proficient in Python for backend development, data analysis, and machine learning applications using frameworks like FastAPI and Django."
-        },
-        {
-          id: "express",
-          name: "Express.js",
-          logo: "",
-          experience: "4+ years",
-          projects: ["E-Commerce Platform", "Social Media App", "Weather API"],
-          description: "Expert in building robust REST APIs and web applications using Express.js with middleware, authentication, and database integration."
-        },
-        {
-          id: "graphql",
-          name: "GraphQL",
-          logo: "",
+          id: "langchain",
+          name: "LangChain",
+          logo: "/src/assets/logos/langchain.svg",
           experience: "2+ years",
-          projects: ["Social Media App", "Task Management App"],
-          description: "Experience implementing GraphQL APIs for efficient data fetching and real-time subscriptions in modern web applications."
+          projects: ["AI Chatbot", "Document Processing", "RAG Applications"],
+          description: "Expert in building AI applications using LangChain for prompt engineering, chain composition, and integration with various LLMs."
         },
         {
-          id: "mongodb",
-          name: "MongoDB",
-          logo: "",
-          experience: "3+ years",
-          projects: ["E-Commerce Platform", "Social Media App", "Task Management App"],
-          description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
+          id: "letta",
+          name: "Letta",
+          logo: "/src/assets/logos/letta.jpg",
+          experience: "1+ years",
+          projects: ["AI Assistant", "Content Generation"],
+          description: "Experience with Letta for building conversational AI applications and natural language processing workflows."
+        },
+        {
+          id: "fetchai",
+          name: "fetch.ai",
+          logo: "/src/assets/logos/fetch-ai.svg",
+          experience: "1+ years",
+          projects: ["Decentralized AI", "Agent Networks"],
+          description: "Knowledge of fetch.ai platform for building decentralized AI applications and autonomous agent systems."
+        },
+        {
+          id: "vapi",
+          name: "VAPI",
+          logo: "/src/assets/logos/vapi.png",
+          experience: "1+ years",
+          projects: ["Voice AI", "Call Automation"],
+          description: "Experience with VAPI for building voice AI applications, call automation, and conversational interfaces."
+        },
+        {
+          id: "openai",
+          name: "OpenAI",
+          logo: "/src/assets/logos/openai.svg",
+          experience: "2+ years",
+          projects: ["AI Chatbot", "Content Generation", "Code Assistant"],
+          description: "Proficient in OpenAI APIs for GPT models, embeddings, and fine-tuning for various AI-powered applications."
+        },
+        {
+          id: "gemini",
+          name: "Gemini",
+          logo: "/src/assets/logos/gemini.png",
+          experience: "1+ years",
+          projects: ["Multimodal AI", "Text Analysis"],
+          description: "Experience with Google's Gemini AI for multimodal applications, text analysis, and advanced language understanding."
         }
       ]
     },
     {
-      title: "Frontend",
+      title: "Web & Application Development",
       technologies: [
+        {
+          id: "flask",
+          name: "Flask",
+          logo: "/src/assets/logos/flask.svg",
+          experience: "3+ years",
+          projects: ["REST APIs", "Web Applications", "Microservices"],
+          description: "Expert in Flask for building lightweight Python web applications, REST APIs, and microservices architecture."
+        },
+        {
+          id: "fastapi",
+          name: "FastAPI",
+          logo: "/src/assets/logos/fastapi.svg",
+          experience: "2+ years",
+          projects: ["High-Performance APIs", "Real-time Applications"],
+          description: "Proficient in FastAPI for building high-performance, modern Python web APIs with automatic documentation and validation."
+        },
+        {
+          id: "nodejs",
+          name: "Node.js",
+          logo: "/src/assets/logos/node.svg",
+          experience: "4+ years",
+          projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
+          description: "Extensive experience building scalable server-side applications, RESTful APIs, and microservices architecture using Node.js."
+        },
         {
           id: "react",
           name: "React",
@@ -76,110 +126,86 @@ export default function TechStackSection() {
           description: "Expert in React ecosystem including hooks, context, state management, and modern patterns for building scalable user interfaces."
         },
         {
-          id: "typescript",
-          name: "TypeScript",
-          logo: "/src/assets/logos/typescript.svg",
-          experience: "4+ years",
-          projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
-          description: "Strong expertise in TypeScript for type-safe development, advanced types, and large-scale application architecture."
-        },
-        {
-          id: "nextjs",
-          name: "Next.js",
-          logo: "",
-          experience: "3+ years",
-          projects: ["E-Commerce Platform", "Analytics Dashboard"],
-          description: "Proficient in Next.js for server-side rendering, static site generation, and full-stack React applications with optimal performance."
-        },
-        {
-          id: "tailwind",
-          name: "Tailwind CSS",
-          logo: "",
-          experience: "3+ years",
-          projects: ["E-Commerce Platform", "Task Management App", "Social Media App"],
-          description: "Expert in utility-first CSS framework for rapid UI development with responsive design and custom component creation."
-        },
-        {
-          id: "vue",
-          name: "Vue.js",
-          logo: "",
+          id: "expo",
+          name: "Expo",
+          logo: "/src/assets/logos/expo.svg",
           experience: "2+ years",
-          projects: ["Task Management App"],
-          description: "Experience with Vue.js ecosystem including Vuex, Vue Router, and composition API for building reactive web applications."
+          projects: ["Mobile Apps", "Cross-Platform Development"],
+          description: "Experience with Expo for rapid mobile app development, cross-platform deployment, and React Native ecosystem."
         }
       ]
     },
     {
-      title: "Cloud",
+      title: "Cloud & Deployment",
       technologies: [
+        {
+          id: "google-cloud-run",
+          name: "Google Cloud Run",
+          logo: "/src/assets/logos/gcloud.svg",
+          experience: "2+ years",
+          projects: ["Serverless Applications", "Container Deployment"],
+          description: "Proficient in Google Cloud Run for serverless container deployment, auto-scaling, and cloud-native application hosting."
+        },
         {
           id: "aws",
           name: "AWS",
-          logo: "",
+          logo: "/src/assets/logos/aws.svg",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
           description: "Certified AWS Solutions Architect with experience in EC2, S3, Lambda, RDS, and CloudFormation for scalable cloud infrastructure."
         },
         {
+          id: "netlify",
+          name: "Netlify",
+          logo: "/src/assets/logos/netlify.svg",
+          experience: "2+ years",
+          projects: ["Static Site Deployment", "JAMstack Applications"],
+          description: "Experience with Netlify for static site hosting, continuous deployment, and serverless functions for modern web applications."
+        },
+        {
           id: "docker",
           name: "Docker",
-          logo: "",
+          logo: "/src/assets/logos/docker.svg",
           experience: "3+ years",
           projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
           description: "Proficient in containerization, multi-stage builds, Docker Compose, and container orchestration for development and production."
-        },
-        {
-          id: "kubernetes",
-          name: "Kubernetes",
-          logo: "",
-          experience: "2+ years",
-          projects: ["ML Model Deployment", "Analytics Dashboard"],
-          description: "Experience with Kubernetes orchestration, deployments, services, and scaling applications in production environments."
-        },
-        {
-          id: "terraform",
-          name: "Terraform",
-          logo: "",
-          experience: "2+ years",
-          projects: ["ML Model Deployment"],
-          description: "Infrastructure as Code expertise for provisioning and managing cloud resources across multiple providers with Terraform."
         }
       ]
     },
     {
-      title: "ML/AI",
+      title: "Databases & Data Infrastructure",
       technologies: [
         {
-          id: "tensorflow",
-          name: "TensorFlow",
-          logo: "",
+          id: "elephantsql",
+          name: "ElephantSQL",
+          logo: "/src/assets/logos/supabase.svg",
           experience: "2+ years",
-          projects: ["ML Model Deployment"],
-          description: "Experience building and deploying machine learning models using TensorFlow for computer vision and natural language processing tasks."
+          projects: ["PostgreSQL Hosting", "Database Management"],
+          description: "Experience with ElephantSQL for managed PostgreSQL hosting, database optimization, and cloud database solutions."
         },
         {
-          id: "pytorch",
-          name: "PyTorch",
-          logo: "",
-          experience: "1+ years",
-          projects: ["ML Model Deployment"],
-          description: "Hands-on experience with PyTorch for deep learning research, model development, and neural network architectures."
+          id: "supabase",
+          name: "Supabase",
+          logo: "/src/assets/logos/supabase.svg",
+          experience: "2+ years",
+          projects: ["Real-time Applications", "Authentication Systems"],
+          description: "Proficient in Supabase for backend-as-a-service, real-time databases, authentication, and API generation."
         },
         {
-          id: "openai",
-          name: "OpenAI API",
-          logo: "",
-          experience: "1+ years",
-          projects: ["Analytics Dashboard"],
-          description: "Integration experience with OpenAI APIs for natural language processing, text generation, and AI-powered features in applications."
+          id: "mongodb",
+          name: "MongoDB",
+          logo: "/src/assets/logos/mongodb.svg",
+          experience: "3+ years",
+          projects: ["E-Commerce Platform", "Social Media App", "Task Management App"],
+          description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
         },
         {
-          id: "mlflow",
-          name: "MLflow",
-          logo: "",
+          id: "chromadb",
+          name: "ChromaDB",
+          logo: "/src/assets/logos/chromadb.svg",
           experience: "1+ years",
-          projects: ["ML Model Deployment"],
-          description: "Experience with MLflow for machine learning lifecycle management, experiment tracking, and model versioning in production."
+          projects: ["Vector Search", "AI Applications"],
+          description: "Experience with ChromaDB for vector database operations, similarity search, and AI-powered data retrieval systems."
         }
       ]
     }
@@ -216,12 +242,17 @@ export default function TechStackSection() {
                     className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:animate-pulse p-4"
                     onClick={() => openModal(tech)}
                   >
-                    <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-muted/20 rounded-lg group-hover:bg-muted/30 transition-all duration-300 group-hover:scale-105">
+                    <div className={`w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-105 bg-muted/20 group-hover:bg-muted/30`}>
                       {tech.logo ? (
                         <img
                           src={tech.logo}
                           alt={tech.name}
-                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 p-2"
+                          style={
+                            ['langchain', 'expo', 'openai', 'flask', 'nodejs'].includes(tech.id) && isDark
+                              ? { filter: 'invert(1)' }
+                              : {}
+                          }
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
                             e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -244,12 +275,17 @@ export default function TechStackSection() {
         {selectedTech && (
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-muted/20 rounded-lg">
+              <div className={`w-12 h-12 flex items-center justify-center rounded-lg bg-muted/20`}>
                 {selectedTech.logo ? (
                   <img
                     src={selectedTech.logo}
                     alt={selectedTech.name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain p-1"
+                    style={
+                      ['langchain', 'expo', 'openai', 'flask', 'nodejs'].includes(selectedTech.id) && isDark
+                        ? { filter: 'invert(1)' }
+                        : {}
+                    }
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling?.classList.remove('hidden');
