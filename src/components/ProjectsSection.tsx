@@ -14,165 +14,163 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern, scalable e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      fullDescription: "A comprehensive e-commerce solution built from the ground up, featuring a modern React frontend with TypeScript, a robust Node.js backend with Express, and PostgreSQL database. The platform includes real-time inventory management, secure payment processing via Stripe, comprehensive admin dashboard, and AWS cloud deployment with auto-scaling capabilities.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "Vocal AI",
+      description: "An AI-powered singing coach that provides real-time feedback and personalized training for vocalists.",
+      fullDescription: "Vocal AI is an innovative singing coach application that leverages artificial intelligence to analyze vocal performance and provide personalized feedback. Built during a hackathon, this project combines advanced audio processing with AI-driven insights to help singers improve their technique and vocal range.",
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3Bob25lfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       images: [
-        "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3Bob25lfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGFwcHxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaW5naW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
       ],
-      category: "Web App",
-      demoUrl: "https://demo-ecommerce.com",
-      githubUrl: "https://github.com/ramizik/ecommerce-platform",
-      timeline: "6 months",
-      role: "Full-Stack Developer & Lead",
-      teamSize: "4 developers",
+      categories: ["Hackathon", "API"],
+      demoUrl: "https://demo-vocalai.com",
+      githubUrl: "https://github.com/ramizik/vocal-ai",
+      timeline: "48 hours",
+      role: "Full-Stack Developer",
+      teamSize: "3 developers",
       keyFeatures: [
-        "Real-time inventory tracking",
-        "Secure payment processing",
-        "Advanced search and filtering",
-        "Order management system",
-        "Admin analytics dashboard",
-        "Mobile-responsive design"
+        "Real-time vocal analysis",
+        "AI-powered feedback system",
+        "Pitch detection and correction",
+        "Progress tracking dashboard",
+        "Custom training exercises",
+        "Performance analytics"
       ]
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and advanced analytics.",
-      fullDescription: "A comprehensive task management solution built with Vue.js and Firebase, featuring real-time collaboration, advanced project tracking, and detailed analytics. The app supports team workspaces, task assignments, deadline tracking, and provides insights into team productivity and project progress.",
-      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "Business Chatbot for iQore",
+      description: "An intelligent business chatbot using RAG and multi-agent architecture for enhanced customer interactions.",
+      fullDescription: "A sophisticated enterprise chatbot solution built for iQore that combines Retrieval-Augmented Generation (RAG) with multi-agent systems. This chatbot intelligently handles customer queries, provides accurate business information, and seamlessly escalates complex issues to appropriate departments.",
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       images: [
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2h8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
       ],
-      category: "Mobile App",
-      demoUrl: "https://demo-taskapp.com",
-      githubUrl: "https://github.com/ramizik/task-manager",
-      timeline: "4 months",
-      role: "Frontend Developer",
-      teamSize: "3 developers",
+      categories: ["RAG", "Multi-Agent"],
+      demoUrl: "https://demo-iqore.com",
+      githubUrl: "https://github.com/ramizik/iqore",
+      timeline: "5 months",
+      role: "AI Engineer & Backend Developer",
+      teamSize: "4 developers",
       keyFeatures: [
-        "Real-time task updates",
-        "Team collaboration tools",
-        "Project analytics dashboard",
-        "Mobile PWA support",
-        "Task assignment and tracking",
-        "Deadline notifications"
+        "RAG-powered knowledge retrieval",
+        "Multi-agent coordination system",
+        "Context-aware conversations",
+        "Document processing pipeline",
+        "Intent classification",
+        "Automated escalation system"
       ]
     },
     {
       id: 3,
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for business intelligence with interactive charts and real-time data visualization.",
-      fullDescription: "A powerful business intelligence dashboard built with React and D3.js, featuring real-time data visualization, interactive charts, and comprehensive reporting capabilities. The backend uses Python with FastAPI for high-performance data processing and Docker for containerized deployment.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "My Buddy",
+      description: "A personal AI assistant mobile app that helps manage daily tasks, schedules, and provides intelligent recommendations.",
+      fullDescription: "My Buddy is a comprehensive personal AI assistant that combines mobile app convenience with powerful API capabilities. It helps users manage their daily lives through intelligent task management, calendar integration, and context-aware suggestions tailored to individual preferences and habits.",
+      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       images: [
-        "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGFzc2lzdGFudHxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      category: "Web App",
-      demoUrl: "https://demo-analytics.com",
-      githubUrl: "https://github.com/ramizik/analytics-dashboard",
-      timeline: "5 months",
+      categories: ["Mobile App", "API"],
+      demoUrl: "https://demo-mybuddy.com",
+      githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
+      timeline: "6 months",
       role: "Full-Stack Developer",
       teamSize: "2 developers",
       keyFeatures: [
-        "Real-time data visualization",
-        "Interactive charts and graphs",
-        "Custom report generation",
-        "Data export capabilities",
-        "User role management",
-        "Responsive dashboard design"
+        "AI-powered task management",
+        "Smart calendar integration",
+        "Personalized recommendations",
+        "Voice command support",
+        "Cross-platform synchronization",
+        "Privacy-focused design"
       ]
     },
     {
       id: 4,
-      title: "Weather Forecast API",
-      description: "A RESTful API service providing accurate weather forecasts with caching, rate limiting, and comprehensive documentation.",
-      fullDescription: "A high-performance weather API service built with Node.js and Express, featuring intelligent caching with Redis, comprehensive rate limiting, and detailed OpenAPI documentation. The service aggregates data from multiple weather providers to ensure accuracy and reliability.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "WonderKid",
+      description: "An interactive AI-powered teaching app that makes learning fun and engaging for children through multi-modal experiences.",
+      fullDescription: "WonderKid transforms reading into an interactive adventure with AI-powered storytelling. Built during a hackathon, it combines Google's Gemini AI, Imagen, and Veo 2.0 to create personalized stories with dynamic illustrations and interactive choices, making learning fun for children aged 5-8.",
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       images: [
-        "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBhcHB8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       ],
-      category: "API",
-      demoUrl: "https://api-weather.com/docs",
-      githubUrl: "https://github.com/ramizik/weather-api",
-      timeline: "3 months",
-      role: "Backend Developer",
-      teamSize: "1 developer",
+      categories: ["Hackathon", "Mobile App", "Multi-Modal"],
+      demoUrl: "https://demo-wonderkid.com",
+      githubUrl: "https://github.com/ramizik/bigredhacks25",
+      timeline: "48 hours",
+      role: "Full-Stack Developer & Lead",
+      teamSize: "3 developers",
       keyFeatures: [
-        "RESTful API with OpenAPI docs",
-        "Intelligent caching system",
-        "Rate limiting and throttling",
-        "Multiple data source aggregation",
-        "Comprehensive error handling",
-        "Performance monitoring"
+        "AI story generation",
+        "Dynamic illustrations with Imagen",
+        "Interactive story choices",
+        "Video compilation with Veo 2.0",
+        "Progress tracking",
+        "Age-appropriate content"
       ]
     },
     {
       id: 5,
-      title: "Social Media App",
-      description: "A modern social media platform with real-time messaging, content sharing, and advanced privacy controls.",
-      fullDescription: "A comprehensive social media platform built with React Native for cross-platform mobile development, featuring real-time messaging via WebSockets, GraphQL API for efficient data fetching, and advanced privacy controls. The platform supports content sharing, user profiles, real-time notifications, and secure authentication.",
-      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "Traveler AI",
+      description: "An intelligent travel assistant that combines multi-modal AI with RAG to provide personalized travel recommendations.",
+      fullDescription: "Traveler AI is a comprehensive travel planning assistant that leverages multi-modal AI capabilities and Retrieval-Augmented Generation to create personalized travel experiences. It analyzes user preferences, budget constraints, and destination information to provide tailored recommendations and itineraries.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       images: [
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXN0aW5hdGlvbnxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
       ],
-      category: "Mobile App",
-      demoUrl: "https://demo-social.com",
-      githubUrl: "https://github.com/ramizik/social-app",
-      timeline: "8 months",
-      role: "Full-Stack Developer",
-      teamSize: "5 developers",
+      categories: ["Multi-Agent", "Multi-Modal", "RAG"],
+      demoUrl: "https://demo-travelerai.com",
+      githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
+      timeline: "4 months",
+      role: "AI Engineer",
+      teamSize: "2 developers",
       keyFeatures: [
-        "Real-time messaging",
-        "Content sharing and media upload",
-        "User profiles and connections",
-        "Advanced privacy settings",
-        "Push notifications",
-        "Cross-platform compatibility"
+        "Multi-modal destination analysis",
+        "RAG-powered recommendations",
+        "Personalized itinerary generation",
+        "Real-time travel information",
+        "Budget optimization",
+        "Interactive map integration"
       ]
     },
     {
       id: 6,
-      title: "ML Model Deployment",
-      description: "A scalable machine learning model deployment platform with automated training pipelines and model versioning.",
-      fullDescription: "An enterprise-grade machine learning platform built with Python and TensorFlow, featuring automated model training pipelines, version control with MLflow, and scalable deployment on Kubernetes. The platform includes model monitoring, A/B testing capabilities, and comprehensive logging for production ML workflows.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      title: "EchoLens AI",
+      description: "A multi-modal hearing assistant that uses AI to enhance audio experiences and provide real-time transcription.",
+      fullDescription: "EchoLens AI is an innovative hearing assistant application built during a hackathon. It combines multi-modal AI capabilities to enhance audio experiences for users with hearing difficulties, providing real-time transcription, audio amplification, and environmental sound detection with visual feedback.",
+      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFyaW5nJTIwYWlkfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       images: [
-        "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "https://images.unsplash.com/photo-1589254065878-42c9da997008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFyaW5nJTIwYWlkfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2Nlc3NpYmlsaXR5fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWRpbyUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
       ],
-      category: "Machine Learning",
-      demoUrl: "https://demo-ml.com",
-      githubUrl: "https://github.com/ramizik/ml-platform",
-      timeline: "6 months",
-      role: "ML Engineer & DevOps",
-      teamSize: "3 developers",
+      categories: ["Multi-Modal", "Hackathon"],
+      demoUrl: "https://demo-echolens.com",
+      githubUrl: "https://github.com/ramizik/echolens.ai",
+      timeline: "48 hours",
+      role: "Full-Stack Developer",
+      teamSize: "4 developers",
       keyFeatures: [
-        "Automated training pipelines",
-        "Model versioning and tracking",
-        "Kubernetes deployment",
-        "Model monitoring and alerting",
-        "A/B testing framework",
-        "Scalable inference serving"
+        "Real-time audio transcription",
+        "Environmental sound detection",
+        "Visual audio feedback",
+        "Multi-modal interface",
+        "Customizable audio profiles",
+        "Accessibility-focused design"
       ]
     }
   ];
 
-  const categories = ["All", "Web App", "Mobile App", "API", "Machine Learning"];
+  const categories = ["All", "RAG", "Multi-Modal", "Multi-Agent", "Hackathon", "API", "Mobile App"];
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -202,7 +200,7 @@ export default function ProjectsSection() {
 
   const filteredProjects = activeFilter === "All" 
     ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter(project => project.categories.includes(activeFilter));
 
   // Handle keyboard navigation for image carousel
   useEffect(() => {
@@ -318,8 +316,10 @@ export default function ProjectsSection() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-                <div className="flex items-center space-x-2 mb-2">
-                  <Badge variant="secondary">{selectedProject.category}</Badge>
+                <div className="flex items-center flex-wrap gap-2 mb-2">
+                  {selectedProject.categories.map((category: string, index: number) => (
+                    <Badge key={index} variant="secondary">{category}</Badge>
+                  ))}
                 </div>
               </div>
               <div className="flex-shrink-0">
