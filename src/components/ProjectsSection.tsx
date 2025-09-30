@@ -17,14 +17,21 @@ export default function ProjectsSection() {
       title: "Vocal AI",
       description: "An AI-powered singing coach that provides real-time feedback and personalized training for vocalists.",
       fullDescription: "Vocal AI is an innovative singing coach application that leverages artificial intelligence to analyze vocal performance and provide personalized feedback. Built during a hackathon, this project combines advanced audio processing with AI-driven insights to help singers improve their technique and vocal range.",
-      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3Bob25lfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/images/vocal-ai-1.jpg",
       images: [
-        "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3Bob25lfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGFwcHxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaW5naW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+        "/images/vocal-ai-0.jpg",
+        "/images/vocal-ai-1.jpg",
+        "/images/vocal-ai-2.jpg",
+        "/images/vocal-ai-3.jpg",
+        "/images/vocal-ai-4.jpg",
+        "/images/vocal-ai-5.jpg",
+        "/images/vocal-ai-6.jpg",
+        "/images/vocal-ai-7.JPEG",
+        "/images/vocal-ai-8.JPEG"
       ],
       categories: ["Hackathon", "API"],
-      demoUrl: "https://demo-vocalai.com",
+      demoUrl: "https://www.youtube.com/watch?v=4XWiMuE9wwM&t=119s",
+      devpostUrl: "https://devpost.com/software/vocai-ai-coach",
       githubUrl: "https://github.com/ramizik/vocal-ai",
       keyFeatures: [
         "Real-time vocal analysis",
@@ -40,14 +47,15 @@ export default function ProjectsSection() {
       title: "Business Chatbot for iQore",
       description: "An intelligent business chatbot using RAG and multi-agent architecture for enhanced customer interactions.",
       fullDescription: "A sophisticated enterprise chatbot solution built for iQore that combines Retrieval-Augmented Generation (RAG) with multi-agent systems. This chatbot intelligently handles customer queries, provides accurate business information, and seamlessly escalates complex issues to appropriate departments.",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/images/iqore-1.jpg",
       images: [
-        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2h8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+        "/images/iqore-1.jpg",
+        "/images/iqore-2.jpg",
+        "/images/iqore-3.jpg"
       ],
       categories: ["RAG", "Multi-Agent"],
-      demoUrl: "https://demo-iqore.com",
+      demoUrl: "",
+      devpostUrl: "",
       githubUrl: "https://github.com/ramizik/iqore",
       keyFeatures: [
         "RAG-powered knowledge retrieval",
@@ -63,14 +71,20 @@ export default function ProjectsSection() {
       title: "My Buddy",
       description: "A personal AI assistant mobile app that helps manage daily tasks, schedules, and provides intelligent recommendations.",
       fullDescription: "My Buddy is a comprehensive personal AI assistant that combines mobile app convenience with powerful API capabilities. It helps users manage their daily lives through intelligent task management, calendar integration, and context-aware suggestions tailored to individual preferences and habits.",
-      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/my-buddy-1.jpg",
       images: [
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGFzc2lzdGFudHxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3QlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc1ODg5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "/images/my-buddy-1.jpg",
+        "/images/my-buddy-2.jpg",
+        "/images/my-buddy-3.jpg",
+        "/images/my-buddy-4.jpg",
+        "/images/my-buddy-5.jpg",
+        "/images/my-buddy-6.jpg",
+        "/images/my-buddy-7.jpg",
+        "/images/my-buddy-8.jpg"
       ],
       categories: ["Mobile App", "API"],
-      demoUrl: "https://demo-mybuddy.com",
+      demoUrl: "",
+      devpostUrl: "",
       githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
       keyFeatures: [
         "AI-powered task management",
@@ -86,14 +100,19 @@ export default function ProjectsSection() {
       title: "WonderKid",
       description: "An interactive AI-powered teaching app that makes learning fun and engaging for children through multi-modal experiences.",
       fullDescription: "WonderKid transforms reading into an interactive adventure with AI-powered storytelling. Built during a hackathon, it combines Google's Gemini AI, Imagen, and Veo 2.0 to create personalized stories with dynamic illustrations and interactive choices, making learning fun for children aged 5-8.",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/images/wonder-kid-1.jpg",
       images: [
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBhcHB8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU4ODU0NzU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        "/images/wonder-kid-1.jpg",
+        "/images/wonder-kid-2.jpg",
+        "/images/wonder-kid-3.jpg",
+        "/images/wonder-kid-4.jpg",
+        "/images/wonder-kid-5.jpg",
+        "/images/wonder-kid-6.jpg",
+        "/images/wonder-kid-7.jpg"
       ],
       categories: ["Hackathon", "Mobile App", "Multi-Modal"],
-      demoUrl: "https://demo-wonderkid.com",
+      demoUrl: "",
+      devpostUrl: "https://devpost.com/software/wonderkid",
       githubUrl: "https://github.com/ramizik/bigredhacks25",
       keyFeatures: [
         "AI story generation",
@@ -109,14 +128,11 @@ export default function ProjectsSection() {
       title: "Traveler AI",
       description: "An intelligent travel assistant that combines multi-modal AI with RAG to provide personalized travel recommendations.",
       fullDescription: "Traveler AI is a comprehensive travel planning assistant that leverages multi-modal AI capabilities and Retrieval-Augmented Generation to create personalized travel experiences. It analyzes user preferences, budget constraints, and destination information to provide tailored recommendations and itineraries.",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      images: [
-        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXN0aW5hdGlvbnxlbnwwfHx8fDE2Nzg5OTAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-      ],
+      image: "/images/profile.jpg",
+      images: [],
       categories: ["Multi-Agent", "Multi-Modal", "RAG"],
-      demoUrl: "https://demo-travelerai.com",
+      demoUrl: "https://www.youtube.com/watch?v=c_hut9NcQwY",
+      devpostUrl: "https://devpost.com/software/travel-ai-agent",
       githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
       keyFeatures: [
         "Multi-modal destination analysis",
@@ -132,14 +148,17 @@ export default function ProjectsSection() {
       title: "EchoLens AI",
       description: "A multi-modal hearing assistant that uses AI to enhance audio experiences and provide real-time transcription.",
       fullDescription: "EchoLens AI is an innovative hearing assistant application built during a hackathon. It combines multi-modal AI capabilities to enhance audio experiences for users with hearing difficulties, providing real-time transcription, audio amplification, and environmental sound detection with visual feedback.",
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFyaW5nJTIwYWlkfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/images/echo-lens-1.png",
       images: [
-        "https://images.unsplash.com/photo-1589254065878-42c9da997008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFyaW5nJTIwYWlkfGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2Nlc3NpYmlsaXR5fGVufDB8fHx8MTY3ODk5MDE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWRpbyUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNjc4OTkwMTQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+        "/images/echo-lens-1.png",
+        "/images/echo-lens-2.png",
+        "/images/echo-lens-3.png",
+        "/images/echo-lens-4.png",
+        "/images/echo-lens-4.JPEG"
       ],
       categories: ["Multi-Modal", "Hackathon"],
-      demoUrl: "https://demo-echolens.com",
+      demoUrl: "https://www.youtube.com/watch?v=HJFwOpEGalA",
+      devpostUrl: "https://devpost.com/software/echolens-oujfr0",
       githubUrl: "https://github.com/ramizik/echolens.ai",
       keyFeatures: [
         "Real-time audio transcription",
@@ -251,19 +270,57 @@ export default function ProjectsSection() {
                <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{project.description}</p>
              </div>
              <div className="px-6 pb-6 pt-3">
-               <div className="flex space-x-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="flex-1" 
-                    asChild
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+              <div className="flex space-x-2">
+                  {project.demoUrl ? (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1" 
+                      asChild
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-1 h-3 w-3" />
+                        Demo
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1" 
+                      disabled
+                    >
                       <ExternalLink className="mr-1 h-3 w-3" />
                       Demo
-                    </a>
-                  </Button>
+                    </Button>
+                  )}
+
+                  {project.devpostUrl ? (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1" 
+                      asChild
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <a href={project.devpostUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-1 h-3 w-3" />
+                        Devpost
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1" 
+                      disabled
+                    >
+                      <ExternalLink className="mr-1 h-3 w-3" />
+                      Devpost
+                    </Button>
+                  )}
+
                   <Button 
                     size="sm" 
                     variant="outline" 

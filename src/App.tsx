@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import TechStackSection from "./components/TechStackSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TimelineSection from "./components/TimelineSection";
+import BlogSection from "./components/BlogSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { Button } from "./components/ui/button";
@@ -50,6 +51,7 @@ export default function App() {
         <ProjectsSection />
         <TechStackSection />
         <TimelineSection />
+        <BlogSection />
         <ContactSection />
       </main>
 

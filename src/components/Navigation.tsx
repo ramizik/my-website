@@ -16,6 +16,7 @@ export default function Navigation({ isDarkMode, toggleTheme }: NavigationProps)
     { id: "projects", label: "Projects" },
     { id: "tech-stack", label: "Skills" },
     { id: "timeline", label: "Experience" },
+    { id: "blog", label: "Blog" },
     { id: "contact", label: "Contact" },
   ];
 

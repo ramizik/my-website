@@ -24,6 +24,7 @@ export default function Footer() {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#tech-stack" },
     { label: "Experience", href: "#timeline" },
+    { label: "Blog", href: "#blog" },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -95,7 +96,6 @@ export default function Footer() {
             <div className="space-y-2 text-muted-foreground">
               <p>rhasanli@pacific.edu</p>
               <p>+1 350 217-9174</p>
-              <p>San Francisco, CA</p>
             </div>
             <Button 
               onClick={scrollToTop}
