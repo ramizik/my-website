@@ -54,12 +54,6 @@ export default function ContactSection() {
       label: "LinkedIn",
       value: "Connect with me",
       href: "https://www.linkedin.com/in/hasanliramis/"
-    },
-    {
-      icon: Calendar,
-      label: "Availability",
-      value: "Open to opportunities",
-      href: null
     }
   ];
 

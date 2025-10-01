@@ -18,6 +18,7 @@ export default function ProjectsSection() {
       title: "Vocal AI",
       description: "An AI-powered singing coach that provides real-time feedback and personalized training for vocalists.",
       fullDescription: "Vocal AI is an innovative singing coach application that leverages artificial intelligence to analyze vocal performance and provide personalized feedback. Built during a hackathon, this project combines advanced audio processing with AI-driven insights to help singers improve their technique and vocal range.",
+      logo: "/images/logo-vocal-ai.png",
       image: "/images/vocal-ai-1.jpg",
       images: [
         "/images/vocal-ai-0.jpg",
@@ -48,6 +49,7 @@ export default function ProjectsSection() {
       title: "Business Chatbot for iQore",
       description: "An intelligent business chatbot using RAG and multi-agent architecture for enhanced customer interactions.",
       fullDescription: "A sophisticated enterprise chatbot solution built for iQore that combines Retrieval-Augmented Generation (RAG) with multi-agent systems. This chatbot intelligently handles customer queries, provides accurate business information, and seamlessly escalates complex issues to appropriate departments.",
+      logo: "/images/logo-iqore.png",
       image: "/images/iqore-1.jpg",
       images: [
         "/images/iqore-1.jpg",
@@ -72,6 +74,7 @@ export default function ProjectsSection() {
       title: "My Buddy",
       description: "A personal AI assistant mobile app that helps manage daily tasks, schedules, and provides intelligent recommendations.",
       fullDescription: "My Buddy is a comprehensive personal AI assistant that combines mobile app convenience with powerful API capabilities. It helps users manage their daily lives through intelligent task management, calendar integration, and context-aware suggestions tailored to individual preferences and habits.",
+      logo: "/images/logo-my-buddy.png",
       image: "/images/my-buddy-1.jpg",
       images: [
         "/images/my-buddy-1.jpg",
@@ -101,6 +104,7 @@ export default function ProjectsSection() {
       title: "WonderKid",
       description: "An interactive AI-powered teaching app that makes learning fun and engaging for children through multi-modal experiences.",
       fullDescription: "WonderKid transforms reading into an interactive adventure with AI-powered storytelling. Built during a hackathon, it combines Google's Gemini AI, Imagen, and Veo 2.0 to create personalized stories with dynamic illustrations and interactive choices, making learning fun for children aged 5-8.",
+      logo: "/images/logo-wonder-kid.png",
       image: "/images/wonder-kid-1.jpg",
       images: [
         "/images/wonder-kid-1.jpg",
@@ -129,6 +133,7 @@ export default function ProjectsSection() {
       title: "Traveler AI",
       description: "An intelligent travel assistant that combines multi-modal AI with RAG to provide personalized travel recommendations.",
       fullDescription: "Traveler AI is a comprehensive travel planning assistant that leverages multi-modal AI capabilities and Retrieval-Augmented Generation to create personalized travel experiences. It analyzes user preferences, budget constraints, and destination information to provide tailored recommendations and itineraries.",
+      logo: "/images/logo-travel-ai.png",
       image: "/images/profile.jpg",
       images: [],
       categories: ["Multi-Agent", "Multi-Modal", "RAG"],
@@ -149,6 +154,7 @@ export default function ProjectsSection() {
       title: "EchoLens AI",
       description: "A multi-modal hearing assistant that uses AI to enhance audio experiences and provide real-time transcription.",
       fullDescription: "EchoLens AI is an innovative hearing assistant application built during a hackathon. It combines multi-modal AI capabilities to enhance audio experiences for users with hearing difficulties, providing real-time transcription, audio amplification, and environmental sound detection with visual feedback.",
+      logo: "/images/logo-echolens.png",
       image: "/images/echo-lens-1.png",
       images: [
         "/images/echo-lens-1.png",
@@ -172,7 +178,7 @@ export default function ProjectsSection() {
     }
   ];
 
-  const categories = ["All", "RAG", "Multi-Modal", "Multi-Agent", "Hackathon", "API", "Mobile App"];
+  const categories = ["All", "Mobile App", "Multi-Modal", "Multi-Agent", "Hackathon", "API", "RAG"];
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -285,11 +291,11 @@ export default function ProjectsSection() {
              className="border-0 shadow-md hover:shadow-lg transition-shadow group cursor-pointer overflow-hidden"
               onClick={() => openModal(project)}
             >
-              <div className="relative">
+              <div className="relative bg-white dark:bg-gray-900 flex items-center justify-center p-4">
                 <ImageWithFallback
-                  src={project.image}
+                  src={project.logo}
                   alt={project.title}
-                  className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
              <div className="px-6 pt-3 pb-1">
@@ -372,23 +378,42 @@ export default function ProjectsSection() {
         {selectedProject && (
           <div className="space-y-6 pb-4">
             {/* Header */}
-            <div className="flex items-start space-x-4">
-              <div className="w-16 h-16 flex-shrink-0">
-                <ImageWithFallback
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover rounded-lg"
-                />
+            <div>
+              <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+              <div className="flex items-center flex-wrap gap-2 mb-3">
+                {selectedProject.categories.map((category: string, index: number) => (
+                  <Badge key={index} variant="secondary">{category}</Badge>
+                ))}
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-                <div className="flex items-center flex-wrap gap-2 mb-2">
-                  {selectedProject.categories.map((category: string, index: number) => (
-                    <Badge key={index} variant="secondary">{category}</Badge>
-                  ))}
-                </div>
-              </div>
-              <div className="flex-shrink-0">
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.demoUrl ? (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Demo
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="outline" size="sm" disabled>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Demo
+                  </Button>
+                )}
+                
+                {selectedProject.devpostUrl ? (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={selectedProject.devpostUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Devpost
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="outline" size="sm" disabled>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Devpost
+                  </Button>
+                )}
+                
                 <Button variant="outline" size="sm" asChild>
                   <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />

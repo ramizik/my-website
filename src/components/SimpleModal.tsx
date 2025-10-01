@@ -54,7 +54,7 @@ export default function SimpleModal({ isOpen, onClose, children }: SimpleModalPr
       }}
     >
       <div
-        className="rounded-lg p-6 max-w-4xl w-full mx-4 my-8 max-h-[90vh] overflow-y-auto relative shadow-lg border"
+        className="rounded-lg p-6 pt-10 pr-16 md:pr-20 max-w-4xl w-full mx-4 my-8 max-h-[90vh] overflow-y-auto relative shadow-lg border"
         onClick={(e) => e.stopPropagation()}
         style={{
           zIndex: 10000,
