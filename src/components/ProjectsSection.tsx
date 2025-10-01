@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -10,6 +10,7 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const thumbnailContainerRef = useRef<HTMLDivElement | null>(null);
 
   const projects = [
     {
@@ -199,6 +200,32 @@ export default function ProjectsSection() {
     }
   };
 
+  const goToPrevFromThumbnails = () => {
+    if (!selectedProject?.images || selectedProject.images.length === 0) return;
+    const newIndex = currentImageIndex === 0
+      ? selectedProject.images.length - 1
+      : currentImageIndex - 1;
+    setCurrentImageIndex(newIndex);
+    requestAnimationFrame(() => {
+      const container = thumbnailContainerRef.current;
+      const child = container?.children?.[newIndex] as HTMLElement | undefined;
+      child?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  };
+
+  const goToNextFromThumbnails = () => {
+    if (!selectedProject?.images || selectedProject.images.length === 0) return;
+    const newIndex = currentImageIndex === selectedProject.images.length - 1
+      ? 0
+      : currentImageIndex + 1;
+    setCurrentImageIndex(newIndex);
+    requestAnimationFrame(() => {
+      const container = thumbnailContainerRef.current;
+      const child = container?.children?.[newIndex] as HTMLElement | undefined;
+      child?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  };
+
   const filteredProjects = activeFilter === "All" 
     ? projects 
     : projects.filter(project => project.categories.includes(activeFilter));
@@ -380,13 +407,13 @@ export default function ProjectsSection() {
 
             {/* Image Carousel */}
             {selectedProject.images && selectedProject.images.length > 0 && (
-              <div className="relative w-full max-w-2xl mx-auto flex-shrink-0">
-                <div className="relative w-full h-60 md:h-80 rounded-lg overflow-hidden bg-muted border flex-shrink-0" style={{ minHeight: '15rem', maxHeight: '20rem' }}>
+              <div className="relative w-full max-w-4xl mx-auto">
+                <div className="relative w-full rounded-lg overflow-hidden bg-muted border" style={{ aspectRatio: '1920/1080' }}>
                   <ImageWithFallback
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover bg-gray-50 dark:bg-gray-800"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    className="w-full h-full object-contain bg-gray-50 dark:bg-gray-800"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
                   
                   {/* Navigation Arrows */}
@@ -419,25 +446,44 @@ export default function ProjectsSection() {
                 
                 {/* Thumbnail Navigation */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex space-x-2 mt-3 overflow-x-auto pb-2 px-1">
-                    {selectedProject.images.map((image: string, index: number) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`flex-shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
-                          index === currentImageIndex 
-                            ? 'border-primary shadow-md' 
-                            : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
-                        }`}
-                        aria-label={`View image ${index + 1}`}
-                      >
-                        <ImageWithFallback
-                          src={image}
-                          alt={`Thumbnail ${index + 1}`}
-                          className="w-full h-full object-cover transition-opacity hover:opacity-80"
-                        />
-                      </button>
-                    ))}
+                  <div className="relative mt-3 flex items-center justify-center w-full">
+                    <button
+                      onClick={goToPrevFromThumbnails}
+                      className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-10 h-10 flex items-center justify-center mr-2"
+                      aria-label="Scroll thumbnails left"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+                    <div
+                      ref={thumbnailContainerRef}
+                      className="flex justify-center items-center space-x-2 overflow-x-auto flex-1 max-w-3xl"
+                    >
+                      {selectedProject.images.map((image: string, index: number) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`flex-shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
+                            index === currentImageIndex 
+                              ? 'border-primary shadow-md' 
+                              : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
+                          }`}
+                          aria-label={`View image ${index + 1}`}
+                        >
+                          <ImageWithFallback
+                            src={image}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-cover transition-opacity hover:opacity-80"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={goToNextFromThumbnails}
+                      className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-10 h-10 flex items-center justify-center ml-2"
+                      aria-label="Scroll thumbnails right"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
                   </div>
                 )}
               </div>
@@ -449,7 +495,7 @@ export default function ProjectsSection() {
                 <Zap className="mr-2 h-4 w-4" />
                 Key Features
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
                 {selectedProject.keyFeatures.map((feature: string, index: number) => (
                   <div key={index} className="flex items-start text-sm">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
