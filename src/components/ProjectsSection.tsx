@@ -446,44 +446,46 @@ export default function ProjectsSection() {
                 
                 {/* Thumbnail Navigation */}
                 {selectedProject.images.length > 1 && (
-                  <div className="relative mt-3 flex items-center justify-center w-full">
-                    <button
-                      onClick={goToPrevFromThumbnails}
-                      className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-10 h-10 flex items-center justify-center mr-2"
-                      aria-label="Scroll thumbnails left"
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                    </button>
-                    <div
-                      ref={thumbnailContainerRef}
-                      className="flex justify-center items-center space-x-2 overflow-x-auto flex-1 max-w-3xl"
-                    >
-                      {selectedProject.images.map((image: string, index: number) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentImageIndex(index)}
-                          className={`flex-shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
-                            index === currentImageIndex 
-                              ? 'border-primary shadow-md' 
-                              : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
-                          }`}
-                          aria-label={`View image ${index + 1}`}
-                        >
-                          <ImageWithFallback
-                            src={image}
-                            alt={`Thumbnail ${index + 1}`}
-                            className="w-full h-full object-cover transition-opacity hover:opacity-80"
-                          />
-                        </button>
-                      ))}
+                  <div className="mt-3 flex items-center justify-center w-full">
+                    <div className="flex items-center justify-center gap-3">
+                      <button
+                        onClick={goToPrevFromThumbnails}
+                        className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-8 h-8 flex items-center justify-center"
+                        aria-label="Scroll thumbnails left"
+                      >
+                        <ChevronLeft className="h-3 w-3" />
+                      </button>
+                      <div
+                        ref={thumbnailContainerRef}
+                        className="flex justify-center items-center space-x-2 overflow-x-auto"
+                      >
+                        {selectedProject.images.map((image: string, index: number) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`flex-shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
+                              index === currentImageIndex 
+                                ? 'border-primary shadow-md' 
+                                : 'border-gray-300 hover:border-primary/50 dark:border-gray-600 dark:hover:border-primary/50'
+                            }`}
+                            aria-label={`View image ${index + 1}`}
+                          >
+                            <ImageWithFallback
+                              src={image}
+                              alt={`Thumbnail ${index + 1}`}
+                              className="w-full h-full object-cover transition-opacity hover:opacity-80"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                      <button
+                        onClick={goToNextFromThumbnails}
+                        className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-8 h-8 flex items-center justify-center"
+                        aria-label="Scroll thumbnails right"
+                      >
+                        <ChevronRight className="h-3 w-3" />
+                      </button>
                     </div>
-                    <button
-                      onClick={goToNextFromThumbnails}
-                      className="flex-shrink-0 z-20 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white border-2 border-blue-800 hover:border-blue-900 dark:border-blue-800 dark:hover:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-full w-10 h-10 flex items-center justify-center ml-2"
-                      aria-label="Scroll thumbnails right"
-                    >
-                      <ChevronRight className="h-4 w-4" />
-                    </button>
                   </div>
                 )}
               </div>
