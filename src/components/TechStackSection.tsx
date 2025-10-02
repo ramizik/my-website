@@ -45,7 +45,7 @@ export default function TechStackSection() {
           name: "LangChain",
           logo: "/src/assets/logos/langchain.svg",
           experience: "2+ years",
-          projects: ["AI Chatbot", "Document Processing", "RAG Applications"],
+          projects: ["Business Chatbot for iQore", "My Buddy"],
           description: "Expert in building AI applications using LangChain for prompt engineering, chain composition, and integration with various LLMs."
         },
         {
@@ -53,7 +53,7 @@ export default function TechStackSection() {
           name: "Letta",
           logo: "/src/assets/logos/letta.jpg",
           experience: "1+ years",
-          projects: ["AI Assistant", "Content Generation"],
+          projects: ["Vocal AI"],
           description: "Experience with Letta for building conversational AI applications and natural language processing workflows."
         },
         {
@@ -61,7 +61,7 @@ export default function TechStackSection() {
           name: "fetch.ai",
           logo: "/src/assets/logos/fetch-ai.svg",
           experience: "1+ years",
-          projects: ["Decentralized AI", "Agent Networks"],
+          projects: ["Vocal AI"],
           description: "Knowledge of fetch.ai platform for building decentralized AI applications and autonomous agent systems."
         },
         {
@@ -69,7 +69,7 @@ export default function TechStackSection() {
           name: "VAPI",
           logo: "/src/assets/logos/vapi.png",
           experience: "1+ years",
-          projects: ["Voice AI", "Call Automation"],
+          projects: ["Vocal AI"],
           description: "Experience with VAPI for building voice AI applications, call automation, and conversational interfaces."
         },
         {
@@ -77,7 +77,7 @@ export default function TechStackSection() {
           name: "OpenAI",
           logo: "/src/assets/logos/openai.svg",
           experience: "2+ years",
-          projects: ["AI Chatbot", "Content Generation", "Code Assistant"],
+          projects: ["Business Chatbot for iQore"],
           description: "Proficient in OpenAI APIs for GPT models, embeddings, and fine-tuning for various AI-powered applications."
         },
         {
@@ -85,7 +85,7 @@ export default function TechStackSection() {
           name: "Gemini",
           logo: "/src/assets/logos/gemini.png",
           experience: "1+ years",
-          projects: ["Multimodal AI", "Text Analysis"],
+          projects: ["WonderKid", "Traveler AI", "EchoLens"],
           description: "Experience with Google's Gemini AI for multimodal applications, text analysis, and advanced language understanding."
         }
       ]
@@ -98,7 +98,7 @@ export default function TechStackSection() {
           name: "Flask",
           logo: "/src/assets/logos/flask.svg",
           experience: "3+ years",
-          projects: ["REST APIs", "Web Applications", "Microservices"],
+          projects: ["EchoLens"],
           description: "Expert in Flask for building lightweight Python web applications, REST APIs, and microservices architecture."
         },
         {
@@ -106,7 +106,7 @@ export default function TechStackSection() {
           name: "FastAPI",
           logo: "/src/assets/logos/fastapi.svg",
           experience: "2+ years",
-          projects: ["High-Performance APIs", "Real-time Applications"],
+          projects: ["Business Chatbot for iQore", "WonderKid"],
           description: "Proficient in FastAPI for building high-performance, modern Python web APIs with automatic documentation and validation."
         },
         {
@@ -114,7 +114,7 @@ export default function TechStackSection() {
           name: "Node.js",
           logo: "/src/assets/logos/node.svg",
           experience: "4+ years",
-          projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
+          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Extensive experience building scalable server-side applications, RESTful APIs, and microservices architecture using Node.js."
         },
         {
@@ -122,7 +122,7 @@ export default function TechStackSection() {
           name: "React",
           logo: "/src/assets/logos/react.svg",
           experience: "5+ years",
-          projects: ["E-Commerce Platform", "Task Management App", "Analytics Dashboard"],
+          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Expert in React ecosystem including hooks, context, state management, and modern patterns for building scalable user interfaces."
         },
         {
@@ -130,7 +130,7 @@ export default function TechStackSection() {
           name: "Expo",
           logo: "/src/assets/logos/expo.svg",
           experience: "2+ years",
-          projects: ["Mobile Apps", "Cross-Platform Development"],
+          projects: ["WonderKid"],
           description: "Experience with Expo for rapid mobile app development, cross-platform deployment, and React Native ecosystem."
         },
         {
@@ -138,7 +138,7 @@ export default function TechStackSection() {
           name: "Figma",
           logo: "/src/assets/logos/figma.svg",
           experience: "3+ years",
-          projects: ["UI/UX Design", "Prototyping", "Design Systems"],
+          projects: ["Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Proficient in Figma for collaborative UI/UX design, prototyping, and creating design systems for web and mobile applications."
         }
       ]
@@ -151,7 +151,7 @@ export default function TechStackSection() {
           name: "Google Cloud Run",
           logo: "/src/assets/logos/gcloud.svg",
           experience: "2+ years",
-          projects: ["Serverless Applications", "Container Deployment"],
+          projects: ["Vocai AI", "Business Chatbot for iQore", "WonderKid"],
           description: "Proficient in Google Cloud Run for serverless container deployment, auto-scaling, and cloud-native application hosting."
         },
         {
@@ -159,7 +159,7 @@ export default function TechStackSection() {
           name: "AWS",
           logo: "/src/assets/logos/aws.svg",
           experience: "3+ years",
-          projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
+          projects: ["My Buddy"],
           description: "Certified AWS Solutions Architect with experience in EC2, S3, Lambda, RDS, and CloudFormation for scalable cloud infrastructure."
         },
         {
@@ -167,7 +167,7 @@ export default function TechStackSection() {
           name: "Netlify",
           logo: "/src/assets/logos/netlify.svg",
           experience: "2+ years",
-          projects: ["Static Site Deployment", "JAMstack Applications"],
+          projects: ["Vocal AI", "EchoLens", "Business Chatbot for iQore"],
           description: "Experience with Netlify for static site hosting, continuous deployment, and serverless functions for modern web applications."
         },
         {
@@ -175,7 +175,7 @@ export default function TechStackSection() {
           name: "Docker",
           logo: "/src/assets/logos/docker.svg",
           experience: "3+ years",
-          projects: ["E-Commerce Platform", "ML Model Deployment", "Analytics Dashboard"],
+          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens"],
           description: "Proficient in containerization, multi-stage builds, Docker Compose, and container orchestration for development and production."
         }
       ]
@@ -188,7 +188,7 @@ export default function TechStackSection() {
           name: "Supabase",
           logo: "/src/assets/logos/supabase.svg",
           experience: "2+ years",
-          projects: ["Real-time Applications", "Authentication Systems"],
+          projects: ["Vocal AI"],
           description: "Proficient in Supabase for backend-as-a-service, real-time databases, authentication, and API generation."
         },
         {
@@ -196,7 +196,7 @@ export default function TechStackSection() {
           name: "MongoDB",
           logo: "/src/assets/logos/mongodb.svg",
           experience: "3+ years",
-          projects: ["E-Commerce Platform", "Social Media App", "Task Management App"],
+          projects: ["WonderKid", "Business Chatbot for iQore"],
           description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
         },
         {
@@ -204,7 +204,7 @@ export default function TechStackSection() {
           name: "ChromaDB",
           logo: "/src/assets/logos/chromadb.svg",
           experience: "1+ years",
-          projects: ["Vector Search", "AI Applications"],
+          projects: ["Traveler AI"],
           description: "Experience with ChromaDB for vector database operations, similarity search, and AI-powered data retrieval systems."
         }
       ]
