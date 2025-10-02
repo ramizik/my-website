@@ -16,8 +16,8 @@ export default function ProjectsSection() {
     {
       id: 1,
       title: "Vocal AI",
-      description: "An AI-powered singing coach that provides real-time feedback and personalized training for vocalists.",
-      fullDescription: "Vocal AI is an innovative singing coach application that leverages artificial intelligence to analyze vocal performance and provide personalized feedback. Built during a hackathon, this project combines advanced audio processing with AI-driven insights to help singers improve their technique and vocal range.",
+      description: "Vocal coaching platform with real-time analysis and conversational agents—Hackathon winner.",
+      fullDescription: "VocalAI is an AI-powered vocal coaching platform that won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025. Built with React/TypeScript and FastAPI, it integrates multiple AI services including Letta for stateful conversational coaching, Fetch.ai for autonomous progress analysis, and VAPI for real-time voice conversations. The platform performs comprehensive vocal analysis using Web Audio API to extract metrics like pitch, jitter, shimmer, and vibrato rate, then generates personalized exercises and feedback through AI agents with long-term memory. Data is managed through Supabase PostgreSQL with the system providing both reactive chat-based coaching and proactive daily reports to track vocal development over time.",
       logo: "/images/logo-vocal-ai.png",
       image: "/images/vocal-ai-1.jpg",
       images: [
@@ -47,8 +47,8 @@ export default function ProjectsSection() {
     {
       id: 2,
       title: "Business Chatbot for iQore",
-      description: "An intelligent business chatbot using RAG and multi-agent architecture for enhanced customer interactions.",
-      fullDescription: "A sophisticated enterprise chatbot solution built for iQore that combines Retrieval-Augmented Generation (RAG) with multi-agent systems. This chatbot intelligently handles customer queries, provides accurate business information, and seamlessly escalates complex issues to appropriate departments.",
+      description: "Multi-agent convention chatbot—20% more client interactions at IEEE Quantum event.",
+      fullDescription: "iQore Multi-Agent Event Chatbot is an enterprise AI system built for iQore's IEEE Quantum Convention featuring four specialized agents powered by LangGraph, LangChain, and OpenAI GPT-3.5-turbo with RAG knowledge retrieval. Built with FastAPI and MongoDB Atlas, the system engaged clients directly while supporting human representatives with instant company information access. This hybrid approach enabled iQore to process 20% more interactions than previous conventions by autonomously handling qualification, technical Q&A, and demo scheduling. Deployed on Google Cloud Run with real-time queue management, demonstrating effective AI-human collaboration in high-traffic convention environments.",
       logo: "/images/logo-iqore.png",
       image: "/images/iqore-1.jpg",
       images: [
@@ -72,8 +72,8 @@ export default function ProjectsSection() {
     {
       id: 3,
       title: "My Buddy",
-      description: "A personal AI assistant mobile app that helps manage daily tasks, schedules, and provides intelligent recommendations.",
-      fullDescription: "My Buddy is a comprehensive personal AI assistant that combines mobile app convenience with powerful API capabilities. It helps users manage their daily lives through intelligent task management, calendar integration, and context-aware suggestions tailored to individual preferences and habits.",
+      description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders",
+      fullDescription: "My Buddy is a cloud-native personal assistant built with AWS serverless architecture, currently in development as my vision of a proactive AI companion. The system integrates Google Calendar API, Telegram Bot API, and AWS services (Lambda, DynamoDB, EventBridge) to track calendar events, tasks, budget, streaks, goals, and projects through conversational commands. EventBridge orchestrates hourly reminders and morning/evening summaries with visual task prioritization. With Phase 2 operational, Phase 3 targets LangChain integration for intelligent analysis and memory—transforming it from reactive to proactive, anticipating needs and providing contextual insights to achieve an always-available intelligent companion working silently in the cloud.",
       logo: "/images/logo-my-buddy.png",
       image: "/images/my-buddy-1.jpg",
       images: [
@@ -102,8 +102,8 @@ export default function ProjectsSection() {
     {
       id: 4,
       title: "WonderKid",
-      description: "An interactive AI-powered teaching app that makes learning fun and engaging for children through multi-modal experiences.",
-      fullDescription: "WonderKid transforms reading into an interactive adventure with AI-powered storytelling. Built during a hackathon, it combines Google's Gemini AI, Imagen, and Veo 2.0 to create personalized stories with dynamic illustrations and interactive choices, making learning fun for children aged 5-8.",
+      description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos",
+      fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
       logo: "/images/logo-wonder-kid.png",
       image: "/images/wonder-kid-1.jpg",
       images: [
@@ -131,12 +131,12 @@ export default function ProjectsSection() {
     {
       id: 5,
       title: "Traveler AI",
-      description: "An intelligent travel assistant that combines multi-modal AI with RAG to provide personalized travel recommendations.",
-      fullDescription: "Traveler AI is a comprehensive travel planning assistant that leverages multi-modal AI capabilities and Retrieval-Augmented Generation to create personalized travel experiences. It analyzes user preferences, budget constraints, and destination information to provide tailored recommendations and itineraries.",
+      description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration",
+      fullDescription: "Traveler AI is a multimodal conversational travel planner built during Google's 5-day Gen AI Intensive Course. Powered by Gemini 2.0 Flash and 1.5 Pro Vision, it combines intelligent itinerary building with real-time data from OpenWeather and Ticketmaster APIs. The assistant understands natural language and tourist photos, offering personalized suggestions through RAG-powered cultural tips (ChromaDB + embeddings), OCR translation, landmark descriptions, and YouTube video summarization. It features an LLM-based self-evaluation system that scores each itinerary on weather suitability, personalization, and authenticity. Users can export plans as Markdown or PDF, take interactive travel quizzes, and maintain session memory of preferences and destinations—all through a Python CLI chatbot experience in Kaggle Notebooks.",
       logo: "/images/logo-travel-ai.png",
       image: "/images/profile.jpg",
       images: [],
-      categories: ["Multi-Agent", "Multi-Modal", "RAG"],
+      categories: ["Multi-Agent", "Multi-Modal", "RAG", "Hackathon"],
       demoUrl: "https://www.youtube.com/watch?v=c_hut9NcQwY",
       devpostUrl: "https://devpost.com/software/travel-ai-agent",
       githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
@@ -151,9 +151,9 @@ export default function ProjectsSection() {
     },
     {
       id: 6,
-      title: "EchoLens AI",
-      description: "A multi-modal hearing assistant that uses AI to enhance audio experiences and provide real-time transcription.",
-      fullDescription: "EchoLens AI is an innovative hearing assistant application built during a hackathon. It combines multi-modal AI capabilities to enhance audio experiences for users with hearing difficulties, providing real-time transcription, audio amplification, and environmental sound detection with visual feedback.",
+      title: "EchoLens",
+      description: "AI accessibility tool translating audio environments into visual info for deaf users.",
+      fullDescription: "EchoLens is an AI-powered accessibility tool that translates audio environments into visual information for deaf and hard-of-hearing users. Built with React and Flask, it uses Google's Gemini AI and TensorFlow's YAMNet to provide real-time speech transcription, emotion detection, and spatial sound classification. The system identifies environmental sounds (doorbells, alarms, vehicles) and determines their direction through stereo audio processing. Features include an interactive 360° sound map, emotion-aware AI assistant, and customizable visualizations—demonstrating practical integration of speech recognition, audio event detection, and multimodal AI to enhance situational awareness and safety.",
       logo: "/images/logo-echolens.png",
       image: "/images/echo-lens-1.png",
       images: [
@@ -516,21 +516,6 @@ export default function ProjectsSection() {
               </div>
             )}
 
-            {/* Key Features */}
-            <div>
-              <h4 className="font-semibold mb-3 flex items-center">
-                <Zap className="mr-2 h-4 w-4" />
-                Key Features
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
-                {selectedProject.keyFeatures.map((feature: string, index: number) => (
-                  <div key={index} className="flex items-start text-sm">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                    <span className="leading-relaxed">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         )}
       </SimpleModal>
