@@ -46,7 +46,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/langchain.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore", "My Buddy"],
-          description: "Expert in building AI applications using LangChain for prompt engineering, chain composition, and integration with various LLMs."
+          description: "Built task‑specific AI agents and multi‑agent routing systems with LangChain that understand user intent, select the right tools, and deliver accurate, traceable results."
         },
         {
           id: "letta",
@@ -54,7 +54,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/letta.jpg",
           experience: "1+ years",
           projects: ["Vocal AI"],
-          description: "Experience with Letta for building conversational AI applications and natural language processing workflows."
+          description: "Built stateful, explainable agents with Letta for a vocal AI—persisting user progress, leveraging conversation memory to personalize interactions, and generating transparent progress reports."
         },
         {
           id: "fetchai",
@@ -62,7 +62,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/fetch-ai.svg",
           experience: "1+ years",
           projects: ["Vocal AI"],
-          description: "Knowledge of fetch.ai platform for building decentralized AI applications and autonomous agent systems."
+          description: "Built autonomous agents with Fetch.ai for a vocal AI coach—securely connecting to user account databases to retrieve and aggregate data, powering timely, personalized coaching insights."
         },
         {
           id: "vapi",
@@ -70,7 +70,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/vapi.png",
           experience: "1+ years",
           projects: ["Vocal AI"],
-          description: "Experience with VAPI for building voice AI applications, call automation, and conversational interfaces."
+          description: "Built a real-time vocal AI coach with VAPI in my award-winning hackathon project—handling conversational speech and sung notes, and continually improving by learning from prior user sessions."
         },
         {
           id: "openai",
@@ -78,7 +78,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/openai.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore"],
-          description: "Proficient in OpenAI APIs for GPT models, embeddings, and fine-tuning for various AI-powered applications."
+          description: "Integrated GPT‑4 via the OpenAI SDK to power chatbots, and used OpenAI embedding models to build a RAG customer support agent for iQore, delivering fast, context‑grounded answers."
         },
         {
           id: "gemini",
@@ -86,7 +86,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/gemini.png",
           experience: "1+ years",
           projects: ["WonderKid", "Traveler AI", "EchoLens"],
-          description: "Experience with Google's Gemini AI for multimodal applications, text analysis, and advanced language understanding."
+          description: "Built multimodal applications with Gemini — Veo-powered video generation for WonderKid, image processing and translation for Traveler AI, real-time audio/video/image assistance for EchoLens, and automated PDF report generation."
         }
       ]
     },
@@ -107,7 +107,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/fastapi.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore", "WonderKid"],
-          description: "Proficient in FastAPI for building high-performance, modern Python web APIs with automatic documentation and validation."
+          description: "Built and deployed FastAPI services to accept, process, and return data across projects—Dockerized endpoints in WonderKid receiving text and streaming image/video to mobile, and a company chatbot backend delivering RAG‑powered conversations."
         },
         {
           id: "nodejs",
@@ -115,7 +115,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/node.svg",
           experience: "4+ years",
           projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
-          description: "Extensive experience building scalable server-side applications, RESTful APIs, and microservices architecture using Node.js."
+          description: "Built modern frontends and seamless backend integrations with Node.js—leveraging its powerful ecosystem for UI tooling and builds, REST/GraphQL APIs, real‑time WebSockets, authentication, caching, and production‑ready deployments."
         },
         {
           id: "react",
@@ -123,7 +123,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/react.svg",
           experience: "5+ years",
           projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
-          description: "Expert in React ecosystem including hooks, context, state management, and modern patterns for building scalable user interfaces."
+          description: "Built cross‑platform UIs with React and React Native—leveraging hooks, the Context API, and solid state‑management patterns to deliver stable, reusable frontends that deploy smoothly across devices, screens, and environments."
         },
         {
           id: "expo",
@@ -152,7 +152,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/gcloud.svg",
           experience: "2+ years",
           projects: ["Vocai AI", "Business Chatbot for iQore", "WonderKid"],
-          description: "Proficient in Google Cloud Run for serverless container deployment, auto-scaling, and cloud-native application hosting."
+          description: "Built and deployed containerized, production‑ready APIs on Google Cloud Run—auto‑scaling services that power my projects and host cloud‑native apps like the iQore chatbot and WonderKid."
         },
         {
           id: "aws",
@@ -160,7 +160,7 @@ export default function TechStackSection() {
           logo: "/src/assets/logos/aws.svg",
           experience: "3+ years",
           projects: ["My Buddy"],
-          description: "Certified AWS Solutions Architect with experience in EC2, S3, Lambda, RDS, and CloudFormation for scalable cloud infrastructure."
+          description: "Used AWS EC2 and S3 for machine learning coursework—scalable training and durable storage—and built a cost‑efficient serverless (Lambda) Telegram bot for cloud‑first, proactive user engagement."
         },
         {
           id: "netlify",
