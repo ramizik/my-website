@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
-import { Calendar, MapPin, Award, GraduationCap, Briefcase, Code, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Award, GraduationCap, Briefcase, Code, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import { Button } from "./ui/button";
 import SimpleModal from "./SimpleModal";
 
@@ -19,13 +19,19 @@ export default function TimelineSection() {
     {
       id: 1,
       type: "work",
-      title: "Cyber Security Analyst",
+      title: "Cybersecurity Engineer Intern",
       company: "City of Stockton",
       location: "Stockton, CA",
       period: "Jul 2023 - Dec 2023",
       year: "2023",
-      description: "Helped protect the City of Stockton and other organizations from cyber-attacks. Monitored and investigated security incidents, conducted threat hunting, and educated colleagues on cybersecurity best practices.",
-      achievements: ["Network monitoring & investigation", "Threat hunting with CISCO tools", "Vulnerability management", "Cybersecurity education & training"],
+      description: "Proactively protected City networks and deployments as my main responsibility. In addition to investigating potential threats, I leveraged my network knowledge and software development expertise to build various Python automation and monitoring scripts, resulting in increased productivity and a stronger cybersecurity posture for the organization. Utilized open-source cybersecurity intelligence tools and web scraping skills to deliver daily cybersecurity updates to the team.",
+      achievements: [
+        "Network+ Certified",
+        "Security+ Certified",
+        "18% team productivity increase",
+        "9% cybersecurity risk decrease",
+        "Best Intern in history"
+      ],
       icon: Briefcase
     },
     {
@@ -36,17 +42,22 @@ export default function TimelineSection() {
       location: "Stockton, CA",
       period: "Jul 2024",
       year: "2024",
-      description: "Bachelor of Computer Science degree from University of the Pacific, focusing on software engineering, algorithms, and data structures.",
-      achievements: ["Computer Science Foundation", "Software Engineering", "Algorithms & Data Structures", "Problem Solving"],
+      description: "Bachelor of Science in Computer Science from University of the Pacific, with a strong focus on Artificial Intelligence and Machine Learning. Completed advanced coursework in Natural Language Processing (NLP), Large Language Models (LLMs), classifiers, and business applications of LLMs.",
+      achievements: [
+        "Dean's Honor Roll",
+        "Teacher Assistant & Mentor",
+        "AI & Machine Learning Coursework (NLP, LLMs, Classifiers)",
+        "Business Applications of LLMs"
+      ],
       icon: GraduationCap
     },
     // Personal Projects
     {
       id: 3,
-      type: "hackathon-participant",
+      type: "hackathon",
       title: "EchoLens",
-      company: "Accessibility Tool",
-      location: "Hackathon",
+      company: "SF Hacks 2025",
+      location: "San Francisco State University, CA",
       period: "Apr 2025",
       year: "2025",
       description: "AI accessibility tool translating audio environments into visual info for deaf users. Uses Gemini AI and TensorFlow's YAMNet for real-time audio processing.",
@@ -55,7 +66,7 @@ export default function TimelineSection() {
     },
     {
       id: 4,
-      type: "hackathon-participant",
+      type: "hackathon",
       title: "Traveler AI",
       company: "Google + Kaggle 2025 Hackathon Winner",
       location: "Online",
@@ -67,10 +78,10 @@ export default function TimelineSection() {
     },
     {
       id: 5,
-      type: "hackathon-participant",
+      type: "hackathon",
       title: "Vocal AI",
       company: "UC Berkley 2025 AI Hackathon Winner",
-      location: "UC Berkeley",
+      location: "UC Berkeley, CA",
       period: "Jun 2025",
       year: "2025",
       description: "AI-powered vocal coaching platform with real-time analysis and conversational agents. Won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025.",
@@ -82,7 +93,7 @@ export default function TimelineSection() {
       type: "personal-project",
       title: "Business Chatbot for iQore",
       company: "IEEE Quantum Convention",
-      location: "Convention Center",
+      location: "Albuquerque, NM",
       period: "Aug 2025",
       year: "2025",
       description: "Multi-agent convention chatbot that increased client interactions by 20% at IEEE Quantum event. Built with LangGraph and LangChain for enterprise AI solutions.",
@@ -94,7 +105,7 @@ export default function TimelineSection() {
       type: "personal-project",
       title: "My Buddy",
       company: "Personal AI Telegram Assistant",
-      location: "Cloud",
+      location: "Online",
       period: "Aug 2025 - Present",
       year: "2025",
       description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders. Built with AWS serverless architecture and EventBridge orchestration.",
@@ -103,10 +114,10 @@ export default function TimelineSection() {
     },
     {
       id: 8,
-      type: "hackathon-participant",
+      type: "hackathon",
       title: "WonderKid",
       company: "Big Red Hacks 2025",
-      location: "Cornell University",
+      location: "Cornell University, NY",
       period: "Oct 2025",
       year: "2025",
       description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos. Combines Gemini, Imagen, and Veo 2.0 for personalized narratives.",
@@ -115,6 +126,23 @@ export default function TimelineSection() {
     },
     {
       id: 9,
+      type: "currently",
+      title: "Today",
+      company: "",
+      location: "Stockton, CA",
+      period: "Today",
+      year: "2025",
+      description: "I'm deeply immersed in exploring the latest AI tools and technologies, always on the lookout for innovative use cases and practical applications. I actively sign up for and prepare to participate in various hackathons, driven by an entrepreneurial mindset that constantly inspires me to brainstorm and prototype new software solutions. My passion for building things fuels my coding addiction, pushing me to create, iterate, and learn every day. As a graduate student, I contribute to academic research in Machine Learning and am committed to mastering AI at a deep level. I also serve as a Graduate Teaching Assistant and mentor in the Computer Science department, where I share my software expertise and develop creative ways to make complex CS concepts accessible to newcomers. In my free time, I pursue research in quantum and quantum-inspired technologies, believing in their transformative potential for the future. Additionally, I am actively seeking internship opportunities in software and artificial intelligence, eager to apply my problem-solving skills and contribute to impactful projects.",
+      achievements: [
+        "Continuous Learner",
+        "Caffeine Maniac",
+        "Laser Focused",
+        "Coding Addiction"
+      ],
+      icon: Clock
+    },
+    {
+      id: 10,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",
@@ -133,12 +161,23 @@ export default function TimelineSection() {
         return "bg-blue-500";
       case "education":
         return "bg-green-500";
-      case "hackathon-participant":
+      case "hackathon":
         return "bg-purple-500";
       case "personal-project":
         return "bg-orange-500";
+      case "currently":
+        return "bg-neutral-200 dark:bg-neutral-800";
       default:
         return "bg-gray-500";
+    }
+  };
+
+  const getTypeIconColor = (type: string) => {
+    switch (type) {
+      case "currently":
+        return "text-neutral-800 dark:text-neutral-200"; // dark gray in light, light gray in dark
+      default:
+        return "text-white";
     }
   };
 
@@ -148,10 +187,12 @@ export default function TimelineSection() {
         return "Internship";
       case "education":
         return "Education";
-      case "hackathon-participant":
-        return "Hackathon Participant";
+      case "hackathon":
+        return "Hackathon";
       case "personal-project":
         return "Personal Project";
+      case "currently":
+        return "Currently";
       default:
         return "Other";
     }
@@ -400,7 +441,7 @@ export default function TimelineSection() {
                       <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
                         <div className="flex items-center space-x-3">
                           <div className={`w-10 h-10 rounded-full ${getTypeColor(item.type)} flex items-center justify-center flex-shrink-0`}>
-                            <item.icon className="h-5 w-5 text-white" />
+                            <item.icon className={`h-5 w-5 ${getTypeIconColor(item.type)}`} />
                           </div>
                           <div className="text-sm font-medium text-muted-foreground">
                             {getTypeLabel(item.type)}
@@ -444,7 +485,7 @@ export default function TimelineSection() {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className={`w-16 h-16 rounded-full ${getTypeColor(selectedEntry.type)} flex items-center justify-center`}>
-                  <selectedEntry.icon className="h-8 w-8 text-white" />
+                  <selectedEntry.icon className={`h-8 w-8 ${getTypeIconColor(selectedEntry.type)}`} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">{selectedEntry.title}</h3>

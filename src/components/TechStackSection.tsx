@@ -227,7 +227,7 @@ export default function TechStackSection() {
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Technologies</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life. Click on any logo to learn more about my experience.
+            Click on any logo to learn more about my experience.
           </p>
         </div>
 

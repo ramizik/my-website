@@ -98,12 +98,6 @@ export default function ContactSection() {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/hasanliramis/",
       color: "hover:text-blue-600"
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/hasanliramis",
-      color: "hover:text-blue-400"
     }
   ];
 
@@ -158,7 +152,7 @@ export default function ContactSection() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell me about your project, requirements, timeline, or any questions you have..."
+                    placeholder="Let me know how I can help—share your role, project needs, or questions about my experience."
                     rows={6}
                     required
                   />
