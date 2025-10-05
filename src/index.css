@@ -2576,3 +2576,16 @@ html {
     transform: rotate(360deg);
   }
 }
+
+/* GitHub Heatmap Dark Mode Override */
+.dark .react-activity-calendar rect[fill="#ebedf0"] {
+  fill: #1a202c !important;
+}
+
+.dark .react-activity-calendar rect[fill="#f6f8fa"] {
+  fill: #1a202c !important;
+}
+
+.dark .react-activity-calendar rect[fill="#f0f0f0"] {
+  fill: #1a202c !important;
+}

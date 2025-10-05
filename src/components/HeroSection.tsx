@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { Download, Mail, Github, Linkedin, ArrowDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import GitHubHeatmap from "./GitHubHeatmap";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -64,6 +65,11 @@ export default function HeroSection() {
                 <Download className="h-5 w-5" />
                 <span className="text-sm">Resume</span>
               </button>
+            </div>
+
+            {/* GitHub Contribution Heatmap */}
+            <div className="mt-8 max-w-2xl">
+              <GitHubHeatmap username="ramizik" />
             </div>
           </div>
 
