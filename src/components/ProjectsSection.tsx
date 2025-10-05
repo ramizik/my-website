@@ -376,10 +376,10 @@ export default function ProjectsSection() {
           <div className="space-y-6 pb-4">
             {/* Header */}
             <div>
-              <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-              <div className="flex items-center flex-wrap gap-2 mb-3">
+              <h3 className="text-2xl font-bold mb-3">{selectedProject.title}</h3>
+              <div className="flex items-center flex-wrap gap-2 mb-4">
                 {selectedProject.categories.map((category: string, index: number) => (
-                  <Badge key={index} variant="secondary" className="text-[10px] px-2 py-0.5 whitespace-nowrap">{category}</Badge>
+                  <Badge key={index} variant="secondary" className="text-xs px-2.5 py-1 whitespace-nowrap">{category}</Badge>
                 ))}
               </div>
               <div className="flex flex-wrap gap-2">
@@ -396,7 +396,7 @@ export default function ProjectsSection() {
                     Demo
                   </Button>
                 )}
-                
+
                 {selectedProject.devpostUrl ? (
                   <Button variant="outline" size="sm" asChild>
                     <a href={selectedProject.devpostUrl} target="_blank" rel="noopener noreferrer">
@@ -410,7 +410,7 @@ export default function ProjectsSection() {
                     Devpost
                   </Button>
                 )}
-                
+
                 <Button variant="outline" size="sm" asChild>
                   <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
