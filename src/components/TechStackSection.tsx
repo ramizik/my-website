@@ -43,7 +43,7 @@ export default function TechStackSection() {
         {
           id: "langchain",
           name: "LangChain",
-          logo: "/src/assets/logos/langchain.svg",
+          logo: "/logos/langchain.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore", "My Buddy"],
           description: "Built task‑specific AI agents and multi‑agent routing systems with LangChain that understand user intent, select the right tools, and deliver accurate, traceable results."
@@ -51,7 +51,7 @@ export default function TechStackSection() {
         {
           id: "letta",
           name: "Letta",
-          logo: "/src/assets/logos/letta.jpg",
+          logo: "/logos/letta.jpg",
           experience: "1+ years",
           projects: ["Vocal AI"],
           description: "Built stateful, explainable agents with Letta for a vocal AI—persisting user progress, leveraging conversation memory to personalize interactions, and generating transparent progress reports."
@@ -59,7 +59,7 @@ export default function TechStackSection() {
         {
           id: "fetchai",
           name: "fetch.ai",
-          logo: "/src/assets/logos/fetch-ai.svg",
+          logo: "/logos/fetch-ai.svg",
           experience: "1+ years",
           projects: ["Vocal AI"],
           description: "Built autonomous agents with Fetch.ai for a vocal AI coach—securely connecting to user account databases to retrieve and aggregate data, powering timely, personalized coaching insights."
@@ -67,7 +67,7 @@ export default function TechStackSection() {
         {
           id: "vapi",
           name: "VAPI",
-          logo: "/src/assets/logos/vapi.png",
+          logo: "/logos/vapi.png",
           experience: "1+ years",
           projects: ["Vocal AI"],
           description: "Built a real-time vocal AI coach with VAPI in my award-winning hackathon project—handling conversational speech and sung notes, and continually improving by learning from prior user sessions."
@@ -75,7 +75,7 @@ export default function TechStackSection() {
         {
           id: "openai",
           name: "OpenAI",
-          logo: "/src/assets/logos/openai.svg",
+          logo: "/logos/openai.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore"],
           description: "Integrated GPT‑4 via the OpenAI SDK to power chatbots, and used OpenAI embedding models to build a RAG customer support agent for iQore, delivering fast, context‑grounded answers."
@@ -83,7 +83,7 @@ export default function TechStackSection() {
         {
           id: "gemini",
           name: "Gemini",
-          logo: "/src/assets/logos/gemini.png",
+          logo: "/logos/gemini.png",
           experience: "1+ years",
           projects: ["WonderKid", "Traveler AI", "EchoLens"],
           description: "Built multimodal applications with Gemini — Veo-powered video generation for WonderKid, image processing and translation for Traveler AI, real-time audio/video/image assistance for EchoLens, and automated PDF report generation."
@@ -96,7 +96,7 @@ export default function TechStackSection() {
         {
           id: "flask",
           name: "Flask",
-          logo: "/src/assets/logos/flask.svg",
+          logo: "/logos/flask.svg",
           experience: "3+ years",
           projects: ["EchoLens"],
           description: "Expert in Flask for building lightweight Python web applications, REST APIs, and microservices architecture."
@@ -104,7 +104,7 @@ export default function TechStackSection() {
         {
           id: "fastapi",
           name: "FastAPI",
-          logo: "/src/assets/logos/fastapi.svg",
+          logo: "/logos/fastapi.svg",
           experience: "2+ years",
           projects: ["Business Chatbot for iQore", "WonderKid"],
           description: "Built and deployed FastAPI services to accept, process, and return data across projects—Dockerized endpoints in WonderKid receiving text and streaming image/video to mobile, and a company chatbot backend delivering RAG‑powered conversations."
@@ -112,7 +112,7 @@ export default function TechStackSection() {
         {
           id: "nodejs",
           name: "Node.js",
-          logo: "/src/assets/logos/node.svg",
+          logo: "/logos/node.svg",
           experience: "4+ years",
           projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Built modern frontends and seamless backend integrations with Node.js—leveraging its powerful ecosystem for UI tooling and builds, REST/GraphQL APIs, real‑time WebSockets, authentication, caching, and production‑ready deployments."
@@ -120,7 +120,7 @@ export default function TechStackSection() {
         {
           id: "react",
           name: "React",
-          logo: "/src/assets/logos/react.svg",
+          logo: "/logos/react.svg",
           experience: "5+ years",
           projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Built cross‑platform UIs with React and React Native—leveraging hooks, the Context API, and solid state‑management patterns to deliver stable, reusable frontends that deploy smoothly across devices, screens, and environments."
@@ -128,7 +128,7 @@ export default function TechStackSection() {
         {
           id: "expo",
           name: "Expo",
-          logo: "/src/assets/logos/expo.svg",
+          logo: "/logos/expo.svg",
           experience: "2+ years",
           projects: ["WonderKid"],
           description: "Experience with Expo for rapid mobile app development, cross-platform deployment, and React Native ecosystem."
@@ -136,7 +136,7 @@ export default function TechStackSection() {
         {
           id: "figma",
           name: "Figma",
-          logo: "/src/assets/logos/figma.svg",
+          logo: "/logos/figma.svg",
           experience: "3+ years",
           projects: ["Business Chatbot for iQore", "WonderKid", "EchoLens"],
           description: "Proficient in Figma for collaborative UI/UX design, prototyping, and creating design systems for web and mobile applications."
@@ -149,7 +149,7 @@ export default function TechStackSection() {
         {
           id: "google-cloud-run",
           name: "Google Cloud Run",
-          logo: "/src/assets/logos/gcloud.svg",
+          logo: "/logos/gcloud.svg",
           experience: "2+ years",
           projects: ["Vocai AI", "Business Chatbot for iQore", "WonderKid"],
           description: "Built and deployed containerized, production‑ready APIs on Google Cloud Run—auto‑scaling services that power my projects and host cloud‑native apps like the iQore chatbot and WonderKid."
@@ -157,7 +157,7 @@ export default function TechStackSection() {
         {
           id: "aws",
           name: "AWS",
-          logo: "/src/assets/logos/aws.svg",
+          logo: "/logos/aws.svg",
           experience: "3+ years",
           projects: ["My Buddy"],
           description: "Used AWS EC2 and S3 for machine learning coursework—scalable training and durable storage—and built a cost‑efficient serverless (Lambda) Telegram bot for cloud‑first, proactive user engagement."
@@ -165,7 +165,7 @@ export default function TechStackSection() {
         {
           id: "netlify",
           name: "Netlify",
-          logo: "/src/assets/logos/netlify.svg",
+          logo: "/logos/netlify.svg",
           experience: "2+ years",
           projects: ["Vocal AI", "EchoLens", "Business Chatbot for iQore"],
           description: "Experience with Netlify for static site hosting, continuous deployment, and serverless functions for modern web applications."
@@ -173,7 +173,7 @@ export default function TechStackSection() {
         {
           id: "docker",
           name: "Docker",
-          logo: "/src/assets/logos/docker.svg",
+          logo: "/logos/docker.svg",
           experience: "3+ years",
           projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens"],
           description: "Proficient in containerization, multi-stage builds, Docker Compose, and container orchestration for development and production."
@@ -186,7 +186,7 @@ export default function TechStackSection() {
         {
           id: "supabase",
           name: "Supabase",
-          logo: "/src/assets/logos/supabase.svg",
+          logo: "/logos/supabase.svg",
           experience: "2+ years",
           projects: ["Vocal AI"],
           description: "Proficient in Supabase for backend-as-a-service, real-time databases, authentication, and API generation."
@@ -194,7 +194,7 @@ export default function TechStackSection() {
         {
           id: "mongodb",
           name: "MongoDB",
-          logo: "/src/assets/logos/mongodb.svg",
+          logo: "/logos/mongodb.svg",
           experience: "3+ years",
           projects: ["WonderKid", "Business Chatbot for iQore"],
           description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
@@ -202,7 +202,7 @@ export default function TechStackSection() {
         {
           id: "chromadb",
           name: "ChromaDB",
-          logo: "/src/assets/logos/chromadb.svg",
+          logo: "/logos/chromadb.svg",
           experience: "1+ years",
           projects: ["Traveler AI"],
           description: "Experience with ChromaDB for vector database operations, similarity search, and AI-powered data retrieval systems."
