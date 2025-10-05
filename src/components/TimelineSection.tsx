@@ -456,12 +456,6 @@ export default function TimelineSection() {
               </div>
 
               <div>
-                <div className="mb-3 border rounded px-2 py-1 inline-block">
-                  {getTypeLabel(selectedEntry.type)}
-                </div>
-              </div>
-
-              <div>
                 <h4 className="font-semibold mb-3">Description</h4>
                 <p className="text-muted-foreground leading-relaxed">
                   {selectedEntry.description}
