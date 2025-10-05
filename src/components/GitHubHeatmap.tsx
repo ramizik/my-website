@@ -131,13 +131,16 @@ export default function GitHubHeatmap({ username }: GitHubHeatmapProps) {
 
   return (
     <div className="space-y-3">
-      <div className="overflow-x-auto [&_.react-activity-calendar]:[--color-calendar-graph-day-bg:#f0f0f0] [&_.react-activity-calendar]:[--color-calendar-graph-day-L1-bg:#c6e48b] [&_.react-activity-calendar]:[--color-calendar-graph-day-L2-bg:#7bc96f] [&_.react-activity-calendar]:[--color-calendar-graph-day-L3-bg:#239a3b] [&_.react-activity-calendar]:[--color-calendar-graph-day-L4-bg:#196127] dark:[&_.react-activity-calendar]:[--color-calendar-graph-day-bg:#1a202c] dark:[&_.react-activity-calendar]:[&_rect[fill='#ebedf0']]:[fill:#1a202c]">
+      <div className="overflow-x-auto [&_.react-activity-calendar]:[--color-calendar-graph-day-bg:#f0f0f0] [&_.react-activity-calendar]:[--color-calendar-graph-day-L1-bg:#c6e48b] [&_.react-activity-calendar]:[--color-calendar-graph-day-L2-bg:#7bc96f] [&_.react-activity-calendar]:[--color-calendar-graph-day-L3-bg:#239a3b] [&_.react-activity-calendar]:[--color-calendar-graph-day-L4-bg:#196127] dark:[&_.react-activity-calendar]:[--color-calendar-graph-day-bg:#1a202c] dark:[&_.react-activity-calendar]:[&_rect[fill='#ebedf0']]:[fill:#1a202c] [&_.react-activity-calendar__legend-colors]:hidden">
         <style jsx>{`
           .react-activity-calendar rect[fill="#ebedf0"] {
             fill: #1a202c !important;
           }
           .dark .react-activity-calendar rect[fill="#ebedf0"] {
             fill: #1a202c !important;
+          }
+          .react-activity-calendar__legend-colors {
+            display: none !important;
           }
         `}</style>
         <ActivityCalendar
