@@ -456,7 +456,6 @@ export default function TimelineSection() {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3">Description</h4>
                 <p className="text-muted-foreground leading-relaxed">
                   {selectedEntry.description}
                 </p>
