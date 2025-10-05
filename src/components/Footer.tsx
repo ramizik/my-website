@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Ramis Hasanli</h3>
             <p className="text-muted-foreground">
-              Full-Stack Software Developer passionate about creating exceptional digital experiences.
+              Passionate lifelong learner dedicated to implementing Large Language Model solutions that help address real-world challenges and make a positive impact.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -82,11 +82,11 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold">Services</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Web Development</li>
-              <li>Mobile App Development</li>
-              <li>API Development</li>
-              <li>Cloud Solutions</li>
-              <li>Technical Consulting</li>
+              <li>Large Language Models</li>
+              <li>Full-Stack Development</li>
+              <li>Automation Solutions</li>
+              <li>Business Solutions</li>
+              <li>Mentorship & Coaching</li>
             </ul>
           </div>
 

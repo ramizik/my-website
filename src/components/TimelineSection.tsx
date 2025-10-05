@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
-import { Calendar, MapPin, Award, GraduationCap, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Award, GraduationCap, Briefcase, Code, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import SimpleModal from "./SimpleModal";
 
@@ -19,110 +19,111 @@ export default function TimelineSection() {
     {
       id: 1,
       type: "work",
-      title: "Software Engineering Intern",
-      company: "Google",
-      location: "Mountain View, CA",
-      period: "Summer 2018",
-      year: "2018",
-      description: "Contributed to Google Chrome's performance optimization team. Implemented features that improved browser startup time and memory usage.",
-      achievements: ["15% faster startup time", "Chrome team contribution", "Published research paper"],
+      title: "Cyber Security Analyst",
+      company: "City of Stockton",
+      location: "Stockton, CA",
+      period: "Jul 2023 - Dec 2023",
+      year: "2023",
+      description: "Helped protect the City of Stockton and other organizations from cyber-attacks. Monitored and investigated security incidents, conducted threat hunting, and educated colleagues on cybersecurity best practices.",
+      achievements: ["Network monitoring & investigation", "Threat hunting with CISCO tools", "Vulnerability management", "Cybersecurity education & training"],
       icon: Briefcase
     },
     {
-      id: 3,
+      id: 2,
       type: "education",
-      title: "Computer Science Degree",
-      company: "UC Berkeley",
-      location: "Berkeley, CA",
-      period: "2015 - 2019",
-      year: "2019",
-      description: "Bachelor of Science in Computer Science with focus on software engineering, algorithms, and data structures. Graduated Magna Cum Laude with 3.8 GPA.",
-      achievements: ["Magna Cum Laude", "Dean's List 6 semesters", "CS Honor Society"],
+      title: "BS Computer Science",
+      company: "University of the Pacific",
+      location: "Stockton, CA",
+      period: "Jul 2024",
+      year: "2024",
+      description: "Bachelor of Computer Science degree from University of the Pacific, focusing on software engineering, algorithms, and data structures.",
+      achievements: ["Computer Science Foundation", "Software Engineering", "Algorithms & Data Structures", "Problem Solving"],
       icon: GraduationCap
     },
+    // Personal Projects
     {
       id: 3,
-      type: "work",
-      title: "Frontend Developer",
-      company: "Digital Innovations",
-      location: "San Jose, CA",
-      period: "2019 - 2020",
-      year: "2020",
-      description: "Specialized in creating modern, responsive web applications using React and Vue.js. Focused on performance optimization and user experience improvements.",
-      achievements: ["50+ component library", "20% load time reduction", "Accessibility compliance"],
-      icon: Briefcase
+      type: "hackathon-participant",
+      title: "EchoLens",
+      company: "Accessibility Tool",
+      location: "Hackathon",
+      period: "Apr 2025",
+      year: "2025",
+      description: "AI accessibility tool translating audio environments into visual info for deaf users. Uses Gemini AI and TensorFlow's YAMNet for real-time audio processing.",
+      achievements: ["Real-time audio transcription", "Environmental sound detection", "Accessibility-focused design", "Multi-modal interface"],
+      icon: Award
     },
     {
       id: 4,
-      type: "work",
-      title: "Full-Stack Developer",
-      company: "StartupHub Inc.",
-      location: "Palo Alto, CA",
-      period: "2020 - 2022",
-      year: "2021",
-      description: "Developed and maintained multiple client applications using React, Node.js, and cloud services. Collaborated with design team to implement responsive, user-friendly interfaces.",
-      achievements: ["Built 8+ client applications", "99.9% uptime achievement", "User satisfaction: 4.8/5"],
-      icon: Briefcase
+      type: "hackathon-participant",
+      title: "Traveler AI",
+      company: "Google + Kaggle 2025 Hackathon Winner",
+      location: "Online",
+      period: "Apr 2025",
+      year: "2025",
+      description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration. Built during Google's 5-day Gen AI Intensive Course.",
+      achievements: ["Multimodal AI integration", "Real-time data APIs", "RAG-powered recommendations", "Export functionality"],
+      icon: Award
     },
     {
       id: 5,
-      type: "certification",
-      title: "AWS Solutions Architect",
-      company: "Amazon Web Services",
-      location: "Online",
-      period: "2021",
-      year: "2021",
-      description: "Achieved AWS Solutions Architect Associate certification, demonstrating expertise in designing and deploying scalable systems on AWS.",
-      achievements: ["Cloud architecture expertise", "Cost optimization", "Security best practices"],
+      type: "hackathon-participant",
+      title: "Vocal AI",
+      company: "UC Berkley 2025 AI Hackathon Winner",
+      location: "UC Berkeley",
+      period: "Jun 2025",
+      year: "2025",
+      description: "AI-powered vocal coaching platform with real-time analysis and conversational agents. Won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025.",
+      achievements: ["Hackathon Winner", "Real-time vocal analysis", "AI-powered feedback system", "Multi-service integration"],
       icon: Award
     },
     {
       id: 6,
-      type: "certification",
-      title: "Google Cloud Professional",
-      company: "Google Cloud",
-      location: "Online",
-      period: "2022",
-      year: "2022",
-      description: "Achieved Google Cloud Professional Cloud Architect certification, demonstrating expertise in designing and managing scalable, secure cloud solutions on GCP.",
-      achievements: ["Cloud architecture design", "Multi-cloud expertise", "Container orchestration"],
-      icon: Award
+      type: "personal-project",
+      title: "Business Chatbot for iQore",
+      company: "IEEE Quantum Convention",
+      location: "Convention Center",
+      period: "Aug 2025",
+      year: "2025",
+      description: "Multi-agent convention chatbot that increased client interactions by 20% at IEEE Quantum event. Built with LangGraph and LangChain for enterprise AI solutions.",
+      achievements: ["20% more client interactions", "Multi-agent coordination", "RAG-powered knowledge retrieval", "Enterprise deployment"],
+      icon: Code
     },
     {
       id: 7,
-      type: "work",
-      title: "Senior Full-Stack Developer",
-      company: "TechFlow Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      year: "2022",
-      description: "Leading development of scalable web applications, mentoring junior developers, and implementing DevOps best practices. Increased application performance by 40% and reduced deployment time by 60%.",
-      achievements: ["Led team of 5 developers", "40% performance improvement", "Implemented CI/CD pipeline"],
-      icon: Briefcase
+      type: "personal-project",
+      title: "My Buddy",
+      company: "Personal AI Telegram Assistant",
+      location: "Cloud",
+      period: "Aug 2025 - Present",
+      year: "2025",
+      description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders. Built with AWS serverless architecture and EventBridge orchestration.",
+      achievements: ["AWS serverless architecture", "Telegram Bot integration", "Proactive reminders", "Multi-service coordination"],
+      icon: Code
     },
     {
       id: 8,
-      type: "work",
-      title: "Tech Lead & Architect",
-      company: "InnovateTech Corp",
-      location: "San Francisco, CA",
-      period: "2023 - Present",
-      year: "2023",
-      description: "Leading technical architecture decisions for multiple products, managing a team of 8 developers, and driving digital transformation initiatives. Architected microservices platform serving 1M+ users.",
-      achievements: ["Microservices architecture", "Team leadership (8 devs)", "1M+ users platform"],
-      icon: Briefcase
+      type: "hackathon-participant",
+      title: "WonderKid",
+      company: "Big Red Hacks 2025",
+      location: "Cornell University",
+      period: "Oct 2025",
+      year: "2025",
+      description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos. Combines Gemini, Imagen, and Veo 2.0 for personalized narratives.",
+      achievements: ["AI story generation", "Dynamic illustrations", "Video compilation", "Child-focused UX"],
+      icon: Code
     },
     {
       id: 9,
-      type: "certification",
-      title: "Kubernetes Administrator",
-      company: "Cloud Native Computing Foundation",
-      location: "Online",
-      period: "2023",
-      year: "2023",
-      description: "Certified Kubernetes Administrator (CKA) certification, demonstrating hands-on skills in Kubernetes cluster administration, troubleshooting, and best practices.",
-      achievements: ["Cluster administration", "Container orchestration", "Production troubleshooting"],
-      icon: Award
+      type: "education",
+      title: "MS Computer Science",
+      company: "University of the Pacific",
+      location: "Stockton, CA",
+      period: "Expected May 2026",
+      year: "2026",
+      description: "Master of Science in Computer Science from University of the Pacific, focusing on advanced computer science concepts and research.",
+      achievements: ["Machine Learning Research", "LLM Integration", "Artificial Intelligence", "Software Engineering"],
+      icon: GraduationCap
     }
   ];
 
@@ -132,8 +133,10 @@ export default function TimelineSection() {
         return "bg-blue-500";
       case "education":
         return "bg-green-500";
-      case "certification":
+      case "hackathon-participant":
         return "bg-purple-500";
+      case "personal-project":
+        return "bg-orange-500";
       default:
         return "bg-gray-500";
     }
@@ -142,11 +145,13 @@ export default function TimelineSection() {
   const getTypeLabel = (type: string) => {
     switch (type) {
       case "work":
-        return "Work";
+        return "Internship";
       case "education":
         return "Education";
-      case "certification":
-        return "Certification";
+      case "hackathon-participant":
+        return "Hackathon Participant";
+      case "personal-project":
+        return "Personal Project";
       default:
         return "Other";
     }

@@ -27,12 +27,8 @@ export default function HeroSection() {
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
                 Ramis Hasanli
               </h1>
-              <h2 className="text-xl md:text-2xl text-muted-foreground">
-                Full-Stack Software Developer
-              </h2>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Crafting exceptional digital experiences with modern technologies. 
-                Passionate about clean code, innovative solutions, and user-centered design.
+                I believe technology is a powerful tool for solving real human problems. With a strong engineering mindset and hands-on experience in Large Language Models, I continuously build software that makes life better for people—always focusing on practical impact and human-centered solutions.
               </p>
             </div>
 
