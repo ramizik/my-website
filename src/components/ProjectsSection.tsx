@@ -379,7 +379,7 @@ export default function ProjectsSection() {
               <h3 className="text-2xl font-bold mb-3">{selectedProject.title}</h3>
               <div className="flex items-center flex-wrap gap-2 mb-4">
                 {selectedProject.categories.map((category: string, index: number) => (
-                  <Badge key={index} variant="secondary" className="text-xs px-3.5 py-1.5 whitespace-nowrap">{category}</Badge>
+                  <Badge key={index} variant="secondary" className="text-xs px-2.5 py-1 whitespace-nowrap">{category}</Badge>
                 ))}
               </div>
               <div className="flex flex-wrap gap-2">
