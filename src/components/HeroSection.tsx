@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { Download, Mail, Github, Linkedin, ArrowDown } from "lucide-react";
+import { ExternalLink, Mail, Github, Linkedin, ArrowDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import GitHubHeatmap from "./GitHubHeatmap";
 
@@ -61,10 +61,15 @@ export default function HeroSection() {
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-              <button className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-2">
-                <Download className="h-5 w-5" />
+              <a
+                href="https://drive.google.com/file/d/1p434n5XwNGXpWHavD7JjkLMi7JK__6qF/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-2"
+              >
+                <ExternalLink className="h-5 w-5" />
                 <span className="text-sm">Resume</span>
-              </button>
+              </a>
             </div>
 
             {/* GitHub Contribution Heatmap */}
