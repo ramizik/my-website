@@ -62,7 +62,7 @@ export default function HeroSection() {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="https://drive.google.com/file/d/1p434n5XwNGXpWHavD7JjkLMi7JK__6qF/view?usp=sharing"
+                href="https://drive.google.com/file/d/1gGMN6ogwTbeFQ6g9N_GTNSvSxXChdPgt/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-2"
