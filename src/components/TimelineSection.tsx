@@ -108,7 +108,7 @@ export default function TimelineSection() {
       location: "Online",
       period: "Aug 2025 - Present",
       year: "2025",
-      description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders. Built with AWS serverless architecture and EventBridge orchestration.",
+      description: "Personal AI assistant in continuous development, tailored to improve my daily life by managing calendar, tasks, budget, and habits via Telegram with proactive reminders. Built on AWS serverless architecture and EventBridge orchestration, I constantly enhance it to better suit my needs—my long-term goal is to evolve it into a true 'Jarvis AI' like in the Iron Man movie.",
       achievements: ["AWS serverless architecture", "Telegram Bot integration", "Proactive reminders", "Multi-service coordination"],
       icon: Code
     },
@@ -118,11 +118,23 @@ export default function TimelineSection() {
       title: "WonderKid",
       company: "Big Red Hacks 2025",
       location: "Cornell University, NY",
-      period: "Oct 2025",
+      period: "Sep 2025",
       year: "2025",
       description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos. Combines Gemini, Imagen, and Veo 2.0 for personalized narratives.",
       achievements: ["AI story generation", "Dynamic illustrations", "Video compilation", "Child-focused UX"],
-      icon: Code
+      icon: Award
+    },
+    {
+      id: 11,
+      type: "hackathon",
+      title: "???",
+      company: "CalHacks 2025 (in development)",
+      location: "UC Berkeley, CA",
+      period: "Oct 2025",
+      year: "2025",
+      description: "",
+      achievements: ["TBD"],
+      icon: Award
     },
     {
       id: 9,
