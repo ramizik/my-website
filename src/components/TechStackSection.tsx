@@ -144,6 +144,43 @@ export default function TechStackSection() {
       ]
     },
     {
+      title: "Front end development",
+      technologies: [
+        {
+          id: "typescript",
+          name: "TypeScript",
+          logo: "/logos/typescript.svg",
+          experience: "4+ years",
+          projects: ["Vocal AI", "WonderKid", "EchoLens"],
+          description: "Expert in TypeScript for type-safe application development, building scalable codebases with strong typing, interfaces, and advanced type features that catch errors early and improve code maintainability."
+        },
+        {
+          id: "tailwind",
+          name: "Tailwind CSS",
+          logo: "/logos/tailwind.svg",
+          experience: "3+ years",
+          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens"],
+          description: "Proficient in Tailwind CSS for rapid UI development, creating responsive, modern interfaces with utility-first CSS, custom design systems, and optimized production builds."
+        },
+        {
+          id: "html-css",
+          name: "HTML & CSS",
+          logo: "/logos/html-css.svg",
+          experience: "6+ years",
+          projects: ["All Projects"],
+          description: "Strong foundation in semantic HTML and modern CSS, building accessible, responsive web interfaces with Flexbox, Grid, animations, and cross-browser compatibility."
+        },
+        {
+          id: "vite",
+          name: "Vite",
+          logo: "/logos/vite.svg",
+          experience: "2+ years",
+          projects: ["Vocal AI", "EchoLens"],
+          description: "Experience with Vite for lightning-fast development builds, hot module replacement, and optimized production bundles for modern web applications."
+        }
+      ]
+    },
+    {
       title: "Cloud & Deployment",
       technologies: [
         {
