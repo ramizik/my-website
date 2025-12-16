@@ -10,11 +10,41 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const thumbnailContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const ITEMS_PER_PAGE = 6;
 
   const projects = [
     {
       id: 1,
+      title: "Tactico AI",
+      description: "AI tactical analysis for college sports—upload match footage and get player tracking, possession, and team insights.",
+      fullDescription: "TacticoAI is an AI-powered tactical analysis platform for college sports teams that turns raw match footage into actionable performance insights. Built with a React + TypeScript frontend and a FastAPI backend, it supports chunked video uploads, background job processing, and persistent storage via Supabase (PostgreSQL + Storage). The core ML pipeline uses YOLO-based detection with ByteTrack multi-object tracking to identify players and the ball, automatically assigns teams via jersey color clustering (K-means), tracks ball possession, and estimates real-world speed and distance using camera movement compensation and perspective transformation from pixel space to field coordinates. Results are delivered as annotated output video overlays plus per-frame tracking data and summary statistics for tactical review and export.",
+      logo: "/images/logo-tactico-ai.jpg",
+      image: "/images/tactico-ai-1.jpg",
+      images: [
+        "/images/tactico-ai-1.jpg",
+        "/images/tactico-ai-2.jpg",
+        "/images/tactico-ai-3.jpg",
+        "/images/tactico-ai-4.jpg",
+        "/images/tactico-ai-5.jpg"
+      ],
+      categories: ["Hackathon", "ML"],
+      demoUrl: "https://www.youtube.com/watch?v=RSF-UM9DC4A",
+      devpostUrl: "https://devpost.com/software/tactico-ai",
+      githubUrl: "https://github.com/ramizik/tactico-ai",
+      keyFeatures: [
+        "Chunked upload for large match videos",
+        "YOLO + ByteTrack player/ball detection and tracking",
+        "Automatic team assignment via jersey color clustering (K-means)",
+        "Ball possession tracking and team control metrics",
+        "Real-world speed and distance estimation with camera compensation",
+        "Perspective transform from pixels to field coordinates with data export"
+      ]
+    },
+    {
+      id: 2,
       title: "Vocal AI",
       description: "Vocal coaching platform with real-time analysis and conversational agents—Hackathon winner.",
       fullDescription: "VocalAI is an AI-powered vocal coaching platform that won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025. Built with React/TypeScript and FastAPI, it integrates multiple AI services including Letta for stateful conversational coaching, Fetch.ai for autonomous progress analysis, and VAPI for real-time voice conversations. The platform performs comprehensive vocal analysis using Web Audio API to extract metrics like pitch, jitter, shimmer, and vibrato rate, then generates personalized exercises and feedback through AI agents with long-term memory. Data is managed through Supabase PostgreSQL with the system providing both reactive chat-based coaching and proactive daily reports to track vocal development over time.",
@@ -45,7 +75,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Business Chatbot for iQore",
       description: "Multi-agent convention chatbot—20% more client interactions at IEEE Quantum event.",
       fullDescription: "iQore Multi-Agent Event Chatbot is an enterprise AI system built for iQore's IEEE Quantum Convention featuring four specialized agents powered by LangGraph, LangChain, and OpenAI GPT-3.5-turbo with RAG knowledge retrieval. Built with FastAPI and MongoDB Atlas, the system engaged clients directly while supporting human representatives with instant company information access. This hybrid approach enabled iQore to process 20% more interactions than previous conventions by autonomously handling qualification, technical Q&A, and demo scheduling. Deployed on Google Cloud Run with real-time queue management, demonstrating effective AI-human collaboration in high-traffic convention environments.",
@@ -70,7 +100,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "My Buddy",
       description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders",
       fullDescription: "My Buddy is a cloud-native personal assistant built with AWS serverless architecture, currently in development as my vision of a proactive AI companion. The system integrates Google Calendar API, Telegram Bot API, and AWS services (Lambda, DynamoDB, EventBridge) to track calendar events, tasks, budget, streaks, goals, and projects through conversational commands. EventBridge orchestrates hourly reminders and morning/evening summaries with visual task prioritization. With Phase 2 operational, Phase 3 targets LangChain integration for intelligent analysis and memory—transforming it from reactive to proactive, anticipating needs and providing contextual insights to achieve an always-available intelligent companion working silently in the cloud.",
@@ -100,7 +130,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "WonderKid",
       description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos",
       fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
@@ -129,27 +159,6 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 5,
-      title: "Traveler AI",
-      description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration",
-      fullDescription: "Traveler AI is a multimodal conversational travel planner built during Google's 5-day Gen AI Intensive Course. Powered by Gemini 2.0 Flash and 1.5 Pro Vision, it combines intelligent itinerary building with real-time data from OpenWeather and Ticketmaster APIs. The assistant understands natural language and tourist photos, offering personalized suggestions through RAG-powered cultural tips (ChromaDB + embeddings), OCR translation, landmark descriptions, and YouTube video summarization. It features an LLM-based self-evaluation system that scores each itinerary on weather suitability, personalization, and authenticity. Users can export plans as Markdown or PDF, take interactive travel quizzes, and maintain session memory of preferences and destinations—all through a Python CLI chatbot experience in Kaggle Notebooks.",
-      logo: "/images/logo-travel-ai.png",
-      image: "/images/profile.jpg",
-      images: [],
-      categories: ["Multi-Agent", "Multi-Modal", "RAG", "Hackathon"],
-      demoUrl: "https://www.youtube.com/watch?v=c_hut9NcQwY",
-      devpostUrl: "https://devpost.com/software/travel-ai-agent",
-      githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
-      keyFeatures: [
-        "Multi-modal destination analysis",
-        "RAG-powered recommendations",
-        "Personalized itinerary generation",
-        "Real-time travel information",
-        "Budget optimization",
-        "Interactive map integration"
-      ]
-    },
-    {
       id: 6,
       title: "EchoLens",
       description: "AI accessibility tool translating audio environments into visual info for deaf users.",
@@ -175,10 +184,31 @@ export default function ProjectsSection() {
         "Customizable audio profiles",
         "Accessibility-focused design"
       ]
+    },
+    {
+      id: 7,
+      title: "Traveler AI",
+      description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration",
+      fullDescription: "Traveler AI is a multimodal conversational travel planner built during Google's 5-day Gen AI Intensive Course. Powered by Gemini 2.0 Flash and 1.5 Pro Vision, it combines intelligent itinerary building with real-time data from OpenWeather and Ticketmaster APIs. The assistant understands natural language and tourist photos, offering personalized suggestions through RAG-powered cultural tips (ChromaDB + embeddings), OCR translation, landmark descriptions, and YouTube video summarization. It features an LLM-based self-evaluation system that scores each itinerary on weather suitability, personalization, and authenticity. Users can export plans as Markdown or PDF, take interactive travel quizzes, and maintain session memory of preferences and destinations—all through a Python CLI chatbot experience in Kaggle Notebooks.",
+      logo: "/images/logo-travel-ai.png",
+      image: "/images/profile.jpg",
+      images: [],
+      categories: ["Multi-Agent", "Multi-Modal", "RAG", "Hackathon"],
+      demoUrl: "https://www.youtube.com/watch?v=c_hut9NcQwY",
+      devpostUrl: "https://devpost.com/software/travel-ai-agent",
+      githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
+      keyFeatures: [
+        "Multi-modal destination analysis",
+        "RAG-powered recommendations",
+        "Personalized itinerary generation",
+        "Real-time travel information",
+        "Budget optimization",
+        "Interactive map integration"
+      ]
     }
   ];
 
-  const categories = ["All", "Mobile App", "Multi-Modal", "Multi-Agent", "Hackathon", "API", "RAG"];
+  const categories = ["All", "Mobile App", "Multi-Modal", "Multi-Agent", "Hackathon", "API", "RAG", "ML"];
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -232,9 +262,35 @@ export default function ProjectsSection() {
     });
   };
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
+  const filteredProjects = activeFilter === "All"
+    ? projects
     : projects.filter(project => project.categories.includes(activeFilter));
+
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentProjects = filteredProjects.slice(startIndex, endIndex);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      // Scroll to projects section
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      // Scroll to projects section
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Reset to page 1 when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter]);
 
   // Handle keyboard navigation for image carousel
   useEffect(() => {
@@ -278,11 +334,44 @@ export default function ProjectsSection() {
               </Button>
             ))}
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center mt-12 mb-8">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={goToPreviousPage}
+                disabled={currentPage === 1}
+                className="gap-2 px-6 py-6 text-base font-medium"
+              >
+                <ChevronLeft className="h-5 w-5" />
+                Previous
+              </Button>
+
+              <div className="flex items-center gap-2 px-4">
+                <span className="text-base font-medium text-foreground">
+                  Page <span className="text-xl font-bold text-primary">{currentPage}</span> of <span className="text-xl font-bold">{totalPages}</span>
+                </span>
+              </div>
+
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={goToNextPage}
+                disabled={currentPage === totalPages}
+                className="gap-2 px-6 py-6 text-base font-medium"
+              >
+                Next
+                <ChevronRight className="h-5 w-5" />
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* All Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
+          {currentProjects.map((project) => (
             <Card 
               key={project.id} 
              className="border-0 shadow-md hover:shadow-lg transition-shadow group cursor-pointer overflow-hidden"

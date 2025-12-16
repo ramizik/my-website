@@ -5,3 +5,7 @@ package-lock.json
 .vscode/
 /build
 /dist
+.cursor/
+AGENTS.md
+CLAUDE.md
+GEMINI.md

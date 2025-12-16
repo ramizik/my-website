@@ -55,7 +55,7 @@ export default function TimelineSection() {
     {
       id: 3,
       type: "hackathon",
-      title: "EchoLens",
+      title: "EchoLens AI",
       company: "SF Hacks 2025",
       location: "San Francisco State University, CA",
       period: "Apr 2025",
@@ -125,36 +125,43 @@ export default function TimelineSection() {
       icon: Award
     },
     {
-      id: 11,
+      id: 9,
       type: "hackathon",
-      title: "???",
-      company: "CalHacks 2025 (in development)",
+      title: "Tactico AI",
+      company: "CalHacks 2025",
       location: "UC Berkeley, CA",
       period: "Oct 2025",
       year: "2025",
-      description: "",
-      achievements: ["TBD"],
+      description: "AI tactical analysis platform for college sports teams that turns match footage into actionable insights. Uses YOLO + ByteTrack for player/ball tracking, automatic team assignment, and real-world metrics estimation.",
+      achievements: ["YOLO-based detection with ByteTrack multi-object tracking", "CalHacks Top 10 Project", "YC W26 Applicant"],
       icon: Award
     },
     {
-      id: 9,
+      id: 11,
+      type: "personal-project",
+      title: "Seru AI",
+      company: "AI Synth Generator for Serum",
+      location: "Online",
+      period: "Currently in development",
+      year: "2025",
+      description: "Building AI Synth generator for Serum.",
+      achievements: [],
+      icon: Code
+    },
+    {
+      id: 12,
       type: "currently",
-      title: "Today",
+      title: "",
       company: "",
       location: "Stockton, CA",
       period: "Today",
       year: "2025",
-      description: "I'm deeply immersed in exploring the latest AI tools and technologies, always on the lookout for innovative use cases and practical applications. I actively sign up for and prepare to participate in various hackathons, driven by an entrepreneurial mindset that constantly inspires me to brainstorm and prototype new software solutions. My passion for building things fuels my coding addiction, pushing me to create, iterate, and learn every day. As a graduate student, I contribute to academic research in Machine Learning and am committed to mastering AI at a deep level. I also serve as a Graduate Teaching Assistant and mentor in the Computer Science department, where I share my software expertise and develop creative ways to make complex CS concepts accessible to newcomers. In my free time, I pursue research in quantum and quantum-inspired technologies, believing in their transformative potential for the future. Additionally, I am actively seeking internship opportunities in software and artificial intelligence, eager to apply my problem-solving skills and contribute to impactful projects.",
-      achievements: [
-        "Continuous Learner",
-        "Caffeine Maniac",
-        "Laser Focused",
-        "Coding Addiction"
-      ],
+      description: "Building stuff. Exploring startup opportunities for Tactico AI. Grinding LeetCode. Always learning new technologies.",
+      achievements: [],
       icon: Clock
     },
     {
-      id: 10,
+      id: 13,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",

@@ -53,16 +53,8 @@ export default function TechStackSection() {
           name: "Letta",
           logo: "/logos/letta.jpg",
           experience: "1+ years",
-          projects: ["Vocal AI"],
+          projects: ["Vocal AI", "Tactico AI"],
           description: "Built stateful, explainable agents with Letta for a vocal AI—persisting user progress, leveraging conversation memory to personalize interactions, and generating transparent progress reports."
-        },
-        {
-          id: "fetchai",
-          name: "fetch.ai",
-          logo: "/logos/fetch-ai.svg",
-          experience: "1+ years",
-          projects: ["Vocal AI"],
-          description: "Built autonomous agents with Fetch.ai for a vocal AI coach—securely connecting to user account databases to retrieve and aggregate data, powering timely, personalized coaching insights."
         },
         {
           id: "vapi",
@@ -87,11 +79,19 @@ export default function TechStackSection() {
           experience: "1+ years",
           projects: ["WonderKid", "Traveler AI", "EchoLens"],
           description: "Built multimodal applications with Gemini — Veo-powered video generation for WonderKid, image processing and translation for Traveler AI, real-time audio/video/image assistance for EchoLens, and automated PDF report generation."
+        },
+        {
+          id: "pytorch",
+          name: "PyTorch",
+          logo: "/logos/pytorch.svg",
+          experience: "1+ years",
+          projects: ["TacticoAI"],
+          description: "Built the ML pipeline for TacticoAI using PyTorch for YOLO-based detection with ByteTrack multi-object tracking."
         }
       ]
     },
     {
-      title: "Application Development",
+      title: "Fullstack Development",
       technologies: [
         {
           id: "flask",
@@ -122,36 +122,15 @@ export default function TechStackSection() {
           name: "React",
           logo: "/logos/react.svg",
           experience: "5+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
+          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens", "TacticoAI"],
           description: "Built cross‑platform UIs with React and React Native—leveraging hooks, the Context API, and solid state‑management patterns to deliver stable, reusable frontends that deploy smoothly across devices, screens, and environments."
         },
-        {
-          id: "expo",
-          name: "Expo",
-          logo: "/logos/expo.svg",
-          experience: "2+ years",
-          projects: ["WonderKid"],
-          description: "Experience with Expo for rapid mobile app development, cross-platform deployment, and React Native ecosystem."
-        },
-        {
-          id: "figma",
-          name: "Figma",
-          logo: "/logos/figma.svg",
-          experience: "3+ years",
-          projects: ["Business Chatbot for iQore", "WonderKid", "EchoLens"],
-          description: "Proficient in Figma for collaborative UI/UX design, prototyping, and creating design systems for web and mobile applications."
-        }
-      ]
-    },
-    {
-      title: "Front end development",
-      technologies: [
         {
           id: "typescript",
           name: "TypeScript",
           logo: "/logos/typescript.svg",
           experience: "4+ years",
-          projects: ["Vocal AI", "WonderKid", "EchoLens"],
+          projects: ["Vocal AI", "WonderKid", "EchoLens", "TacticoAI"],
           description: "Expert in TypeScript for type-safe application development, building scalable codebases with strong typing, interfaces, and advanced type features that catch errors early and improve code maintainability."
         },
         {
@@ -159,25 +138,9 @@ export default function TechStackSection() {
           name: "Tailwind CSS",
           logo: "/logos/tailwind.svg",
           experience: "3+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens"],
+          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens", "TacticoAI"],
           description: "Proficient in Tailwind CSS for rapid UI development, creating responsive, modern interfaces with utility-first CSS, custom design systems, and optimized production builds."
         },
-        {
-          id: "html-css",
-          name: "HTML & CSS",
-          logo: "/logos/html-css.svg",
-          experience: "6+ years",
-          projects: ["All Projects"],
-          description: "Strong foundation in semantic HTML and modern CSS, building accessible, responsive web interfaces with Flexbox, Grid, animations, and cross-browser compatibility."
-        },
-        {
-          id: "vite",
-          name: "Vite",
-          logo: "/logos/vite.svg",
-          experience: "2+ years",
-          projects: ["Vocal AI", "EchoLens"],
-          description: "Experience with Vite for lightning-fast development builds, hot module replacement, and optimized production bundles for modern web applications."
-        }
       ]
     },
     {
@@ -225,7 +188,7 @@ export default function TechStackSection() {
           name: "Supabase",
           logo: "/logos/supabase.svg",
           experience: "2+ years",
-          projects: ["Vocal AI"],
+          projects: ["Vocal AI", "TacticoAI"],
           description: "Proficient in Supabase for backend-as-a-service, real-time databases, authentication, and API generation."
         },
         {
@@ -292,7 +255,7 @@ export default function TechStackSection() {
                           alt={tech.name}
                           className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 p-2"
                           style={
-                            ['langchain', 'expo', 'openai', 'flask', 'nodejs', 'aws'].includes(tech.id) && isDark
+                            ['langchain', 'openai', 'flask', 'nodejs', 'aws'].includes(tech.id) && isDark
                               ? { filter: 'invert(1)' }
                               : {}
                           }
@@ -325,7 +288,7 @@ export default function TechStackSection() {
                     alt={selectedTech.name}
                     className="w-full h-full object-contain p-1"
                     style={
-                      ['langchain', 'expo', 'openai', 'flask', 'nodejs'].includes(selectedTech.id) && isDark
+                      ['langchain', 'openai', 'flask', 'nodejs'].includes(selectedTech.id) && isDark
                         ? { filter: 'invert(1)' }
                         : {}
                     }
