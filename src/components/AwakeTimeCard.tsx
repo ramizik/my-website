@@ -6,7 +6,7 @@ const STORAGE_KEYS = {
   IS_RUNNING: "stopwatch_isRunning",
 } as const;
 
-export default function CurrentTimeCard() {
+export default function AwakeTimeCard() {
   const [wakeTime, setWakeTime] = useState<Date | null>(null);
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
   const [isRunning, setIsRunning] = useState<boolean>(false);
@@ -190,7 +190,7 @@ export default function CurrentTimeCard() {
           className="flex-1 max-w-[140px]"
           disabled={isRunning}
         >
-          Woke up
+          Wake up
         </Button>
         <Button
           onClick={handleSleep}
@@ -198,23 +198,20 @@ export default function CurrentTimeCard() {
           className="flex-1 max-w-[140px]"
           disabled={!isRunning}
         >
-          Sleep
+          Go to sleep
         </Button>
       </div>
 
       {/* Label */}
       <div className="text-center">
-        <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
-          Awake Time
-        </h3>
         <p className="text-sm text-muted-foreground mt-1">
           {isRunning
             ? `Since ${wakeTime?.toLocaleTimeString("en-US", {
                 hour: "2-digit",
                 minute: "2-digit",
-                hour12: false,
+                hour12: true,
               })}`
-            : "Press 'Woke up' to start"}
+            : ""}
         </p>
       </div>
     </div>

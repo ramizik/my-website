@@ -1,6 +1,6 @@
 import React from "react";
 import CircularCountdown from "./CircularCountdown";
-import CurrentTimeCard from "./CurrentTimeCard";
+import AwakeTimeCard from "./AwakeTimeCard";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
 
@@ -44,7 +44,6 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
       {/* Header with theme toggle */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-foreground">Personal Tracker</h1>
           <Button
             variant="ghost"
             size="icon"
@@ -66,9 +65,6 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
         <div className="max-w-7xl mx-auto">
           {/* Page Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Countdown Trackers
-            </h2>
           </div>
 
           {/* Trackers Grid */}
@@ -80,18 +76,8 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
                 targetDate={tracker.targetDate}
               />
             ))}
-            {/* Current Time Card - 6th position */}
-            <CurrentTimeCard />
-          </div>
-
-          {/* Back to Home Link */}
-          <div className="text-center mt-16">
-            <a
-              href="/"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg font-medium"
-            >
-              ← Back to Home
-            </a>
+            {/* Awake Time Card - 6th position */}
+            <AwakeTimeCard />
           </div>
         </div>
       </main>

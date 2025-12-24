@@ -20,9 +20,9 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="pt-24 pb-6 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="hero" className="pt-16 pb-8 min-h-screen flex items-center scroll-mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div className="space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">

@@ -322,7 +322,7 @@ export default function ProjectsSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -337,7 +337,7 @@ export default function ProjectsSection() {
 
           {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center mt-12 mb-8">
+            <div className="flex items-center justify-center mt-6 mb-8">
               <Button
                 variant="outline"
                 size="lg"
