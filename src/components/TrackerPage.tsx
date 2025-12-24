@@ -1,5 +1,6 @@
 import React from "react";
 import CircularCountdown from "./CircularCountdown";
+import CurrentTimeCard from "./CurrentTimeCard";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
 
@@ -79,6 +80,8 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
                 targetDate={tracker.targetDate}
               />
             ))}
+            {/* Current Time Card - 6th position */}
+            <CurrentTimeCard />
           </div>
 
           {/* Back to Home Link */}
