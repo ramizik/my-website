@@ -19,9 +19,9 @@ export default function ProjectsSection() {
     {
       id: 1,
       title: "Coherence",
-      description: "AI presentation coach detecting visual-verbal dissonance—Winner: Best Use of AI at SBHacks 2025.",
+      description: "AI presentation coach detecting visual-verbal dissonance. UCSB Hackathon Winner",
       fullDescription: "Coherence is the first AI presentation coach that detects visual-verbal dissonance—identifying moments where body language contradicts spoken words. Built for SBHacks 2025 and winner of Best Use of AI track, it synchronizes three AI services in parallel: TwelveLabs for semantic video understanding (15+ body language queries per analysis), Deepgram for real-time transcription with word-level timestamps, and Google Gemini for multimodal synthesis and dissonance reasoning. The system processes any presentation video (Zoom recordings, stage presentations, phone captures) in under 60 seconds, generating a Coherence Score (0-100), timestamped dissonance flags, interactive timeline heatmap, and actionable coaching insights. Built with React + TypeScript + Vite frontend and FastAPI async backend, it addresses a critical gap in the $1.3B presentation training market where 55% of communication (non-verbal) was being ignored by existing tools that only analyze audio. Features include PDF report generation for education use cases and real-time status updates during processing.",
-      logo: "/images/logo-coherence.jpg",
+      logo: "/images/logo-coherence.png",
       image: "/images/coherence-1.jpg",
       images: [
         "/images/coherence-1.png",
@@ -33,8 +33,8 @@ export default function ProjectsSection() {
         "/images/coherence-7.png"
       ],
       categories: ["Hackathon", "Multi-Modal", "API"],
-      demoUrl: "",
-      devpostUrl: "https://devpost.com/software/coherence",
+      demoUrl: "https://youtu.be/0IcYJvMz0W4",
+      devpostUrl: "https://devpost.com/software/coherence-jga4uw",
       githubUrl: "https://github.com/ramizik/coherence",
       keyFeatures: [
         "Multimodal AI synchronization (3 services)",
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
     {
       id: 3,
       title: "Vocal AI",
-      description: "Vocal coaching platform with real-time analysis and conversational agents—Hackathon winner.",
+      description: "Vocal coaching platform with real-time analysis and conversational agents. UC Berkley Hackathon Winner.",
       fullDescription: "VocalAI is an AI-powered vocal coaching platform that won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025. Built with React/TypeScript and FastAPI, it integrates multiple AI services including Letta for stateful conversational coaching, Fetch.ai for autonomous progress analysis, and VAPI for real-time voice conversations. The platform performs comprehensive vocal analysis using Web Audio API to extract metrics like pitch, jitter, shimmer, and vibrato rate, then generates personalized exercises and feedback through AI agents with long-term memory. Data is managed through Supabase PostgreSQL with the system providing both reactive chat-based coaching and proactive daily reports to track vocal development over time.",
       logo: "/images/logo-vocal-ai.png",
       image: "/images/vocal-ai-1.jpg",

@@ -138,24 +138,12 @@ export default function TimelineSection() {
     },
     {
       id: 11,
-      type: "personal-project",
-      title: "Seru AI",
-      company: "AI Synth Generator for Serum",
-      location: "Online",
-      period: "Currently in development",
-      year: "2025",
-      description: "Building AI Synth generator for Serum.",
-      achievements: [],
-      icon: Code
-    },
-    {
-      id: 12,
       type: "hackathon",
       title: "Coherence",
-      company: "SBHacks 2025 - Winner: Best Use of AI",
+      company: "SBHacks 2025 Winner",
       location: "UC Santa Barbara, CA",
-      period: "Jan 2025",
-      year: "2025",
+      period: "Jan 2026",
+      year: "2026",
       description: "First AI presentation coach that detects visual-verbal dissonance—analyzing when body language contradicts spoken words. Built multimodal AI pipeline synchronizing TwelveLabs (video understanding), Deepgram (transcription), and Gemini (synthesis) to identify exact moments where confidence gaps occur. Processes any presentation video in under 60 seconds, generating actionable feedback instead of generic criticism.",
       achievements: [
         "Winner: Best Use of AI Track",
@@ -165,6 +153,18 @@ export default function TimelineSection() {
         "PDF report generation for education"
       ],
       icon: Award
+    },
+    {
+      id: 12,
+      type: "personal-project",
+      title: "Seru AI",
+      company: "AI Synth Generator for Serum",
+      location: "Online",
+      period: "Currently in development",
+      year: "2026",
+      description: "Building AI Synth generator for Serum.",
+      achievements: [],
+      icon: Code
     },
     {
       id: 13,
