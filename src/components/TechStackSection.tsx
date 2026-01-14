@@ -45,7 +45,7 @@ export default function TechStackSection() {
           name: "LangChain",
           logo: "/logos/langchain.svg",
           experience: "2+ years",
-          projects: ["Business Chatbot for iQore", "My Buddy"],
+          projects: ["Customer Rep. for iQore", "My Buddy"],
           description: "Built task‑specific AI agents and multi‑agent routing systems with LangChain that understand user intent, select the right tools, and deliver accurate, traceable results."
         },
         {
@@ -69,7 +69,7 @@ export default function TechStackSection() {
           name: "OpenAI",
           logo: "/logos/openai.svg",
           experience: "2+ years",
-          projects: ["Business Chatbot for iQore"],
+          projects: ["Customer Rep. for iQore"],
           description: "Integrated GPT‑4 via the OpenAI SDK to power chatbots, and used OpenAI embedding models to build a RAG customer support agent for iQore, delivering fast, context‑grounded answers."
         },
         {
@@ -106,7 +106,7 @@ export default function TechStackSection() {
           name: "FastAPI",
           logo: "/logos/fastapi.svg",
           experience: "2+ years",
-          projects: ["Coherence", "Business Chatbot for iQore", "WonderKid"],
+          projects: ["Coherence", "Customer Rep. for iQore", "WonderKid"],
           description: "Built and deployed FastAPI services to accept, process, and return data across projects—async parallel processing pipeline for Coherence orchestrating 3 AI services simultaneously, Dockerized endpoints in WonderKid receiving text and streaming image/video to mobile, and a company chatbot backend delivering RAG‑powered conversations."
         },
         {
@@ -114,7 +114,7 @@ export default function TechStackSection() {
           name: "Node.js",
           logo: "/logos/node.svg",
           experience: "4+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens"],
+          projects: ["Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens"],
           description: "Built modern frontends and seamless backend integrations with Node.js—leveraging its powerful ecosystem for UI tooling and builds, REST/GraphQL APIs, real‑time WebSockets, authentication, caching, and production‑ready deployments."
         },
         {
@@ -122,7 +122,7 @@ export default function TechStackSection() {
           name: "React",
           logo: "/logos/react.svg",
           experience: "5+ years",
-          projects: ["Coherence", "Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens", "TacticoAI"],
           description: "Built cross‑platform UIs with React and React Native—leveraging hooks, the Context API, and solid state‑management patterns to deliver stable, reusable frontends that deploy smoothly across devices, screens, and environments."
         },
         {
@@ -138,7 +138,7 @@ export default function TechStackSection() {
           name: "Tailwind CSS",
           logo: "/logos/tailwind.svg",
           experience: "3+ years",
-          projects: ["Coherence", "Vocal AI", "Business Chatbot for iQore", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "EchoLens", "TacticoAI"],
           description: "Proficient in Tailwind CSS for rapid UI development, creating responsive, modern interfaces with utility-first CSS, custom design systems, and optimized production builds."
         },
       ]
@@ -151,7 +151,7 @@ export default function TechStackSection() {
           name: "Google Cloud Run",
           logo: "/logos/gcloud.svg",
           experience: "2+ years",
-          projects: ["Vocai AI", "Business Chatbot for iQore", "WonderKid"],
+          projects: ["Vocal AI", "Customer Rep. for iQore", "WonderKid"],
           description: "Built and deployed containerized, production‑ready APIs on Google Cloud Run—auto‑scaling services that power my projects and host cloud‑native apps like the iQore chatbot and WonderKid."
         },
         {
@@ -167,7 +167,7 @@ export default function TechStackSection() {
           name: "Netlify",
           logo: "/logos/netlify.svg",
           experience: "2+ years",
-          projects: ["Vocal AI", "EchoLens", "Business Chatbot for iQore"],
+          projects: ["Vocal AI", "EchoLens", "Customer Rep. for iQore"],
           description: "Experience with Netlify for static site hosting, continuous deployment, and serverless functions for modern web applications."
         },
         {
@@ -175,7 +175,7 @@ export default function TechStackSection() {
           name: "Docker",
           logo: "/logos/docker.svg",
           experience: "3+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens"],
+          projects: ["Vocal AI", "Customer Rep. for iQore", "EchoLens"],
           description: "Proficient in containerization, multi-stage builds, Docker Compose, and container orchestration for development and production."
         }
       ]
@@ -196,7 +196,7 @@ export default function TechStackSection() {
           name: "MongoDB",
           logo: "/logos/mongodb.svg",
           experience: "3+ years",
-          projects: ["WonderKid", "Business Chatbot for iQore"],
+          projects: ["WonderKid", "Customer Rep. for iQore"],
           description: "Skilled in NoSQL database design, aggregation pipelines, and performance optimization for high-traffic applications."
         },
         {

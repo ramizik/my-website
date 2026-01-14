@@ -91,7 +91,7 @@ export default function TimelineSection() {
     {
       id: 6,
       type: "personal-project",
-      title: "Business Chatbot for iQore",
+      title: "Customer Rep. for iQore",
       company: "IEEE Quantum Convention",
       location: "Albuquerque, NM",
       period: "Aug 2025",
