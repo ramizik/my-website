@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SimpleModal from "./SimpleModal";
 
 interface Technology {
@@ -77,8 +77,8 @@ export default function TechStackSection() {
           name: "Gemini",
           logo: "/logos/gemini.png",
           experience: "1+ years",
-          projects: ["WonderKid", "Traveler AI", "EchoLens"],
-          description: "Built multimodal applications with Gemini — Veo-powered video generation for WonderKid, image processing and translation for Traveler AI, real-time audio/video/image assistance for EchoLens, and automated PDF report generation."
+          projects: ["Coherence", "WonderKid", "Traveler AI", "EchoLens"],
+          description: "Built multimodal applications with Gemini — visual-verbal dissonance detection and synthesis for Coherence, Veo-powered video generation for WonderKid, image processing and translation for Traveler AI, real-time audio/video/image assistance for EchoLens, and automated PDF report generation."
         },
         {
           id: "pytorch",
@@ -106,8 +106,8 @@ export default function TechStackSection() {
           name: "FastAPI",
           logo: "/logos/fastapi.svg",
           experience: "2+ years",
-          projects: ["Business Chatbot for iQore", "WonderKid"],
-          description: "Built and deployed FastAPI services to accept, process, and return data across projects—Dockerized endpoints in WonderKid receiving text and streaming image/video to mobile, and a company chatbot backend delivering RAG‑powered conversations."
+          projects: ["Coherence", "Business Chatbot for iQore", "WonderKid"],
+          description: "Built and deployed FastAPI services to accept, process, and return data across projects—async parallel processing pipeline for Coherence orchestrating 3 AI services simultaneously, Dockerized endpoints in WonderKid receiving text and streaming image/video to mobile, and a company chatbot backend delivering RAG‑powered conversations."
         },
         {
           id: "nodejs",
@@ -122,7 +122,7 @@ export default function TechStackSection() {
           name: "React",
           logo: "/logos/react.svg",
           experience: "5+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Business Chatbot for iQore", "WonderKid", "EchoLens", "TacticoAI"],
           description: "Built cross‑platform UIs with React and React Native—leveraging hooks, the Context API, and solid state‑management patterns to deliver stable, reusable frontends that deploy smoothly across devices, screens, and environments."
         },
         {
@@ -130,7 +130,7 @@ export default function TechStackSection() {
           name: "TypeScript",
           logo: "/logos/typescript.svg",
           experience: "4+ years",
-          projects: ["Vocal AI", "WonderKid", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "WonderKid", "EchoLens", "TacticoAI"],
           description: "Expert in TypeScript for type-safe application development, building scalable codebases with strong typing, interfaces, and advanced type features that catch errors early and improve code maintainability."
         },
         {
@@ -138,7 +138,7 @@ export default function TechStackSection() {
           name: "Tailwind CSS",
           logo: "/logos/tailwind.svg",
           experience: "3+ years",
-          projects: ["Vocal AI", "Business Chatbot for iQore", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Business Chatbot for iQore", "EchoLens", "TacticoAI"],
           description: "Proficient in Tailwind CSS for rapid UI development, creating responsive, modern interfaces with utility-first CSS, custom design systems, and optimized production builds."
         },
       ]
@@ -242,7 +242,7 @@ export default function TechStackSection() {
                     className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:animate-pulse p-4"
                     onClick={() => openModal(tech)}
                   >
-                    <div 
+                    <div
                       className="flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-105 bg-muted/20 group-hover:bg-muted/30"
                       style={{
                         width: tech.id === 'vapi' ? '120px' : '64px',

@@ -150,6 +150,24 @@ export default function TimelineSection() {
     },
     {
       id: 12,
+      type: "hackathon",
+      title: "Coherence",
+      company: "SBHacks 2025 - Winner: Best Use of AI",
+      location: "UC Santa Barbara, CA",
+      period: "Jan 2025",
+      year: "2025",
+      description: "First AI presentation coach that detects visual-verbal dissonance—analyzing when body language contradicts spoken words. Built multimodal AI pipeline synchronizing TwelveLabs (video understanding), Deepgram (transcription), and Gemini (synthesis) to identify exact moments where confidence gaps occur. Processes any presentation video in under 60 seconds, generating actionable feedback instead of generic criticism.",
+      achievements: [
+        "Winner: Best Use of AI Track",
+        "Multimodal AI synchronization (3 services)",
+        "<60 second processing time",
+        "15+ semantic video queries per analysis",
+        "PDF report generation for education"
+      ],
+      icon: Award
+    },
+    {
+      id: 13,
       type: "currently",
       title: "",
       company: "",
@@ -161,7 +179,7 @@ export default function TimelineSection() {
       icon: Clock
     },
     {
-      id: 13,
+      id: 14,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",
