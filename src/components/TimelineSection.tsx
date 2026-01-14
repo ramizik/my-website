@@ -72,7 +72,7 @@ export default function TimelineSection() {
       location: "Online",
       period: "Apr 2025",
       year: "2025",
-      description: "Won Google + Kaggle hackathon with an intelligent travel planning platform featuring multimodal conversational AI. Implemented RAG-powered recommendation engine with real-time data integration, generating personalized itineraries through natural language interactions. Built during Google's intensive Gen AI course, showcasing production-ready AI application development.",
+      description: "Intelligent travel planning platform featuring multimodal conversational AI. Implemented RAG-powered recommendation engine with real-time data integration, generating personalized itineraries through natural language interactions. Built during Google's intensive Gen AI course, showcasing production-ready AI application development.",
       achievements: ["Multimodal AI integration", "Real-time data APIs", "RAG-powered recommendations", "Export functionality"],
       icon: Award
     },
@@ -84,7 +84,7 @@ export default function TimelineSection() {
       location: "UC Berkeley, CA",
       period: "Jun 2025",
       year: "2025",
-      description: "Awarded Most Ambitious Vapi Project at UC Berkeley's AI Hackathon for building a real-time vocal coaching platform. Integrated dual-AI architecture with Letta conversational agents and Fetch.ai autonomous systems, delivering personalized coaching through deep voice analytics including pitch, jitter, shimmer, and vibrato analysis with persistent user progress tracking.",
+      description: "A real-time vocal coaching platform. Integrated dual-AI architecture with Letta conversational agents and Fetch.ai autonomous systems, delivering personalized coaching through deep voice analytics including pitch, jitter, shimmer, and vibrato analysis with persistent user progress tracking.",
       achievements: ["Hackathon Winner", "Real-time vocal analysis", "AI-powered feedback system", "Multi-service integration"],
       icon: Award
     },
@@ -144,9 +144,9 @@ export default function TimelineSection() {
       location: "UC Santa Barbara, CA",
       period: "Jan 2026",
       year: "2026",
-      description: "SBHacks 2026 winner for pioneering the first AI presentation coach detecting visual-verbal dissonance. Engineered complex multimodal synchronization pipeline orchestrating TwelveLabs video understanding, Deepgram transcription, and Gemini synthesis to pinpoint exact moments where body language contradicts speech. Processes full presentation videos in under 60 seconds, executing 15+ semantic queries per analysis and generating actionable PDF reports with specific improvement recommendations.",
+      description: "First AI presentation coach detecting visual-verbal dissonance. Engineered complex multimodal synchronization pipeline orchestrating TwelveLabs video understanding, Deepgram transcription, and Gemini synthesis to pinpoint exact moments where body language contradicts speech. Processes full presentation videos in under 60 seconds, executing 15+ semantic queries per analysis and generating actionable PDF reports with specific improvement recommendations.",
       achievements: [
-        "Hackathon Winner"
+        "Hackathon Winner",
         "Multimodal AI synchronization (3 services)",
         "<60 second processing time",
         "15+ semantic video queries per analysis",
@@ -173,8 +173,8 @@ export default function TimelineSection() {
       company: "",
       location: "Bay Area",
       period: "Today",
-      year: "2025",
-      description: "Actively exploring startup opportunities for Tactico AI, refining technical skills through competitive programming, and continuously expanding expertise in cutting-edge AI/ML technologies. Balancing graduate studies with entrepreneurial pursuits and hands-on experimentation with emerging tools and frameworks.",
+      year: "2026",
+      description: "Actively exploring startup opportunities, refining technical skills through competitive programming, and continuously expanding expertise in cutting-edge AI/ML technologies. Balancing graduate studies with entrepreneurial pursuits and hands-on experimentation with emerging tools and frameworks.",
       achievements: [],
       icon: Clock
     },
