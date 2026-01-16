@@ -393,3 +393,9 @@ The description is now consistent with other timeline entries like EchoLens, Tra
 
 ---
 
+_**User**_
+
+@src/components/TrackerPage.tsx:11-40 add a new event here with id 1, call it "LA Hackathon" and put date of 2026-01-24
+
+---
+
