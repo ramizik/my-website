@@ -20,7 +20,7 @@ export default function ProjectsSection() {
       id: 1,
       title: "⭐ Coherence",
       description: "AI presentation coach detecting visual-verbal dissonance. UCSB Hackathon Winner.",
-      fullDescription: "Coherence is the first AI presentation coach that detects visual-verbal dissonance—identifying moments where body language contradicts spoken words. Built for SBHacks 2025 and winner of Best Use of AI track, it synchronizes three AI services in parallel: TwelveLabs for semantic video understanding (15+ body language queries per analysis), Deepgram for real-time transcription with word-level timestamps, and Google Gemini for multimodal synthesis and dissonance reasoning. The system processes any presentation video (Zoom recordings, stage presentations, phone captures) in under 60 seconds, generating a Coherence Score (0-100), timestamped dissonance flags, interactive timeline heatmap, and actionable coaching insights. Built with React + TypeScript + Vite frontend and FastAPI async backend, it addresses a critical gap in the $1.3B presentation training market where 55% of communication (non-verbal) was being ignored by existing tools that only analyze audio. Features include PDF report generation for education use cases and real-time status updates during processing.",
+      fullDescription: "Coherence is the first AI presentation coach that detects visual-verbal dissonance—identifying moments where body language contradicts spoken words. Winner of Best Use of AI track, it synchronizes three AI services in parallel: TwelveLabs for semantic video understanding, Deepgram for real-time transcription with word-level timestamps, and Google Gemini for multimodal synthesis and dissonance reasoning. The system processes any presentation video in under 60 seconds, generating a Coherence Score, timestamped dissonance flags, interactive timeline heatmap, and actionable coaching insights. Coherence addresses a critical gap in the $1.3B presentation training market where 55% of communication (non-verbal) was being ignored by existing tools that only analyze audio. Features include PDF report generation for education use cases and real-time status updates during processing.",
       logo: "/images/logo-coherence.png",
       image: "/images/coherence-1.jpg",
       images: [
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
         "/images/coherence-6.png",
         "/images/coherence-7.png"
       ],
-      categories: ["Hackathon", "Multi-Modal", "API"],
+      categories: ["Hackathon", "Multi-Modal", "API", "Startup-ready"],
       demoUrl: "https://youtu.be/0IcYJvMz0W4",
       devpostUrl: "https://devpost.com/software/coherence-jga4uw",
       githubUrl: "https://github.com/ramizik/coherence",
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
       id: 2,
       title: "⭐ Tactico AI",
       description: "AI sports analytics—upload footage for player, ball, and possession insights.",
-      fullDescription: "TacticoAI is an AI-powered tactical analysis platform for college sports teams that turns raw match footage into actionable performance insights. Built with a React + TypeScript frontend and a FastAPI backend, it supports chunked video uploads, background job processing, and persistent storage via Supabase (PostgreSQL + Storage). The core ML pipeline uses YOLO-based detection with ByteTrack multi-object tracking to identify players and the ball, automatically assigns teams via jersey color clustering (K-means), tracks ball possession, and estimates real-world speed and distance using camera movement compensation and perspective transformation from pixel space to field coordinates. Results are delivered as annotated output video overlays plus per-frame tracking data and summary statistics for tactical review and export.",
+      fullDescription: "TacticoAI is an AI-powered tactical analysis platform for college sports teams that turns raw match footage into actionable performance insights. Built with a React + TypeScript frontend and a FastAPI backend, it supports chunked video uploads, background job processing, and persistent storage via Supabase. The core ML pipeline uses YOLO-based detection with ByteTrack multi-object tracking to identify players and the ball, automatically assigns teams via jersey color clustering (K-means), tracks ball possession, and estimates real-world speed and distance using camera movement compensation and perspective transformation from pixel space to field coordinates. Results are delivered as annotated output video overlays plus per-frame tracking data and summary statistics for tactical review and export.",
       logo: "/images/logo-tactico-ai.jpg",
       image: "/images/tactico-ai-1.jpg",
       images: [
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
         "/images/tactico-ai-4.jpg",
         "/images/tactico-ai-5.jpg"
       ],
-      categories: ["Hackathon", "ML", "YC Applicant"],
+      categories: ["Hackathon", "ML", "YC Applicant", "Startup-ready"],
       demoUrl: "https://www.youtube.com/watch?v=RSF-UM9DC4A",
       devpostUrl: "https://devpost.com/software/tactico-ai",
       githubUrl: "https://github.com/ramizik/tactico-ai",
@@ -90,7 +90,7 @@ export default function ProjectsSection() {
         "/images/vocal-ai-7.JPEG",
         "/images/vocal-ai-8.JPEG"
       ],
-      categories: ["Hackathon", "API"],
+      categories: ["Hackathon", "API", "Startup-ready"],
       demoUrl: "https://www.youtube.com/watch?v=4XWiMuE9wwM&t=119s",
       devpostUrl: "https://devpost.com/software/vocai-ai-coach",
       githubUrl: "https://github.com/ramizik/vocal-ai",
@@ -106,9 +106,9 @@ export default function ProjectsSection() {
     {
       id: 4,
       title: "CareMate",
-      description: "AI-powered caregiver burnout prevention platform with real-time wearable integration and intervention system.",
-      fullDescription: "CareMate is a multimodal AI platform built at RoseHack 2026 that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. The system uses a 4-component burnout algorithm (wearable risk 30%, calendar/task load 30%, semantic analysis 25%, self-reports 15%) to generate a unified 0-100 risk score with color-coded severity levels. Built with React Native/Expo frontend and FastAPI backend, it integrates Google Gemini for context-aware intervention generation and Supabase PostgreSQL for data persistence. The platform analyzes HRV (heart rate variability), sleep patterns, appointment conflicts, and task overload to deliver hyper-specific, low-friction interventions with quantified time savings. Features include smart calendar management with AI-powered schedule optimization, delegation assistant with pre-drafted messages removing emotional barriers to asking for help, and a provider dashboard for B2B healthcare monitoring. Addresses the $873 billion invisible labor crisis affecting 63 million unpaid caregivers—61% women—through early detection and actionable solutions before burnout becomes a health emergency.",
-      logo: "/images/logo-caremate.png",
+      description: "AI-powered caregiver burnout prevention mobile app with real-time wearable integration and intervention system.",
+      fullDescription: "CareMate is a mobile app that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. The system uses a 4-component burnout algorithm (wearable risk 30%, calendar/task load 30%, semantic analysis 25%, self-reports 15%) to generate a unified risk score with color-coded severity levels. The platform analyzes HRV, sleep patterns, appointment conflicts, and task overload to deliver hyper-specific, low-friction interventions with quantified time savings. Features include smart calendar management with AI-powered schedule optimization, delegation assistant with pre-drafted messages removing emotional barriers to asking for help, and a provider dashboard for B2B healthcare monitoring. Addresses the invisible labor crisis affecting 63 million unpaid caregivers—through early detection and actionable solutions.",
+      logo: "/images/logo-caremate.jpg",
       image: "/images/caremate-1.jpg",
       images: [
         "/images/caremate-1.jpg",
@@ -116,19 +116,18 @@ export default function ProjectsSection() {
         "/images/caremate-3.jpg",
         "/images/caremate-4.jpg",
         "/images/caremate-5.jpg",
-        "/images/caremate-6.jpg"
       ],
-      categories: ["Hackathon", "Mobile App", "Multi-Agent"],
+      categories: ["Hackathon", "Mobile App", "Startup-ready"],
       demoUrl: "https://youtu.be/OQndt2JkB8Y?si=rCrSrPCkl1AxSh2T",
       devpostUrl: "https://devpost.com/software/caremate-ohnrv9",
       githubUrl: "https://github.com/ramizik/caremate-app",
       keyFeatures: [
         "4-component real-time burnout scoring (0-100 risk scale)",
-      "JSON wearable health data integration with HRV, sleep, and stress analysis",
-      "Smart calendar management with conflict detection and AI schedule optimization",
-      "Context-aware AI intervention engine powered by Google Gemini",
-      "Delegation assistant with pre-drafted messages to remove emotional barriers",
-      "Provider dashboard with auto-refresh for B2B healthcare monitoring"
+        "JSON wearable health data integration with HRV, sleep, and stress analysis",
+        "Smart calendar management with conflict detection and AI schedule optimization",
+        "Context-aware AI intervention engine powered by Google Gemini",
+        "Delegation assistant with pre-drafted messages to remove emotional barriers",
+        "Provider dashboard with auto-refresh for B2B healthcare monitoring"
       ]
     },
     {
