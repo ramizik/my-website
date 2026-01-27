@@ -163,7 +163,7 @@ export default function TimelineSection() {
       period: "Feb 2026",
       year: "2026",
       description: "Building a real-time AI-powered customer service assistant for a local business, using LangChain and LangGraph to create a multi-agent system that can handle customer inquiries and complaints in real-time.",
-      achievements: ["Real-time customer service", "Multi-agent system", "LangChain and LangGraph integration"],
+      achievements: ["Social Impact", "Context-aware AI", "Wearable Integration"],
       icon: Award
     },
     {
