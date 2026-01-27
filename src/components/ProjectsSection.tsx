@@ -105,61 +105,34 @@ export default function ProjectsSection() {
     },
     {
       id: 4,
-      title: "Customer Rep. for iQore",
-      description: "Multi-agent convention chatbot—20% more client interactions at IEEE Quantum event.",
-      fullDescription: "iQore Multi-Agent Event Chatbot is an enterprise AI system built for iQore's IEEE Quantum Convention featuring four specialized agents powered by LangGraph, LangChain, and OpenAI GPT-3.5-turbo with RAG knowledge retrieval. Built with FastAPI and MongoDB Atlas, the system engaged clients directly while supporting human representatives with instant company information access. This hybrid approach enabled iQore to process 20% more interactions than previous conventions by autonomously handling qualification, technical Q&A, and demo scheduling. Deployed on Google Cloud Run with real-time queue management, demonstrating effective AI-human collaboration in high-traffic convention environments.",
-      logo: "/images/logo-iqore.png",
-      image: "/images/iqore-1.jpg",
+      title: "CareMate",
+      description: "AI-powered caregiver burnout prevention platform with real-time wearable integration and intervention system.",
+      fullDescription: "CareMate is a multimodal AI platform built at RoseHack 2026 that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. The system uses a 4-component burnout algorithm (wearable risk 30%, calendar/task load 30%, semantic analysis 25%, self-reports 15%) to generate a unified 0-100 risk score with color-coded severity levels. Built with React Native/Expo frontend and FastAPI backend, it integrates Google Gemini for context-aware intervention generation and Supabase PostgreSQL for data persistence. The platform analyzes HRV (heart rate variability), sleep patterns, appointment conflicts, and task overload to deliver hyper-specific, low-friction interventions with quantified time savings. Features include smart calendar management with AI-powered schedule optimization, delegation assistant with pre-drafted messages removing emotional barriers to asking for help, and a provider dashboard for B2B healthcare monitoring. Addresses the $873 billion invisible labor crisis affecting 63 million unpaid caregivers—61% women—through early detection and actionable solutions before burnout becomes a health emergency.",
+      logo: "/images/logo-caremate.png",
+      image: "/images/caremate-1.jpg",
       images: [
-        "/images/iqore-1.jpg",
-        "/images/iqore-2.jpg",
-        "/images/iqore-3.jpg"
+        "/images/caremate-1.jpg",
+        "/images/caremate-2.jpg",
+        "/images/caremate-3.jpg",
+        "/images/caremate-4.jpg",
+        "/images/caremate-5.jpg",
+        "/images/caremate-6.jpg"
       ],
-      categories: ["RAG", "Multi-Agent"],
-      demoUrl: "",
-      devpostUrl: "",
-      githubUrl: "https://github.com/ramizik/iqore",
+      categories: ["Hackathon", "Mobile App", "Multi-Agent"],
+      demoUrl: "https://youtu.be/OQndt2JkB8Y?si=rCrSrPCkl1AxSh2T",
+      devpostUrl: "https://devpost.com/software/caremate-ohnrv9",
+      githubUrl: "https://github.com/ramizik/caremate-app",
       keyFeatures: [
-        "RAG-powered knowledge retrieval",
-        "Multi-agent coordination system",
-        "Context-aware conversations",
-        "Document processing pipeline",
-        "Intent classification",
-        "Automated escalation system"
+        "4-component real-time burnout scoring (0-100 risk scale)",
+      "JSON wearable health data integration with HRV, sleep, and stress analysis",
+      "Smart calendar management with conflict detection and AI schedule optimization",
+      "Context-aware AI intervention engine powered by Google Gemini",
+      "Delegation assistant with pre-drafted messages to remove emotional barriers",
+      "Provider dashboard with auto-refresh for B2B healthcare monitoring"
       ]
     },
     {
       id: 5,
-      title: "My Buddy",
-      description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders.",
-      fullDescription: "My Buddy is a cloud-native personal assistant built with AWS serverless architecture, currently in development as my vision of a proactive AI companion. The system integrates Google Calendar API, Telegram Bot API, and AWS services (Lambda, DynamoDB, EventBridge) to track calendar events, tasks, budget, streaks, goals, and projects through conversational commands. EventBridge orchestrates hourly reminders and morning/evening summaries with visual task prioritization. With Phase 2 operational, Phase 3 targets LangChain integration for intelligent analysis and memory—transforming it from reactive to proactive, anticipating needs and providing contextual insights to achieve an always-available intelligent companion working silently in the cloud.",
-      logo: "/images/logo-my-buddy.png",
-      image: "/images/my-buddy-1.jpg",
-      images: [
-        "/images/my-buddy-1.jpg",
-        "/images/my-buddy-2.jpg",
-        "/images/my-buddy-3.jpg",
-        "/images/my-buddy-4.jpg",
-        "/images/my-buddy-5.jpg",
-        "/images/my-buddy-6.jpg",
-        "/images/my-buddy-7.jpg",
-        "/images/my-buddy-8.jpg"
-      ],
-      categories: ["Mobile App", "API"],
-      demoUrl: "",
-      devpostUrl: "",
-      githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
-      keyFeatures: [
-        "AI-powered task management",
-        "Smart calendar integration",
-        "Personalized recommendations",
-        "Voice command support",
-        "Cross-platform synchronization",
-        "Privacy-focused design"
-      ]
-    },
-    {
-      id: 6,
       title: "WonderKid",
       description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos.",
       fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
@@ -188,7 +161,63 @@ export default function ProjectsSection() {
       ]
     },
     {
+      id: 6,
+      title: "Customer Rep. for iQore",
+      description: "Multi-agent convention chatbot—20% more client interactions at IEEE Quantum event.",
+      fullDescription: "iQore Multi-Agent Event Chatbot is an enterprise AI system built for iQore's IEEE Quantum Convention featuring four specialized agents powered by LangGraph, LangChain, and OpenAI GPT-3.5-turbo with RAG knowledge retrieval. Built with FastAPI and MongoDB Atlas, the system engaged clients directly while supporting human representatives with instant company information access. This hybrid approach enabled iQore to process 20% more interactions than previous conventions by autonomously handling qualification, technical Q&A, and demo scheduling. Deployed on Google Cloud Run with real-time queue management, demonstrating effective AI-human collaboration in high-traffic convention environments.",
+      logo: "/images/logo-iqore.png",
+      image: "/images/iqore-1.jpg",
+      images: [
+        "/images/iqore-1.jpg",
+        "/images/iqore-2.jpg",
+        "/images/iqore-3.jpg"
+      ],
+      categories: ["RAG", "Multi-Agent"],
+      demoUrl: "",
+      devpostUrl: "",
+      githubUrl: "https://github.com/ramizik/iqore",
+      keyFeatures: [
+        "RAG-powered knowledge retrieval",
+        "Multi-agent coordination system",
+        "Context-aware conversations",
+        "Document processing pipeline",
+        "Intent classification",
+        "Automated escalation system"
+      ]
+    },
+    {
       id: 7,
+      title: "My Buddy",
+      description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders.",
+      fullDescription: "My Buddy is a cloud-native personal assistant built with AWS serverless architecture, currently in development as my vision of a proactive AI companion. The system integrates Google Calendar API, Telegram Bot API, and AWS services (Lambda, DynamoDB, EventBridge) to track calendar events, tasks, budget, streaks, goals, and projects through conversational commands. EventBridge orchestrates hourly reminders and morning/evening summaries with visual task prioritization. With Phase 2 operational, Phase 3 targets LangChain integration for intelligent analysis and memory—transforming it from reactive to proactive, anticipating needs and providing contextual insights to achieve an always-available intelligent companion working silently in the cloud.",
+      logo: "/images/logo-my-buddy.png",
+      image: "/images/my-buddy-1.jpg",
+      images: [
+        "/images/my-buddy-1.jpg",
+        "/images/my-buddy-2.jpg",
+        "/images/my-buddy-3.jpg",
+        "/images/my-buddy-4.jpg",
+        "/images/my-buddy-5.jpg",
+        "/images/my-buddy-6.jpg",
+        "/images/my-buddy-7.jpg",
+        "/images/my-buddy-8.jpg"
+      ],
+      categories: ["Mobile App", "API"],
+      demoUrl: "",
+      devpostUrl: "",
+      githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
+      keyFeatures: [
+        "AI-powered task management",
+        "Smart calendar integration",
+        "Personalized recommendations",
+        "Voice command support",
+        "Cross-platform synchronization",
+        "Privacy-focused design"
+      ]
+    },
+
+    {
+      id: 8,
       title: "EchoLens",
       description: "AI accessibility tool translating audio environments into visual info for deaf users.",
       fullDescription: "EchoLens is an AI-powered accessibility tool that translates audio environments into visual information for deaf and hard-of-hearing users. Built with React and Flask, it uses Google's Gemini AI and TensorFlow's YAMNet to provide real-time speech transcription, emotion detection, and spatial sound classification. The system identifies environmental sounds (doorbells, alarms, vehicles) and determines their direction through stereo audio processing. Features include an interactive 360° sound map, emotion-aware AI assistant, and customizable visualizations—demonstrating practical integration of speech recognition, audio event detection, and multimodal AI to enhance situational awareness and safety.",
@@ -215,7 +244,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 8,
+      id: 9,
       title: "Traveler AI",
       description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration.",
       fullDescription: "Traveler AI is a multimodal conversational travel planner built during Google's 5-day Gen AI Intensive Course. Powered by Gemini 2.0 Flash and 1.5 Pro Vision, it combines intelligent itinerary building with real-time data from OpenWeather and Ticketmaster APIs. The assistant understands natural language and tourist photos, offering personalized suggestions through RAG-powered cultural tips (ChromaDB + embeddings), OCR translation, landmark descriptions, and YouTube video summarization. It features an LLM-based self-evaluation system that scores each itinerary on weather suitability, personalization, and authenticity. Users can export plans as Markdown or PDF, take interactive travel quizzes, and maintain session memory of preferences and destinations—all through a Python CLI chatbot experience in Kaggle Notebooks.",
@@ -233,6 +262,31 @@ export default function ProjectsSection() {
         "Real-time travel information",
         "Budget optimization",
         "Interactive map integration"
+      ]
+    },
+    {
+      id: 10,
+      title: "Dormstorm",
+      description: "Full-stack college dorm selection web app with filtering, comparison, and campus map views.",
+      fullDescription: "Dormstorm is a full-stack housing selection platform built for University of the Pacific students to make informed dorm decisions by centralizing scattered housing information into a single, interactive web app. The React client and Python backend expose rich dorm metadata including semester rates, minimum meal plans, and key amenities, then surface it through powerful filtering, search, sorting, and multi-view browsing experiences (gallery, list, and interactive campus map). Students can compare multiple dorms side-by-side, explore locations visually on a campus map, and quickly answer policy or process questions via an integrated FAQ page. A built-in contact form with email messaging lets users reach the housing department directly from the site, demonstrating production-style full-stack patterns including RESTful APIs, client–server separation, and deployment to Netlify for frictionless student access",
+      logo: "/images/logo-dormstorm.png",
+      image: "/images/dormstorm-1.jpg",
+      images: [
+        "/images/dormstorm-1.jpg",
+        "/images/dormstorm-2.jpg",
+        "/images/dormstorm-3.jpg"
+      ],
+      categories: [],
+      demoUrl: "",
+      devpostUrl: "",
+      githubUrl: "https://github.com/ramizik/projects_archive/tree/main/1%20-%20Dormstorm",
+      keyFeatures: [
+        "Centralized campus dorm information with rates, meal plans, and attributes",
+        "Advanced dorm filtering by price, meal plan, and amenities",
+        "Search, sort, and multi-view browsing (gallery, list, and map views)",
+        "Side-by-side dorm comparison page for informed selection",
+        "FAQ page covering common housing questions",
+        "Contact form with integrated email messaging to housing department"
       ]
     }
   ];

@@ -77,7 +77,7 @@ export default function TechStackSection() {
           name: "Gemini",
           logo: "/logos/gemini.png",
           experience: "1+ years",
-          projects: ["Coherence", "WonderKid", "Traveler AI", "EchoLens"],
+          projects: ["Coherence", "WonderKid", "Traveler AI", "EchoLens", "CareMate"],
           description: "Expert in Google's Gemini multimodal AI suite, building production applications across vision, audio, and video domains. Implemented Veo 2.0 video generation pipelines, real-time multimodal analysis systems, and automated content generation workflows. Delivered end-to-end AI experiences from text prompts to generated video narratives with optimized latency and quality."
         },
         {
@@ -106,7 +106,7 @@ export default function TechStackSection() {
           name: "FastAPI",
           logo: "/logos/fastapi.svg",
           experience: "2+ years",
-          projects: ["Coherence", "Customer Rep. for iQore", "WonderKid"],
+          projects: ["Coherence", "Customer Rep. for iQore", "WonderKid", "CareMate"],
           description: "Architected high-performance FastAPI backends with async/await patterns, implementing parallel AI service orchestration, real-time streaming endpoints, and RAG-powered conversational APIs. Built scalable services handling 100+ concurrent users, optimized database queries, and deployed containerized production systems with automated CI/CD pipelines."
         },
         {
@@ -114,7 +114,7 @@ export default function TechStackSection() {
           name: "Node.js",
           logo: "/logos/node.svg",
           experience: "4+ years",
-          projects: ["Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens"],
+          projects: ["Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens", "CareMate"],
           description: "Expert in Node.js for full-stack development, building RESTful APIs, real-time WebSocket services, and production-ready backend systems. Implemented authentication flows, caching strategies, and optimized build pipelines. Delivered scalable applications with efficient async processing, error handling, and monitoring integration."
         },
         {
@@ -122,7 +122,7 @@ export default function TechStackSection() {
           name: "React",
           logo: "/logos/react.svg",
           experience: "5+ years",
-          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "WonderKid", "EchoLens", "TacticoAI", "CareMate"],
           description: "Expert in React and React Native, building responsive cross-platform applications with modern hooks, Context API, and optimized state management. Implemented reusable component libraries, performance optimizations, and smooth animations. Delivered production apps that work seamlessly across web, iOS, and Android with consistent UX patterns."
         },
         {
@@ -130,7 +130,7 @@ export default function TechStackSection() {
           name: "TypeScript",
           logo: "/logos/typescript.svg",
           experience: "4+ years",
-          projects: ["Coherence", "Vocal AI", "WonderKid", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "WonderKid", "EchoLens", "TacticoAI", "CareMate"],
           description: "Expert in TypeScript, building type-safe applications with advanced type features, generics, and strict mode configurations. Implemented robust type systems that catch errors at compile-time, improve IDE support, and enable confident refactoring. Designed scalable architectures with well-defined interfaces and type-driven development practices."
         },
         {
@@ -138,7 +138,7 @@ export default function TechStackSection() {
           name: "Tailwind CSS",
           logo: "/logos/tailwind.svg",
           experience: "3+ years",
-          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "EchoLens", "TacticoAI"],
+          projects: ["Coherence", "Vocal AI", "Customer Rep. for iQore", "EchoLens", "TacticoAI", "CareMate"],
           description: "Expert in Tailwind CSS, building responsive, modern UIs with utility-first architecture and custom design systems. Implemented dark mode support, responsive breakpoints, and optimized production builds. Created reusable component patterns and maintained consistent design language across multiple projects with minimal CSS overhead."
         },
       ]
@@ -188,7 +188,7 @@ export default function TechStackSection() {
           name: "Supabase",
           logo: "/logos/supabase.svg",
           experience: "2+ years",
-          projects: ["Vocal AI", "TacticoAI"],
+          projects: ["Vocal AI", "TacticoAI", "CareMate"],
           description: "Built secure, scalable backends with Supabase, implementing Row Level Security (RLS) policies, real-time subscriptions, and PostgreSQL-based data models. Integrated authentication flows, managed user sessions, and leveraged auto-generated REST APIs. Designed database schemas optimized for multi-user applications with proper access controls."
         },
         {

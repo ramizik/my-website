@@ -137,7 +137,7 @@ export default function TimelineSection() {
       icon: Award
     },
     {
-      id: 11,
+      id: 10,
       type: "hackathon",
       title: "Coherence",
       company: "SBHacks 2026 Winner",
@@ -152,6 +152,18 @@ export default function TimelineSection() {
         "15+ semantic video queries per analysis",
         "PDF report generation for education"
       ],
+      icon: Award
+    },
+    {
+      id: 11,
+      type: "hackathon",
+      title: "CareMate",
+      company: "RoseHacks 2026",
+      location: "UC Riverside, CA",
+      period: "Feb 2026",
+      year: "2026",
+      description: "Building a real-time AI-powered customer service assistant for a local business, using LangChain and LangGraph to create a multi-agent system that can handle customer inquiries and complaints in real-time.",
+      achievements: ["Real-time customer service", "Multi-agent system", "LangChain and LangGraph integration"],
       icon: Award
     },
     {
