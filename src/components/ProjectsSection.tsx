@@ -269,11 +269,11 @@ export default function ProjectsSection() {
       description: "Full-stack college dorm selection web app with filtering, comparison, and campus map views.",
       fullDescription: "Dormstorm is a full-stack housing selection platform built for University of the Pacific students to make informed dorm decisions by centralizing scattered housing information into a single, interactive web app. The React client and Python backend expose rich dorm metadata including semester rates, minimum meal plans, and key amenities, then surface it through powerful filtering, search, sorting, and multi-view browsing experiences (gallery, list, and interactive campus map). Students can compare multiple dorms side-by-side, explore locations visually on a campus map, and quickly answer policy or process questions via an integrated FAQ page. A built-in contact form with email messaging lets users reach the housing department directly from the site, demonstrating production-style full-stack patterns including RESTful APIs, client–server separation, and deployment to Netlify for frictionless student access",
       logo: "/images/logo-dormstorm.png",
-      image: "/images/dormstorm-1.jpg",
+      image: "/images/dormstorm-1.png",
       images: [
-        "/images/dormstorm-1.jpg",
-        "/images/dormstorm-2.jpg",
-        "/images/dormstorm-3.jpg"
+        "/images/dormstorm-1.png",
+        "/images/dormstorm-2.png",
+        "/images/dormstorm-3.png"
       ],
       categories: [],
       demoUrl: "",
