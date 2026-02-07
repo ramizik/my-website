@@ -190,7 +190,7 @@ export default function AwakeTimeCard() {
           className="flex-1 max-w-[140px]"
           disabled={isRunning}
         >
-          Wake up
+          Start Work
         </Button>
         <Button
           onClick={handleSleep}
@@ -198,7 +198,7 @@ export default function AwakeTimeCard() {
           className="flex-1 max-w-[140px]"
           disabled={!isRunning}
         >
-          Go to sleep
+          End Work
         </Button>
       </div>
 
