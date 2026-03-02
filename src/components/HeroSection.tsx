@@ -29,7 +29,7 @@ export default function HeroSection() {
                 Ramis Hasanli
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                I believe technology is a powerful tool for solving real human problems. With a strong engineering mindset and hands-on experience in Large Language Models, I continuously build software that makes life better for people—always focusing on practical impact and human-centered solutions.
+                Software engineer specializing in AI-powered applications and multi-agent systems. MS Computer Science candidate building production tools with LLMs, computer vision, and full-stack development—from hackathon-winning prototypes to enterprise deployments.
               </p>
             </div>
 

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "maestro-status": {
+      "args": [],
+      "command": "C:\\Users\\ramis\\AppData\\Local\\Maestro\\maestro-mcp-server.exe",
+      "env": {
+        "MAESTRO_INSTANCE_ID": "f4995e96-f708-41d0-9f3e-cbbbcf9ffe53",
+        "MAESTRO_SESSION_ID": "6",
+        "MAESTRO_STATUS_URL": "http://127.0.0.1:9901/status"
+      },
+      "type": "stdio"
+    }
+  }
+}

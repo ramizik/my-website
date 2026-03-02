@@ -24,7 +24,6 @@ export default function Footer() {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#tech-stack" },
     { label: "Experience", href: "#timeline" },
-    { label: "Blog", href: "#blog" },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -43,7 +42,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Ramis Hasanli</h3>
             <p className="text-muted-foreground">
-              Passionate lifelong learner dedicated to implementing Large Language Model solutions that help address real-world challenges and make a positive impact.
+              Software engineer building AI-powered applications and multi-agent systems. MS CS candidate shipping production tools with LLMs, computer vision, and full-stack development.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -78,15 +77,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Expertise */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Services</h4>
+            <h4 className="font-semibold">Expertise</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Large Language Models</li>
+              <li>Multi-Agent AI Systems</li>
               <li>Full-Stack Development</li>
-              <li>Automation Solutions</li>
-              <li>Business Solutions</li>
-              <li>Mentorship & Coaching</li>
+              <li>Computer Vision & ML</li>
+              <li>Cloud & Serverless</li>
+              <li>LLM Integration</li>
             </ul>
           </div>
 

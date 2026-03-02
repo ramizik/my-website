@@ -75,7 +75,7 @@ export default function ProjectsSection() {
     {
       id: 3,
       title: "⭐ Vocal AI",
-      description: "Vocal coaching platform with real-time analysis and conversational agents. UC Berkley Hackathon Winner.",
+      description: "Vocal coaching platform with real-time analysis and conversational agents. UC Berkeley Hackathon Winner.",
       fullDescription: "VocalAI is an AI-powered vocal coaching platform that won Most Ambitious Vapi Project at UC Berkeley's AI Hackathon 2025. Built with React/TypeScript and FastAPI, it integrates multiple AI services including Letta for stateful conversational coaching, Fetch.ai for autonomous progress analysis, and VAPI for real-time voice conversations. The platform performs comprehensive vocal analysis using Web Audio API to extract metrics like pitch, jitter, shimmer, and vibrato rate, then generates personalized exercises and feedback through AI agents with long-term memory. Data is managed through Supabase PostgreSQL with the system providing both reactive chat-based coaching and proactive daily reports to track vocal development over time.",
       logo: "/images/logo-vocal-ai.png",
       image: "/images/vocal-ai-1.jpg",
@@ -95,12 +95,12 @@ export default function ProjectsSection() {
       devpostUrl: "https://devpost.com/software/vocai-ai-coach",
       githubUrl: "https://github.com/ramizik/vocal-ai",
       keyFeatures: [
-        "Real-time vocal analysis",
-        "AI-powered feedback system",
-        "Pitch detection and correction",
-        "Progress tracking dashboard",
-        "Custom training exercises",
-        "Performance analytics"
+        "Web Audio API vocal analysis (pitch, jitter, shimmer, vibrato)",
+        "Letta-powered stateful coaching agents with long-term memory",
+        "VAPI real-time voice conversations with sub-second latency",
+        "Fetch.ai autonomous agents for proactive daily progress reports",
+        "Supabase PostgreSQL for persistent user session and progress data",
+        "Personalized exercise generation based on vocal metrics"
       ]
     },
     {
@@ -151,12 +151,12 @@ export default function ProjectsSection() {
       devpostUrl: "https://devpost.com/software/wonderkid",
       githubUrl: "https://github.com/ramizik/bigredhacks25",
       keyFeatures: [
-        "AI story generation",
-        "Dynamic illustrations with Imagen",
-        "Interactive story choices",
-        "Video compilation with Veo 2.0",
-        "Progress tracking",
-        "Age-appropriate content"
+        "Gemini-powered branching narrative engine across 6 scenes",
+        "Imagen AI-generated illustrations unique to each story choice",
+        "Veo 2.0 video compilation of completed adventures",
+        "React Native cross-platform app with gradient-rich child-friendly UI",
+        "FastAPI backend orchestrating 3 Google AI services concurrently",
+        "MongoDB + Google Cloud Storage for persistent story data"
       ]
     },
     {
@@ -206,12 +206,12 @@ export default function ProjectsSection() {
       devpostUrl: "",
       githubUrl: "https://github.com/ramizik/ai-helper/tree/main",
       keyFeatures: [
-        "AI-powered task management",
-        "Smart calendar integration",
-        "Personalized recommendations",
-        "Voice command support",
-        "Cross-platform synchronization",
-        "Privacy-focused design"
+        "AWS Lambda + DynamoDB + EventBridge serverless architecture",
+        "Google Calendar API integration with OAuth token management",
+        "Telegram Bot conversational interface for task and budget tracking",
+        "EventBridge-orchestrated hourly reminders and morning/evening summaries",
+        "Single-table DynamoDB design for streaks, goals, and project data",
+        "Phase 3: LangChain integration for proactive contextual insights"
       ]
     },
 
@@ -234,12 +234,12 @@ export default function ProjectsSection() {
       devpostUrl: "https://devpost.com/software/echolens-oujfr0",
       githubUrl: "https://github.com/ramizik/echolens.ai",
       keyFeatures: [
-        "Real-time audio transcription",
-        "Environmental sound detection",
-        "Visual audio feedback",
-        "Multi-modal interface",
-        "Customizable audio profiles",
-        "Accessibility-focused design"
+        "Gemini AI + TensorFlow YAMNet for real-time speech and sound classification",
+        "Stereo audio processing for directional sound detection",
+        "Interactive 360-degree spatial sound map",
+        "Emotion detection from speech tone and context",
+        "Customizable visual alerts for doorbells, alarms, and vehicles",
+        "React + Flask architecture with dedicated processing endpoints"
       ]
     },
     {
@@ -265,9 +265,32 @@ export default function ProjectsSection() {
     },
     {
       id: 10,
+      title: "LeadSync",
+      description: "Multi-agent dev workflow engine—auto-enriches Jira tickets, generates PR descriptions, and answers Slack questions with the tech lead's voice.",
+      fullDescription: "LeadSync is an agentic context engine that bridges the gap between tech leads and developers. It turns sparse Jira tickets into paste-ready AI prompts, auto-documents pull requests, posts daily digests to Slack, and answers developer questions with the tech lead's actual opinions—not generic summaries. The system runs six automated workflows: (1) Ticket Enrichment—a Jira webhook triggers three CrewAI agents that load team rules from Google Docs, scan GitHub commits, retrieve same-label ticket history, and generate a self-contained prompt.md attached directly to the ticket. (2) End-of-Day Digest—agents scan recent commits and post structured summaries to Slack. (3) Slack Q&A—developers ask questions via /leadsync and get opinionated answers grounded in the tech lead's documented preferences. (4) PR Auto-Description—GitHub webhooks trigger AI-powered PR enrichment with summary, implementation details, and validation steps. (5) Jira PR Auto-Link—automatically links PRs to Jira tickets and transitions them to 'In Review'. (6) Done Ticket Scan—when tickets move to Done, agents scan commits and PRs to post an implementation summary. Built with FastAPI, CrewAI multi-agent orchestration, Gemini 2.5 Flash via LiteLLM, and Composio for unified Jira/GitHub/Slack/Google Docs integration, with SQLite for persistent memory across runs.",
+      logo: "/images/logo-leadsync.png",
+      image: "/images/leadsync-1.png",
+      images: [
+        "/images/leadsync-1.png",
+      ],
+      categories: ["Multi-Agent", "API"],
+      demoUrl: "",
+      devpostUrl: "",
+      githubUrl: "https://github.com/hongdnn/leadsync",
+      keyFeatures: [
+        "6 automated workflows spanning Jira, GitHub, Slack, and Google Docs",
+        "CrewAI multi-agent orchestration (up to 3 agents per workflow)",
+        "Jira ticket enrichment with paste-ready AI prompts for coding agents",
+        "PR auto-description with AI-generated summaries and validation steps",
+        "Slack Q&A grounded in the tech lead's documented preferences",
+        "SQLite memory for contextual retrieval across runs"
+      ]
+    },
+    {
+      id: 11,
       title: "Dormstorm",
       description: "Full-stack college dorm selection web app with filtering, comparison, and campus map views.",
-      fullDescription: "Dormstorm is a full-stack housing selection platform built for University of the Pacific students to make informed dorm decisions by centralizing scattered housing information into a single, interactive web app. The React client and Python backend expose rich dorm metadata including semester rates, minimum meal plans, and key amenities, then surface it through powerful filtering, search, sorting, and multi-view browsing experiences (gallery, list, and interactive campus map). Students can compare multiple dorms side-by-side, explore locations visually on a campus map, and quickly answer policy or process questions via an integrated FAQ page. A built-in contact form with email messaging lets users reach the housing department directly from the site, demonstrating production-style full-stack patterns including RESTful APIs, client–server separation, and deployment to Netlify for frictionless student access",
+      fullDescription: "Dormstorm is a full-stack housing selection platform built for University of the Pacific students to make informed dorm decisions by centralizing scattered housing information into a single, interactive web app. The React client and Python backend expose rich dorm metadata including semester rates, minimum meal plans, and key amenities, then surface it through powerful filtering, search, sorting, and multi-view browsing experiences (gallery, list, and interactive campus map). Students can compare multiple dorms side-by-side, explore locations visually on a campus map, and quickly answer policy or process questions via an integrated FAQ page. A built-in contact form with email messaging lets users reach the housing department directly from the site, demonstrating production-style full-stack patterns including RESTful APIs, client-server separation, and deployment to Netlify for frictionless student access.",
       logo: "/images/logo-dormstorm.png",
       image: "/images/dormstorm-1.png",
       images: [

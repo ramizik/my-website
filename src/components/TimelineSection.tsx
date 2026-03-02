@@ -30,7 +30,7 @@ export default function TimelineSection() {
         "Security+ Certified",
         "18% team productivity increase",
         "9% cybersecurity risk decrease",
-        "Best Intern in history"
+        "Recognized as top-performing intern"
       ],
       icon: Briefcase
     },
@@ -45,7 +45,7 @@ export default function TimelineSection() {
       description: "Earned Bachelor of Science in Computer Science with specialized focus on AI/ML systems. Completed rigorous coursework in NLP, LLM architectures, and applied machine learning. Served as Graduate Teaching Assistant, mentoring hundreds of students in CS, SWE, and ML topics while maintaining Dean's Honor Roll standing.",
       achievements: [
         "Dean's Honor Roll",
-        "Teacher Assistant & Mentor",
+        "Teaching Assistant & Mentor",
         "AI & Machine Learning Coursework (NLP, LLMs, Classifiers)",
         "Business Applications of LLMs"
       ],
@@ -80,11 +80,11 @@ export default function TimelineSection() {
       id: 5,
       type: "hackathon",
       title: "Vocal AI",
-      company: "UC Berkley 2025 AI Hackathon Winner",
+      company: "UC Berkeley 2025 AI Hackathon Winner",
       location: "UC Berkeley, CA",
       period: "Jun 2025",
       year: "2025",
-      description: "A real-time vocal coaching platform. Integrated dual-AI architecture with Letta conversational agents and Fetch.ai autonomous systems, delivering personalized coaching through deep voice analytics including pitch, jitter, shimmer, and vibrato analysis with persistent user progress tracking.",
+      description: "Won Most Ambitious Vapi Project by building an AI vocal coaching platform with dual-AI architecture. Integrated Letta conversational agents and Fetch.ai autonomous systems to deliver personalized coaching through deep voice analytics including pitch, jitter, shimmer, and vibrato analysis with persistent user progress tracking.",
       achievements: ["Hackathon Winner", "Real-time vocal analysis", "AI-powered feedback system", "Multi-service integration"],
       icon: Award
     },
@@ -162,12 +162,24 @@ export default function TimelineSection() {
       location: "UC Riverside, CA",
       period: "Feb 2026",
       year: "2026",
-      description: "Building a real-time AI-powered customer service assistant for a local business, using LangChain and LangGraph to create a multi-agent system that can handle customer inquiries and complaints in real-time.",
-      achievements: ["Social Impact", "Context-aware AI", "Wearable Integration"],
+      description: "Built a mobile app that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. Engineered a 4-component burnout scoring algorithm and context-aware intervention engine powered by Google Gemini, delivering hyper-specific recommendations with quantified time savings for 63 million unpaid caregivers.",
+      achievements: ["Real-time burnout detection", "Wearable health data integration", "AI-powered schedule optimization", "Social impact focus"],
       icon: Award
     },
     {
       id: 12,
+      type: "personal-project",
+      title: "LeadSync",
+      company: "Agentic Context Engine for Dev Teams",
+      location: "Online",
+      period: "Mar 2026",
+      year: "2026",
+      description: "Built an agentic context engine that bridges tech leads and developers. Six automated workflows powered by CrewAI multi-agent orchestration: Jira ticket enrichment into paste-ready AI prompts, PR auto-description via GitHub webhooks, Slack Q&A grounded in tech lead preferences from Google Docs, daily digests, Jira-PR auto-linking, and done-ticket implementation scans. Deployed with FastAPI, Gemini 2.5 Flash, and Composio for unified Jira/GitHub/Slack/Google Docs integration.",
+      achievements: ["6 automated dev workflows", "CrewAI multi-agent orchestration", "Jira + GitHub + Slack + Google Docs integration", "SQLite contextual memory"],
+      icon: Code
+    },
+    {
+      id: 14,
       type: "personal-project",
       title: "Seru AI",
       company: "AI Synth Generator for Serum",
@@ -179,19 +191,19 @@ export default function TimelineSection() {
       icon: Code
     },
     {
-      id: 13,
+      id: 15,
       type: "currently",
       title: "",
       company: "",
       location: "Bay Area",
       period: "Today",
       year: "2026",
-      description: "Actively exploring startup opportunities, refining technical skills through competitive programming, and continuously expanding expertise in cutting-edge AI/ML technologies. Balancing graduate studies with entrepreneurial pursuits and hands-on experimentation with emerging tools and frameworks.",
+      description: "Completing MS Computer Science while shipping AI-powered products and competing in hackathons across California. Open to full-time software engineering and AI/ML roles in the Bay Area starting May 2026.",
       achievements: [],
       icon: Clock
     },
     {
-      id: 14,
+      id: 16,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",
