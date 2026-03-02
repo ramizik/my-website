@@ -204,18 +204,6 @@ export default function TimelineSection() {
     },
     {
       id: 16,
-      type: "hackathon",
-      title: "",
-      company: "Llama Lounge 24",
-      location: "Mountain View, CA",
-      period: "SOON",
-      year: "2026",
-      description: "What will it be???",
-      achievements: [],
-      icon: Award
-    },
-    {
-      id: 17,
       type: "currently",
       title: "",
       company: "",
@@ -227,7 +215,7 @@ export default function TimelineSection() {
       icon: Clock
     },
     {
-      id: 18,
+      id: 17,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",
