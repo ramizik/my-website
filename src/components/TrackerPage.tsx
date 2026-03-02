@@ -13,26 +13,21 @@ interface TrackerPageProps {
 const trackers = [
   {
     id: 1,
-    eventName: "SF Hackathon",
-    targetDate: new Date("2026-02-13"),
+    eventName: "UniConnect Release",
+    targetDate: new Date("2026-03-20"),
   },
   {
     id: 2,
-    eventName: "CC MVP Due",
-    targetDate: new Date("2026-03-30"),
-  },
-  {
-    id: 3,
     eventName: "Graduated",
     targetDate: new Date("2026-05-06"),
   },
   {
-    id: 4,
+    id: 3,
     eventName: "OPT start date 🤔",
     targetDate: new Date("2026-06-01"),
   },
   {
-    id: 5,
+    id: 4,
     eventName: "Last unemployment day",
     targetDate: new Date("2026-09-01"),
   }

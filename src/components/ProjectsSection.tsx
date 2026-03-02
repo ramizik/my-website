@@ -274,7 +274,7 @@ export default function ProjectsSection() {
         "/images/leadsync-1.png",
       ],
       categories: ["Multi-Agent", "API"],
-      demoUrl: "",
+      demoUrl: "https://youtu.be/fAU51vf3yuk",
       devpostUrl: "",
       githubUrl: "https://github.com/hongdnn/leadsync",
       keyFeatures: [
