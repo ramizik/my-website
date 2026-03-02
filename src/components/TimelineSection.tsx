@@ -168,15 +168,15 @@ export default function TimelineSection() {
     },
     {
       id: 12,
-      type: "personal-project",
+      type: "hackathon",
       title: "LeadSync",
-      company: "Agentic Context Engine for Dev Teams",
-      location: "Online",
-      period: "Mar 2026",
+      company: "SVAI LLama + Snowflake Hackathon 2026",
+      location: "Mountain View, CA",
+      period: "Feb 2026",
       year: "2026",
       description: "Built an agentic context engine that bridges tech leads and developers. Six automated workflows powered by CrewAI multi-agent orchestration: Jira ticket enrichment into paste-ready AI prompts, PR auto-description via GitHub webhooks, Slack Q&A grounded in tech lead preferences from Google Docs, daily digests, Jira-PR auto-linking, and done-ticket implementation scans. Deployed with FastAPI, Gemini 2.5 Flash, and Composio for unified Jira/GitHub/Slack/Google Docs integration.",
       achievements: ["6 automated dev workflows", "CrewAI multi-agent orchestration", "Jira + GitHub + Slack + Google Docs integration", "SQLite contextual memory"],
-      icon: Code
+      icon: Award
     },
     {
       id: 14,
@@ -192,6 +192,30 @@ export default function TimelineSection() {
     },
     {
       id: 15,
+      type: "personal-project",
+      title: "UniConnect",
+      company: "iOS app for UC students",
+      location: "Online",
+      period: "Currently in development",
+      year: "2026",
+      description: "Building iOS app for UC college students.",
+      achievements: [],
+      icon: Code
+    },
+    {
+      id: 16,
+      type: "hackathon",
+      title: "",
+      company: "Llama Lounge 24",
+      location: "Mountain View, CA",
+      period: "SOON",
+      year: "2026",
+      description: "What will it be???",
+      achievements: [],
+      icon: Award
+    },
+    {
+      id: 17,
       type: "currently",
       title: "",
       company: "",
@@ -203,7 +227,7 @@ export default function TimelineSection() {
       icon: Clock
     },
     {
-      id: 16,
+      id: 18,
       type: "education",
       title: "MS Computer Science",
       company: "University of the Pacific",

@@ -132,31 +132,25 @@ export default function ProjectsSection() {
     },
     {
       id: 5,
-      title: "WonderKid",
-      description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos.",
-      fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
-      logo: "/images/logo-wonder-kid.png",
-      image: "/images/wonder-kid-1.jpg",
+      title: "LeadSync",
+      description: "Multi-agent dev workflow engine—auto-enriches Jira tickets, generates PR descriptions, and answers Slack questions with the tech lead's voice.",
+      fullDescription: "LeadSync is a multi-agent workflow engine for engineering teams. It enriches Jira tickets with actionable AI prompts, auto-documents pull requests, posts structured digests to Slack, and answers developer questions in the tech lead's voice. Six automated workflows span ticket enrichment, PR auto-description, Slack Q&A, and cross-platform integration (Jira, GitHub, Slack, Google Docs) using CrewAI, Gemini 2.5, FastAPI, and persistent SQLite memory.",
+      logo: "/images/logo-leadsync.png",
+      image: "/images/leadsync-1.png",
       images: [
-        "/images/wonder-kid-1.jpg",
-        "/images/wonder-kid-2.jpg",
-        "/images/wonder-kid-3.jpg",
-        "/images/wonder-kid-4.jpg",
-        "/images/wonder-kid-5.jpg",
-        "/images/wonder-kid-6.jpg",
-        "/images/wonder-kid-7.jpg"
+        "/images/leadsync-1.png",
       ],
-      categories: ["Hackathon", "Mobile App", "Multi-Modal"],
-      demoUrl: "",
-      devpostUrl: "https://devpost.com/software/wonderkid",
-      githubUrl: "https://github.com/ramizik/bigredhacks25",
+      categories: ["Multi-Agent", "API"],
+      demoUrl: "https://youtu.be/fAU51vf3yuk",
+      devpostUrl: "",
+      githubUrl: "https://github.com/ramizik/leadsync",
       keyFeatures: [
-        "Gemini-powered branching narrative engine across 6 scenes",
-        "Imagen AI-generated illustrations unique to each story choice",
-        "Veo 2.0 video compilation of completed adventures",
-        "React Native cross-platform app with gradient-rich child-friendly UI",
-        "FastAPI backend orchestrating 3 Google AI services concurrently",
-        "MongoDB + Google Cloud Storage for persistent story data"
+        "6 automated workflows spanning Jira, GitHub, Slack, and Google Docs",
+        "CrewAI multi-agent orchestration (up to 3 agents per workflow)",
+        "Jira ticket enrichment with paste-ready AI prompts for coding agents",
+        "PR auto-description with AI-generated summaries and validation steps",
+        "Slack Q&A grounded in the tech lead's documented preferences",
+        "SQLite memory for contextual retrieval across runs"
       ]
     },
     {
@@ -214,101 +208,33 @@ export default function ProjectsSection() {
         "Phase 3: LangChain integration for proactive contextual insights"
       ]
     },
-
     {
       id: 8,
-      title: "EchoLens",
-      description: "AI accessibility tool translating audio environments into visual info for deaf users.",
-      fullDescription: "EchoLens is an AI-powered accessibility tool that translates audio environments into visual information for deaf and hard-of-hearing users. Built with React and Flask, it uses Google's Gemini AI and TensorFlow's YAMNet to provide real-time speech transcription, emotion detection, and spatial sound classification. The system identifies environmental sounds (doorbells, alarms, vehicles) and determines their direction through stereo audio processing. Features include an interactive 360° sound map, emotion-aware AI assistant, and customizable visualizations—demonstrating practical integration of speech recognition, audio event detection, and multimodal AI to enhance situational awareness and safety.",
-      logo: "/images/logo-echolens.png",
-      image: "/images/echo-lens-1.png",
+      title: "WonderKid",
+      description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos.",
+      fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
+      logo: "/images/logo-wonder-kid.png",
+      image: "/images/wonder-kid-1.jpg",
       images: [
-        "/images/echo-lens-1.png",
-        "/images/echo-lens-2.png",
-        "/images/echo-lens-3.png",
-        "/images/echo-lens-4.png",
-        "/images/echo-lens-4.JPEG"
+        "/images/wonder-kid-1.jpg",
+        "/images/wonder-kid-2.jpg",
+        "/images/wonder-kid-3.jpg",
+        "/images/wonder-kid-4.jpg",
+        "/images/wonder-kid-5.jpg",
+        "/images/wonder-kid-6.jpg",
+        "/images/wonder-kid-7.jpg"
       ],
-      categories: ["Multi-Modal", "Hackathon"],
-      demoUrl: "https://www.youtube.com/watch?v=HJFwOpEGalA",
-      devpostUrl: "https://devpost.com/software/echolens-oujfr0",
-      githubUrl: "https://github.com/ramizik/echolens.ai",
-      keyFeatures: [
-        "Gemini AI + TensorFlow YAMNet for real-time speech and sound classification",
-        "Stereo audio processing for directional sound detection",
-        "Interactive 360-degree spatial sound map",
-        "Emotion detection from speech tone and context",
-        "Customizable visual alerts for doorbells, alarms, and vehicles",
-        "React + Flask architecture with dedicated processing endpoints"
-      ]
-    },
-    {
-      id: 9,
-      title: "Traveler AI",
-      description: "AI travel planner with multimodal chat, itinerary generation & real-time data integration.",
-      fullDescription: "Traveler AI is a multimodal conversational travel planner built during Google's 5-day Gen AI Intensive Course. Powered by Gemini 2.0 Flash and 1.5 Pro Vision, it combines intelligent itinerary building with real-time data from OpenWeather and Ticketmaster APIs. The assistant understands natural language and tourist photos, offering personalized suggestions through RAG-powered cultural tips (ChromaDB + embeddings), OCR translation, landmark descriptions, and YouTube video summarization. It features an LLM-based self-evaluation system that scores each itinerary on weather suitability, personalization, and authenticity. Users can export plans as Markdown or PDF, take interactive travel quizzes, and maintain session memory of preferences and destinations—all through a Python CLI chatbot experience in Kaggle Notebooks.",
-      logo: "/images/logo-travel-ai.png",
-      image: "/images/profile.jpg",
-      images: [],
-      categories: ["Multi-Agent", "Multi-Modal", "RAG", "Hackathon"],
-      demoUrl: "https://www.youtube.com/watch?v=c_hut9NcQwY",
-      devpostUrl: "https://devpost.com/software/travel-ai-agent",
-      githubUrl: "https://github.com/ramizik/travelai-gemini-agent",
-      keyFeatures: [
-        "Multi-modal destination analysis",
-        "RAG-powered recommendations",
-        "Personalized itinerary generation",
-        "Real-time travel information",
-        "Budget optimization",
-        "Interactive map integration"
-      ]
-    },
-    {
-      id: 10,
-      title: "LeadSync",
-      description: "Multi-agent dev workflow engine—auto-enriches Jira tickets, generates PR descriptions, and answers Slack questions with the tech lead's voice.",
-      fullDescription: "LeadSync is an agentic context engine that bridges the gap between tech leads and developers. It turns sparse Jira tickets into paste-ready AI prompts, auto-documents pull requests, posts daily digests to Slack, and answers developer questions with the tech lead's actual opinions—not generic summaries. The system runs six automated workflows: (1) Ticket Enrichment—a Jira webhook triggers three CrewAI agents that load team rules from Google Docs, scan GitHub commits, retrieve same-label ticket history, and generate a self-contained prompt.md attached directly to the ticket. (2) End-of-Day Digest—agents scan recent commits and post structured summaries to Slack. (3) Slack Q&A—developers ask questions via /leadsync and get opinionated answers grounded in the tech lead's documented preferences. (4) PR Auto-Description—GitHub webhooks trigger AI-powered PR enrichment with summary, implementation details, and validation steps. (5) Jira PR Auto-Link—automatically links PRs to Jira tickets and transitions them to 'In Review'. (6) Done Ticket Scan—when tickets move to Done, agents scan commits and PRs to post an implementation summary. Built with FastAPI, CrewAI multi-agent orchestration, Gemini 2.5 Flash via LiteLLM, and Composio for unified Jira/GitHub/Slack/Google Docs integration, with SQLite for persistent memory across runs.",
-      logo: "/images/logo-leadsync.png",
-      image: "/images/leadsync-1.png",
-      images: [
-        "/images/leadsync-1.png",
-      ],
-      categories: ["Multi-Agent", "API"],
-      demoUrl: "https://youtu.be/fAU51vf3yuk",
-      devpostUrl: "",
-      githubUrl: "https://github.com/hongdnn/leadsync",
-      keyFeatures: [
-        "6 automated workflows spanning Jira, GitHub, Slack, and Google Docs",
-        "CrewAI multi-agent orchestration (up to 3 agents per workflow)",
-        "Jira ticket enrichment with paste-ready AI prompts for coding agents",
-        "PR auto-description with AI-generated summaries and validation steps",
-        "Slack Q&A grounded in the tech lead's documented preferences",
-        "SQLite memory for contextual retrieval across runs"
-      ]
-    },
-    {
-      id: 11,
-      title: "Dormstorm",
-      description: "Full-stack college dorm selection web app with filtering, comparison, and campus map views.",
-      fullDescription: "Dormstorm is a full-stack housing selection platform built for University of the Pacific students to make informed dorm decisions by centralizing scattered housing information into a single, interactive web app. The React client and Python backend expose rich dorm metadata including semester rates, minimum meal plans, and key amenities, then surface it through powerful filtering, search, sorting, and multi-view browsing experiences (gallery, list, and interactive campus map). Students can compare multiple dorms side-by-side, explore locations visually on a campus map, and quickly answer policy or process questions via an integrated FAQ page. A built-in contact form with email messaging lets users reach the housing department directly from the site, demonstrating production-style full-stack patterns including RESTful APIs, client-server separation, and deployment to Netlify for frictionless student access.",
-      logo: "/images/logo-dormstorm.png",
-      image: "/images/dormstorm-1.png",
-      images: [
-        "/images/dormstorm-1.png",
-        "/images/dormstorm-2.png",
-        "/images/dormstorm-3.png"
-      ],
-      categories: [],
+      categories: ["Hackathon", "Mobile App", "Multi-Modal"],
       demoUrl: "",
-      devpostUrl: "",
-      githubUrl: "https://github.com/ramizik/projects_archive/tree/main/1%20-%20Dormstorm",
+      devpostUrl: "https://devpost.com/software/wonderkid",
+      githubUrl: "https://github.com/ramizik/bigredhacks25",
       keyFeatures: [
-        "Centralized campus dorm information with rates, meal plans, and attributes",
-        "Advanced dorm filtering by price, meal plan, and amenities",
-        "Search, sort, and multi-view browsing (gallery, list, and map views)",
-        "Side-by-side dorm comparison page for informed selection",
-        "FAQ page covering common housing questions",
-        "Contact form with integrated email messaging to housing department"
+        "Gemini-powered branching narrative engine across 6 scenes",
+        "Imagen AI-generated illustrations unique to each story choice",
+        "Veo 2.0 video compilation of completed adventures",
+        "React Native cross-platform app with gradient-rich child-friendly UI",
+        "FastAPI backend orchestrating 3 Google AI services concurrently",
+        "MongoDB + Google Cloud Storage for persistent story data"
       ]
     }
   ];
