@@ -2,7 +2,6 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import SimpleModal from "./SimpleModal";
-import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 
@@ -105,6 +104,30 @@ export default function ProjectsSection() {
     },
     {
       id: 4,
+      title: "Helion GPU Kernel Optimization",
+      description: "Top-3 PyTorch Helion Hackathon solo run on NVIDIA B200: optimized Gated DeltaNet kernels with major latency wins.",
+      fullDescription: "Helion GPU Kernel Optimization is my solo systems-performance project from the PyTorch Cerebral Valley's PyTorch + Helion Hackathon 2026. I built and tuned high-performance GPU kernels for transformer-style workloads using Helion (Python DSL over Triton/CUDA) on NVIDIA B200 Blackwell GPUs via Nebius. The submission pipeline covered gated_deltanet_chunk_fwd_o (chunk output), gated_deltanet_chunk_fwd_h (inter-chunk recurrence), gated_deltanet_recompute_w_u (WY transform), causal_conv1d, and fp8_quant warmup. Results reached Top-2 on chunk_fwd_o and Top-3 on chunk_fwd_h, improving latency from 23.210us to 17.994us (22.5%) and from 51.896us to 11.138us (78.5%). Optimization work included per-kernel autotuning, ACF search with NVIDIA CompileIQ guidance, launch configuration tuning (warps/stages/indexing/loop order), precision-aware accumulation strategy, and correctness validation after each tuning cycle to avoid performance-only regressions.",
+      logo: "/images/logo-helion-hack.png",
+      image: "/images/helion-hack-1.jpg",
+      images: [
+        "/images/helion-hack-1.jpg",
+        "/images/helion-hack-2.jpg"
+      ],
+      categories: ["CUDA", "Parallel Programming", "PyTorch", "Helion", "Systems Performance", "Profiling"],
+      demoUrl: "",
+      devpostUrl: "",
+      githubUrl: "https://github.com/ramizik/helion-hack",
+      keyFeatures: [
+        "Top-2 on gated_deltanet_chunk_fwd_o and Top-3 on gated_deltanet_chunk_fwd_h",
+        "Latency gains: 23.210us -> 17.994us and 51.896us -> 11.138us",
+        "End-to-end kernel pipeline for recompute_w_u, chunk_fwd_h, chunk_fwd_o, causal_conv1d, fp8_quant",
+        "ACF-based tuning with NVIDIA CompileIQ guidance for PTXAS-level optimization",
+        "Hardware-aware optimization on B200 Blackwell with static-shape compile strategy",
+        "Correctness-checked tuning loop with profiling-driven iteration"
+      ]
+    },
+    {
+      id: 5,
       title: "CareMate",
       description: "AI-powered caregiver burnout prevention mobile app with real-time wearable integration and intervention system.",
       fullDescription: "CareMate is a mobile app that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. The system uses a 4-component burnout algorithm (wearable risk 30%, calendar/task load 30%, semantic analysis 25%, self-reports 15%) to generate a unified risk score with color-coded severity levels. The platform analyzes HRV, sleep patterns, appointment conflicts, and task overload to deliver hyper-specific, low-friction interventions with quantified time savings. Features include smart calendar management with AI-powered schedule optimization, delegation assistant with pre-drafted messages removing emotional barriers to asking for help, and a provider dashboard for B2B healthcare monitoring. Addresses the invisible labor crisis affecting 63 million unpaid caregivers—through early detection and actionable solutions.",
@@ -131,7 +154,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: "LeadSync",
       description: "Multi-agent dev workflow engine—auto-enriches Jira tickets, generates PR descriptions, and answers Slack questions with the tech lead's voice.",
       fullDescription: "LeadSync is a multi-agent workflow engine for engineering teams. It enriches Jira tickets with actionable AI prompts, auto-documents pull requests, posts structured digests to Slack, and answers developer questions in the tech lead's voice. Six automated workflows span ticket enrichment, PR auto-description, Slack Q&A, and cross-platform integration (Jira, GitHub, Slack, Google Docs) using CrewAI, Gemini 2.5, FastAPI, and persistent SQLite memory.",
@@ -154,7 +177,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: "Customer Rep. for iQore",
       description: "Multi-agent convention chatbot—20% more client interactions at IEEE Quantum event.",
       fullDescription: "iQore Multi-Agent Event Chatbot is an enterprise AI system built for iQore's IEEE Quantum Convention featuring four specialized agents powered by LangGraph, LangChain, and OpenAI GPT-3.5-turbo with RAG knowledge retrieval. Built with FastAPI and MongoDB Atlas, the system engaged clients directly while supporting human representatives with instant company information access. This hybrid approach enabled iQore to process 20% more interactions than previous conventions by autonomously handling qualification, technical Q&A, and demo scheduling. Deployed on Google Cloud Run with real-time queue management, demonstrating effective AI-human collaboration in high-traffic convention environments.",
@@ -179,7 +202,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 7,
+      id: 8,
       title: "My Buddy",
       description: "Cloud AI assistant managing calendar, tasks, budget & habits via Telegram with proactive reminders.",
       fullDescription: "My Buddy is a cloud-native personal assistant built with AWS serverless architecture, currently in development as my vision of a proactive AI companion. The system integrates Google Calendar API, Telegram Bot API, and AWS services (Lambda, DynamoDB, EventBridge) to track calendar events, tasks, budget, streaks, goals, and projects through conversational commands. EventBridge orchestrates hourly reminders and morning/evening summaries with visual task prioritization. With Phase 2 operational, Phase 3 targets LangChain integration for intelligent analysis and memory—transforming it from reactive to proactive, anticipating needs and providing contextual insights to achieve an always-available intelligent companion working silently in the cloud.",
@@ -209,7 +232,7 @@ export default function ProjectsSection() {
       ]
     },
     {
-      id: 8,
+      id: 9,
       title: "WonderKid",
       description: "AI-powered interactive storytelling app for kids with dynamic stories, illustrations & videos.",
       fullDescription: "WonderKid is an AI-powered interactive reading game for children aged 5-8, built at Big Red Hacks 2025. It combines Google's Gemini for dynamic story generation, Imagen for custom illustrations, and Veo 2.0 for video compilation. Kids input story themes and make choices that shape personalized narratives across 6 scenes, each with unique AI-generated artwork. After completion, the entire adventure compiles into a shareable video. The React Native mobile app features gradient-rich UI and progress tracking, while the FastAPI backend orchestrates AI integrations with MongoDB and Google Cloud Storage. This project demonstrates full-stack development, real-time AI orchestration, and child-focused UX design.",
@@ -491,15 +514,19 @@ export default function ProjectsSection() {
       </div>
 
       {/* Project Detail Modal */}
-      <SimpleModal isOpen={!!selectedProject} onClose={closeModal}>
-        {selectedProject && (
+      <SimpleModal
+        isOpen={!!selectedProject}
+        onClose={closeModal}
+        children={selectedProject && (
           <div className="space-y-6 pb-4">
             {/* Header */}
             <div>
               <h3 className="text-2xl font-bold mb-3">{selectedProject.title}</h3>
               <div className="flex items-center flex-wrap gap-2 mb-4">
                 {selectedProject.categories.map((category: string, index: number) => (
-                  <Badge key={index} variant="secondary" className="text-xs px-3 py-1 shrink-0">{category}</Badge>
+                  <span key={index} className="text-xs px-3 py-1 shrink-0 rounded-full bg-secondary text-secondary-foreground">
+                    {category}
+                  </span>
                 ))}
               </div>
               <div className="flex flex-wrap gap-2">
@@ -635,7 +662,7 @@ export default function ProjectsSection() {
 
           </div>
         )}
-      </SimpleModal>
+      />
     </section>
   );
 }

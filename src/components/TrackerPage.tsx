@@ -14,7 +14,7 @@ const trackers = [
   {
     id: 1,
     eventName: "UniConnect Release",
-    targetDate: new Date("2026-03-20"),
+    targetDate: new Date("2026-04-05"),
   },
   {
     id: 2,

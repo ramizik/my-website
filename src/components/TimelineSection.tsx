@@ -179,6 +179,24 @@ export default function TimelineSection() {
       icon: Award
     },
     {
+      id: 13,
+      type: "hackathon",
+      title: "Helion GPU Kernel Optimization",
+      company: "PyTorch Helion Hackathon",
+      location: "San Francisco, CA",
+      period: "Mar 2026",
+      year: "2026",
+      description: "Solo competitor in a 140-participant systems-focused hackathon, building and optimizing Helion/Triton GPU kernels for transformer-style workloads on NVIDIA B200 Blackwell GPUs (Nebius). Implemented end-to-end submissions and tuning workflows for Gated DeltaNet kernels plus causal convolution and FP8 quantization warmup, balancing parallel chunk compute with sequential recurrence while preserving strict correctness constraints.",
+      achievements: [
+        "Top-2: gated_deltanet_chunk_fwd_o",
+        "Top-3: gated_deltanet_chunk_fwd_h",
+        "chunk_fwd_o: 23.210us -> 17.994us (22.5% faster)",
+        "chunk_fwd_h: 51.896us -> 11.138us (78.5% faster)",
+        "Built repeatable autotune + profiling workflow"
+      ],
+      icon: Award
+    },
+    {
       id: 14,
       type: "personal-project",
       title: "Seru AI",

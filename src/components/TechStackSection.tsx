@@ -84,9 +84,46 @@ export default function TechStackSection() {
           id: "pytorch",
           name: "PyTorch",
           logo: "/logos/pytorch.svg",
+          experience: "2+ years",
+          projects: ["TacticoAI", "Helion GPU Kernel Optimization"],
+          description: "Built end-to-end ML systems with PyTorch across both model-level and kernel-level workloads. Implemented YOLOv11 + ByteTrack CV pipelines and optimized transformer-style kernels during the PyTorch Helion Hackathon, where I validated correctness and latency improvements on NVIDIA B200 hardware through autotuning and profiling-driven iteration."
+        }
+      ]
+    },
+    {
+      title: "GPU Systems & Performance",
+      technologies: [
+        {
+          id: "helion",
+          name: "Helion",
+          logo: "/logos/helion.png",
           experience: "1+ years",
-          projects: ["TacticoAI"],
-          description: "Built end-to-end computer vision pipelines with PyTorch, implementing YOLOv11 object detection with SAHI optimization, ByteTrack multi-object tracking, and custom homography mapping. Achieved 0.91 mAP for detection and 94.2% keypoint accuracy, processing real-time video streams with optimized inference performance."
+          projects: ["Helion GPU Kernel Optimization"],
+          description: "Built high-performance kernels using Helion's Python DSL over Triton/CUDA for leaderboard-constrained workloads. Implemented and tuned kernels for gated_deltanet_chunk_fwd_o, gated_deltanet_chunk_fwd_h, gated_deltanet_recompute_w_u, causal_conv1d, and fp8_quant with repeatable benchmark/correctness workflows."
+        },
+        {
+          id: "triton",
+          name: "Triton",
+          logo: "/logos/triton.png",
+          experience: "1+ years",
+          projects: ["Helion GPU Kernel Optimization"],
+          description: "Optimized Triton-backed kernels for throughput and numerical stability, tuning warps, stages, indexing, and loop order based on measured bottlenecks. Applied fused accumulation patterns and precision-aware casting in recurrent paths to improve latency without correctness regressions."
+        },
+        {
+          id: "cuda",
+          name: "CUDA",
+          logo: "/logos/nvidia.png",
+          experience: "1+ years",
+          projects: ["Helion GPU Kernel Optimization"],
+          description: "Performed hardware-aware optimization on NVIDIA B200 Blackwell GPUs, using profiling and PTXAS-informed iteration to improve hot paths. Focused on memory behavior, instruction choices, and launch configuration strategy for static benchmark shape sets with runtime fallback planning."
+        },
+        {
+          id: "nvidia-compileiq",
+          name: "NVIDIA CompileIQ / ACF",
+          logo: "/logos/nvidia.png",
+          experience: "1+ years",
+          projects: ["Helion GPU Kernel Optimization"],
+          description: "Integrated ACF-based search and CompileIQ guidance into a kernel tuning pipeline that converted manual trial-and-error into reproducible performance engineering. Used these tools to lock winning configs and validate improvements against leaderboard benchmarks."
         }
       ]
     },
@@ -277,8 +314,10 @@ export default function TechStackSection() {
         </div>
       </div>
 
-      <SimpleModal isOpen={!!selectedTech} onClose={closeModal}>
-        {selectedTech && (
+      <SimpleModal
+        isOpen={!!selectedTech}
+        onClose={closeModal}
+        children={selectedTech && (
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <div className={`w-12 h-12 flex items-center justify-center rounded-lg bg-muted/20`}>
@@ -326,7 +365,7 @@ export default function TechStackSection() {
             </div>
           </div>
         )}
-      </SimpleModal>
+      />
     </section>
   );
 }
