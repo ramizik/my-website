@@ -105,7 +105,7 @@ export default function ProjectsSection() {
     {
       id: 4,
       title: "Helion GPU Kernel Optimization",
-      description: "Top-3 PyTorch Helion Hackathon solo run on NVIDIA B200: optimized Gated DeltaNet kernels with major latency wins.",
+      description: "Top-3 PyTorch Helion solo run on NVIDIA B200 with major Gated DeltaNet latency gains.",
       fullDescription: "Helion GPU Kernel Optimization is my solo systems-performance project from the PyTorch Cerebral Valley's PyTorch + Helion Hackathon 2026. I built and tuned high-performance GPU kernels for transformer-style workloads using Helion (Python DSL over Triton/CUDA) on NVIDIA B200 Blackwell GPUs via Nebius. The submission pipeline covered gated_deltanet_chunk_fwd_o (chunk output), gated_deltanet_chunk_fwd_h (inter-chunk recurrence), gated_deltanet_recompute_w_u (WY transform), causal_conv1d, and fp8_quant warmup. Results reached Top-2 on chunk_fwd_o and Top-3 on chunk_fwd_h, improving latency from 23.210us to 17.994us (22.5%) and from 51.896us to 11.138us (78.5%). Optimization work included per-kernel autotuning, ACF search with NVIDIA CompileIQ guidance, launch configuration tuning (warps/stages/indexing/loop order), precision-aware accumulation strategy, and correctness validation after each tuning cycle to avoid performance-only regressions.",
       logo: "/images/logo-helion-hack.png",
       image: "/images/helion-hack-1.jpg",
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
     {
       id: 5,
       title: "CareMate",
-      description: "AI-powered caregiver burnout prevention mobile app with real-time wearable integration and intervention system.",
+      description: "Mobile app for real-time caregiver burnout detection with wearable-driven AI interventions.",
       fullDescription: "CareMate is a mobile app that detects caregiver burnout in real-time by combining wearable biomarkers, calendar density analysis, and AI-driven interventions. The system uses a 4-component burnout algorithm (wearable risk 30%, calendar/task load 30%, semantic analysis 25%, self-reports 15%) to generate a unified risk score with color-coded severity levels. The platform analyzes HRV, sleep patterns, appointment conflicts, and task overload to deliver hyper-specific, low-friction interventions with quantified time savings. Features include smart calendar management with AI-powered schedule optimization, delegation assistant with pre-drafted messages removing emotional barriers to asking for help, and a provider dashboard for B2B healthcare monitoring. Addresses the invisible labor crisis affecting 63 million unpaid caregivers—through early detection and actionable solutions.",
       logo: "/images/logo-caremate.jpg",
       image: "/images/caremate-1.jpg",
@@ -156,7 +156,7 @@ export default function ProjectsSection() {
     {
       id: 6,
       title: "LeadSync",
-      description: "Multi-agent dev workflow engine—auto-enriches Jira tickets, generates PR descriptions, and answers Slack questions with the tech lead's voice.",
+      description: "Multi-agent dev workflow engine for Jira enrichment, PR summaries, and Slack Q&A.",
       fullDescription: "LeadSync is a multi-agent workflow engine for engineering teams. It enriches Jira tickets with actionable AI prompts, auto-documents pull requests, posts structured digests to Slack, and answers developer questions in the tech lead's voice. Six automated workflows span ticket enrichment, PR auto-description, Slack Q&A, and cross-platform integration (Jira, GitHub, Slack, Google Docs) using CrewAI, Gemini 2.5, FastAPI, and persistent SQLite memory.",
       logo: "/images/logo-leadsync.png",
       image: "/images/leadsync-1.png",

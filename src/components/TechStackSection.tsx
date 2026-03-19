@@ -110,20 +110,12 @@ export default function TechStackSection() {
           description: "Optimized Triton-backed kernels for throughput and numerical stability, tuning warps, stages, indexing, and loop order based on measured bottlenecks. Applied fused accumulation patterns and precision-aware casting in recurrent paths to improve latency without correctness regressions."
         },
         {
-          id: "cuda",
-          name: "CUDA",
+          id: "nvidia",
+          name: "NVIDIA (CUDA / CompileIQ / ACF)",
           logo: "/logos/nvidia.png",
           experience: "1+ years",
           projects: ["Helion GPU Kernel Optimization"],
-          description: "Performed hardware-aware optimization on NVIDIA B200 Blackwell GPUs, using profiling and PTXAS-informed iteration to improve hot paths. Focused on memory behavior, instruction choices, and launch configuration strategy for static benchmark shape sets with runtime fallback planning."
-        },
-        {
-          id: "nvidia-compileiq",
-          name: "NVIDIA CompileIQ / ACF",
-          logo: "/logos/nvidia.png",
-          experience: "1+ years",
-          projects: ["Helion GPU Kernel Optimization"],
-          description: "Integrated ACF-based search and CompileIQ guidance into a kernel tuning pipeline that converted manual trial-and-error into reproducible performance engineering. Used these tools to lock winning configs and validate improvements against leaderboard benchmarks."
+          description: "Performed hardware-aware optimization on NVIDIA B200 Blackwell GPUs using CUDA profiling and PTXAS-informed iteration to improve hot paths. Integrated ACF-based search and CompileIQ guidance into a reproducible kernel tuning pipeline, locking winning configs and validating gains against leaderboard benchmarks."
         }
       ]
     },
