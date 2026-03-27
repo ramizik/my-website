@@ -197,18 +197,6 @@ export default function TimelineSection() {
       icon: Award
     },
     {
-      id: 14,
-      type: "personal-project",
-      title: "Seru AI",
-      company: "AI Synth Generator for Serum",
-      location: "Online",
-      period: "Currently in development",
-      year: "2026",
-      description: "Developing AI-powered synthesizer generator for Serum, leveraging machine learning to create unique sound presets and automate music production workflows. Exploring neural network architectures for audio synthesis and pattern generation in electronic music production.",
-      achievements: [],
-      icon: Code
-    },
-    {
       id: 15,
       type: "personal-project",
       title: "UniConnect",
