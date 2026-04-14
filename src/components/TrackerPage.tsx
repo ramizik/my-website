@@ -9,27 +9,48 @@ interface TrackerPageProps {
   toggleTheme: () => void;
 }
 
+interface Tracker {
+  id: number;
+  eventName: string;
+  targetDate: string;
+  targetTime?: string;
+}
+
+const createTargetDate = (date: string, time?: string): Date => {
+  if (!time) {
+    return new Date(`${date}T00:00:00`);
+  }
+
+  return new Date(`${date}T${time}:00`);
+};
+
 // Hardcoded tracker data
-const trackers = [
+const trackers: Tracker[] = [
   {
     id: 1,
-    eventName: "UniConnect Release",
-    targetDate: new Date("2026-04-05"),
-  },
-  {
-    id: 2,
-    eventName: "Graduated",
-    targetDate: new Date("2026-05-06"),
+    eventName: "Bluejay Due",
+    targetDate: "2026-04-16",
+    targetTime: "10:00",
   },
   {
     id: 3,
-    eventName: "OPT start date 🤔",
-    targetDate: new Date("2026-06-01"),
+    eventName: "May 1st",
+    targetDate: "2026-05-01",
   },
   {
     id: 4,
+    eventName: "Graduated",
+    targetDate: "2026-05-10",
+  },
+  {
+    id: 5,
+    eventName: "June 1st",
+    targetDate: "2026-06-01",
+  },
+  {
+    id: 6,
     eventName: "Last unemployment day",
-    targetDate: new Date("2026-09-01"),
+    targetDate: "2026-08-31",
   }
 ];
 
@@ -65,11 +86,13 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
           {/* Trackers Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {trackers.map((tracker) => (
-              <CircularCountdown
-                key={tracker.id}
-                eventName={tracker.eventName}
-                targetDate={tracker.targetDate}
-              />
+              <React.Fragment key={tracker.id}>
+                <CircularCountdown
+                  eventName={tracker.eventName}
+                  targetDate={createTargetDate(tracker.targetDate, tracker.targetTime)}
+                  hasTargetTime={Boolean(tracker.targetTime)}
+                />
+              </React.Fragment>
             ))}
             {/* Awake Time Card - 6th position */}
             <AwakeTimeCard />

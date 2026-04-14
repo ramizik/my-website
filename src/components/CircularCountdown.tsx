@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 interface CircularCountdownProps {
   eventName: string;
   targetDate: Date;
+  hasTargetTime?: boolean;
 }
 
-export default function CircularCountdown({ eventName, targetDate }: CircularCountdownProps) {
+export default function CircularCountdown({ eventName, targetDate, hasTargetTime = false }: CircularCountdownProps) {
   const [daysLeft, setDaysLeft] = useState<number>(0);
   const [progress, setProgress] = useState<number>(0);
   const [dynamicColor, setDynamicColor] = useState<string>('');
@@ -125,11 +126,19 @@ export default function CircularCountdown({ eventName, targetDate }: CircularCou
           {eventName}
         </h3>
         <p className="text-sm text-muted-foreground mt-1">
-          {targetDate.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          })}
+          {hasTargetTime
+            ? targetDate.toLocaleString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit",
+              })
+            : targetDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+              })}
         </p>
       </div>
     </div>
