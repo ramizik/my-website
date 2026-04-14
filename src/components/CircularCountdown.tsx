@@ -131,9 +131,17 @@ export default function CircularCountdown({ eventName, targetDate, hasTargetTime
           />
         </svg>
 
-        {/* Days Counter in Center */}
-        <div className="font-bold tabular-nums z-10 leading-none" style={{ fontSize: '96px', color: dynamicColor }}>
-          {timeLeft}
+        {/* Countdown value + unit in center */}
+        <div className="z-10 flex flex-col items-center justify-center gap-2">
+          <div className="font-bold tabular-nums leading-none" style={{ fontSize: '96px', color: dynamicColor }}>
+            {timeLeft}
+          </div>
+          <span
+            className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-foreground"
+            aria-live="polite"
+          >
+            {showHours ? "Hours Left" : "Days Left"}
+          </span>
         </div>
       </div>
 
@@ -142,9 +150,6 @@ export default function CircularCountdown({ eventName, targetDate, hasTargetTime
         <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
           {eventName}
         </h3>
-        <p className="text-xs uppercase tracking-wide text-muted-foreground/80 mt-1">
-          {showHours ? "hours left" : "days left"}
-        </p>
         <p className="text-sm text-muted-foreground mt-1">
           {hasTargetTime
             ? targetDate.toLocaleString("en-US", {

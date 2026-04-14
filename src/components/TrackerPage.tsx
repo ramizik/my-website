@@ -28,13 +28,13 @@ const createTargetDate = (date: string, time?: string): Date => {
 const trackers: Tracker[] = [
   {
     id: 1,
-    eventName: "Bluejay Due",
+    eventName: "Bluejay Assessment Due",
     targetDate: "2026-04-16",
     targetTime: "10:00",
   },
   {
     id: 3,
-    eventName: "May 1st",
+    eventName: "May Starts",
     targetDate: "2026-05-01",
   },
   {
@@ -44,7 +44,7 @@ const trackers: Tracker[] = [
   },
   {
     id: 5,
-    eventName: "June 1st",
+    eventName: "June Starts",
     targetDate: "2026-06-01",
   },
   {
