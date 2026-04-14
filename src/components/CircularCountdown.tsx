@@ -7,7 +7,8 @@ interface CircularCountdownProps {
 }
 
 export default function CircularCountdown({ eventName, targetDate, hasTargetTime = false }: CircularCountdownProps) {
-  const [daysLeft, setDaysLeft] = useState<number>(0);
+  const [timeLeft, setTimeLeft] = useState<number>(0);
+  const [showHours, setShowHours] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
   const [dynamicColor, setDynamicColor] = useState<string>('');
 
@@ -63,21 +64,37 @@ export default function CircularCountdown({ eventName, targetDate, hasTargetTime
       // Real-time countdown using current date
       const now = new Date();
       const difference = targetDate.getTime() - now.getTime();
-      const days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+      const dayMs = 1000 * 60 * 60 * 24;
+      const hourMs = 1000 * 60 * 60;
+      const days = Math.ceil(difference / dayMs);
+      const hours = Math.ceil(difference / hourMs);
+      const safeDays = days > 0 ? days : 0;
 
-      setDaysLeft(days > 0 ? days : 0);
-      setDynamicColor(getGradientColor(days > 0 ? days : 0));
+      // Switch to hour display when under 48 hours remain.
+      if (difference > 0 && difference < dayMs * 2) {
+        setShowHours(true);
+        setTimeLeft(hours > 0 ? hours : 0);
+      } else {
+        setShowHours(false);
+        setTimeLeft(safeDays);
+      }
+
+      setDynamicColor(getGradientColor(safeDays));
 
       // Progress represents how much time is left as a percentage
       // Use 365 days as the maximum reference point
       // 365+ days = 100% full circle, 0 days = 0% empty circle
       const maxDays = 365;
-      const progressPercentage = days > 0 ? Math.min(100, (days / maxDays) * 100) : 0;
+      const progressPercentage = safeDays > 0 ? Math.min(100, (safeDays / maxDays) * 100) : 0;
       setProgress(progressPercentage);
     };
 
     calculateDaysLeft();
-    const interval = setInterval(calculateDaysLeft, 1000 * 60 * 60); // Update every hour
+    const now = new Date();
+    const msLeft = targetDate.getTime() - now.getTime();
+    const isUnderTwoDays = msLeft > 0 && msLeft < 1000 * 60 * 60 * 24 * 2;
+    const intervalMs = isUnderTwoDays ? 1000 * 60 : 1000 * 60 * 60;
+    const interval = setInterval(calculateDaysLeft, intervalMs);
 
     return () => clearInterval(interval);
   }, [targetDate]);
@@ -116,7 +133,7 @@ export default function CircularCountdown({ eventName, targetDate, hasTargetTime
 
         {/* Days Counter in Center */}
         <div className="font-bold tabular-nums z-10 leading-none" style={{ fontSize: '96px', color: dynamicColor }}>
-          {daysLeft}
+          {timeLeft}
         </div>
       </div>
 
@@ -125,6 +142,9 @@ export default function CircularCountdown({ eventName, targetDate, hasTargetTime
         <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
           {eventName}
         </h3>
+        <p className="text-xs uppercase tracking-wide text-muted-foreground/80 mt-1">
+          {showHours ? "hours left" : "days left"}
+        </p>
         <p className="text-sm text-muted-foreground mt-1">
           {hasTargetTime
             ? targetDate.toLocaleString("en-US", {
