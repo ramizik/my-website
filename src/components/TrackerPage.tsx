@@ -29,8 +29,8 @@ const trackers: Tracker[] = [
   {
     id: 1,
     eventName: "Bluejay Interview",
-    targetDate: "2026-04-18",
-    targetTime: "13:00",
+    targetDate: "2026-04-20",
+    targetTime: "12:00",
   },
   {
     id: 3,
