@@ -29,7 +29,7 @@ export default function HeroSection() {
                 Ramis Hasanli
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Software engineer specializing in AI-powered applications and multi-agent systems. MS Computer Science candidate building production tools with LLMs, computer vision, and full-stack development—from hackathon-winning prototypes to enterprise deployments.
+                Software engineer specializing in AI-powered applications and multi-agent systems. MS Computer Science candidate building production tools with LLMs, computer vision, and full-stack development—from hackathon-winning prototypes to enterprise deployments. Living with Kitten his best Kitten 💖💖
               </p>
             </div>
 
