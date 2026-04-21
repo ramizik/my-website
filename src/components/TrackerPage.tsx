@@ -28,27 +28,21 @@ const createTargetDate = (date: string, time?: string): Date => {
 const trackers: Tracker[] = [
   {
     id: 1,
-    eventName: "Bluejay Interview",
-    targetDate: "2026-04-20",
-    targetTime: "12:00",
-  },
-  {
-    id: 3,
     eventName: "May Starts",
     targetDate: "2026-05-01",
   },
   {
-    id: 4,
+    id: 2,
     eventName: "Graduated",
     targetDate: "2026-05-10",
   },
   {
-    id: 5,
+    id: 3,
     eventName: "June Starts",
     targetDate: "2026-06-01",
   },
   {
-    id: 6,
+    id: 4,
     eventName: "Last unemployment day",
     targetDate: "2026-08-31",
   }
@@ -99,6 +93,20 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
           animation: heart-burst 1.5s ease-out forwards;
           z-index: 40;
         }
+        .tracker-heart-label {
+          position: fixed;
+          top: calc(50% + 110px);
+          left: 50%;
+          pointer-events: none;
+          color: #ef4444;
+          font-weight: 700;
+          font-size: 2rem;
+          letter-spacing: 0.02em;
+          white-space: nowrap;
+          text-shadow: 0 4px 18px rgba(239, 68, 68, 0.45);
+          animation: heart-burst 1.5s ease-out forwards;
+          z-index: 40;
+        }
       `}</style>
 
       {/* Header with theme toggle */}
@@ -132,13 +140,15 @@ export default function TrackerPage({ isDarkMode, toggleTheme }: TrackerPageProp
       {/* Animated hearts layer */}
       <div aria-hidden="true" className="pointer-events-none">
         {hearts.map((id) => (
-          <Heart
-            key={id}
-            className="tracker-heart"
-            style={{ width: "160px", height: "160px" }}
-            fill="currentColor"
-            strokeWidth={1}
-          />
+          <React.Fragment key={id}>
+            <Heart
+              className="tracker-heart"
+              style={{ width: "160px", height: "160px" }}
+              fill="currentColor"
+              strokeWidth={1}
+            />
+            <span className="tracker-heart-label">Kitten My Love</span>
+          </React.Fragment>
         ))}
       </div>
 
